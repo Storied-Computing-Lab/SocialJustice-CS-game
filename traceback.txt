@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/guessing_game.rpy", line 3, in script
+    init python:
+  File "game/guessing_game.rpy", line 7, in <module>
+    povname = renpy.input("What is your name?")
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was 
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/guessing_game.rpy", line 3, in script
+    init python:
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/guessing_game.rpy", line 7, in <module>
+    povname = renpy.input("What is your name?")
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/exports.py", line 855, in input
+    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ui.py", line 283, in interact
+    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was "+('\n'.join([str(item) for item in stack])))
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was 
+
+Darwin-17.7.0-x86_64-i386-64bit
+Ren'Py 7.2.2.491
+ 
+Wed Jun 12 13:18:57 2019
