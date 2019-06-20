@@ -1,32 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/guessing_game.rpy", line 3, in script
-    init python:
-  File "game/guessing_game.rpy", line 7, in <module>
-    povname = renpy.input("What is your name?")
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was 
+  File "renpy/common/00keymap.rpy", line 415, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 415, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 434, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+Exception: Could not pickle <module 'random' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/random.pyo'>. (perhaps store.random = <module 'random' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/random.pyo'>)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/guessing_game.rpy", line 3, in script
-    init python:
+  File "renpy/common/00keymap.rpy", line 415, in script
+    python hide:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/guessing_game.rpy", line 7, in <module>
-    povname = renpy.input("What is your name?")
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/exports.py", line 855, in input
-    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ui.py", line 283, in interact
-    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was "+('\n'.join([str(item) for item in stack])))
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was 
+  File "renpy/common/00keymap.rpy", line 415, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 434, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loadsave.py", line 422, in save
+    six.reraise(t, e, tb)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loadsave.py", line 405, in save
+    dump((roots, renpy.game.log), logf)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loadsave.py", line 49, in dump
+    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 2024, in module_pickle
+    raise Exception("Could not pickle {!r}.".format(module))
+Exception: Could not pickle <module 'random' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/random.pyo'>. (perhaps store.random = <module 'random' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/random.pyo'>)
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
- 
-Wed Jun 12 13:18:57 2019
+TestNovel1 1.0
+Fri Jun 14 17:25:28 2019

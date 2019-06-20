@@ -2,10 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/guessing_game.rpy", line 4: invalid syntax
-    define pov = Character("[povname]")
-              ^
-    
+File "game/script.rpy", line 65: end of line expected.
+    {i}"It seems that Teresita is uncomfortable with the idea of hacking the powerful US Navy."{/i}
+                                                                                               ^
+
+File "game/script.rpy", line 66: end of line expected.
+    {i}"Who wouldn't be?"{/i}
+                         ^
+
+File "game/script.rpy", line 81: end of line expected.
+    {i}"Tita doesn't exactly encourage me to be a coder"{/i}
+                                                        ^
+
+File "game/script.rpy", line 82: end of line expected.
+    {i}"That's for sure"{/i}
+                        ^
+
+File "game/script.rpy", line 83: end of line expected.
+    {i}"Why can't I be one of those \"computer guys\" she likes?"{/i}
+                                                                 ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Wed Jun 12 13:17:25 2019
+Fri Jun 14 17:25:45 2019
