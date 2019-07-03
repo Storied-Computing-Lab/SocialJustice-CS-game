@@ -1,9 +1,8 @@
 label guessing_game2:
     python:
-        import importlib
-        import random
-        import submit
 
+        import random
+        import submit_code
         solved = False
         secret = random.randint(0, 1000)
 
@@ -16,11 +15,10 @@ label guessing_game2:
                 solved = True
 
         def reload_submit_guess():
-            global submit
-            submit = importlib.reload(submit)
-            submit.read_guess_from_terminal = read_guess_from_terminal
-            submit.submit_guess = check_guess
-            submit.main()
+            submitm = reload(submit_code)
+            submitm.read_guess_from_terminal = read_guess_from_terminal
+            submitm.submit_guess = check_guess
+            submitm.main()
 
         while not solved:
             try:
@@ -33,6 +31,6 @@ label guessing_game2:
             if not solved:
                 renpy.say("Clara","Wrong!")
                 renpy.input("Press enter to restart the computer")
-        renpy.say("Clara","You're in!")
+        renpy.say("Clara","You guessed the password correctly!")
 
     return
