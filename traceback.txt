@@ -1,26 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 67, in script
-    $print(connections)
-  File "game/script.rpy", line 67, in <module>
-    $print(connections)
-NameError: name 'connections' is not defined
+  File "game/script.rpy", line 99, in script call
+    call guessing_game2
+  File "game/guessing_game2.rpy", line 2, in script
+    python:
+  File "game/guessing_game2.rpy", line 5, in <module>
+    import submit_code
+IndentationError: expected an indented block (submit_code.py, line 2)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 67, in script
-    $print(connections)
+  File "game/script.rpy", line 99, in script call
+    call guessing_game2
+  File "game/guessing_game2.rpy", line 2, in script
+    python:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 67, in <module>
-    $print(connections)
-NameError: name 'connections' is not defined
+  File "game/guessing_game2.rpy", line 5, in <module>
+    import submit_code
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loader.py", line 744, in load_module
+    code = compile(source, filename, 'exec', renpy.python.old_compile_flags, 1)
+IndentationError: expected an indented block (submit_code.py, line 2)
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Tue Jul  2 16:30:15 2019
+Wed Jul  3 11:23:36 2019

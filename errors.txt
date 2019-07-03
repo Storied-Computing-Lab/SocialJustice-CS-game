@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Managed_Memory/kill_virus.rpy", line 4: invalid syntax
-    scene desk_standing_behind
-                              ^
-    
+File "game/script.rpy", line 94: end of line expected.
+    call Managed_Memory/kill_virus
+                       ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Wed Jul  3 10:37:51 2019
+Wed Jul  3 10:59:39 2019

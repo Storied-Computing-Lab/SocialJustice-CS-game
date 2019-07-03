@@ -4,7 +4,12 @@ label kill_virus: #kill_virus is now the code that actually contains the bad cod
         renpy.scene()
         renpy.show("desk_standing_behind")
 
-        renpy.show("clara phone",at_list=["lowered_left"])
+        renpy.show("clara phone")
+
+        renpy.show("clara phone",at_list=[lowered_left])
+
+        # JUNE 3 problem: 
+        # I NEED HER TO SHOW UP AT THE OFFICE FIRST BEFORE THE PYTHON RUNS
 
         import shutil
         from time import sleep

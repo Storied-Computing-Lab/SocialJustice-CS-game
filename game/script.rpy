@@ -5,6 +5,7 @@
 
 image tinian japaneseGate = "tinian japaneseGate.png"
 define t = Character("Tita")
+
 $ config.console = True
 
 transform lowered_center:
@@ -89,6 +90,9 @@ label start:
     call kill_virus
 
     e "At this point, you should have finished the virus challenge"
+
+    #This call is having trouble (July 3)
+    #call Managed_Memory/kill_virus
 
     e "Well, now it's time to access the Navy's servers"
 
