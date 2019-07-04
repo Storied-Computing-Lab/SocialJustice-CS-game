@@ -1,32 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 99, in script call
-    call guessing_game2
-  File "game/guessing_game2.rpy", line 2, in script
+  File "game/script.rpy", line 98, in script call
+    call kill_virus
+  File "game/Managed_Memory/kill_virus.rpy", line 4, in script
     python:
-  File "game/guessing_game2.rpy", line 5, in <module>
-    import submit_code
-IndentationError: expected an indented block (submit_code.py, line 2)
+  File "game/Managed_Memory/kill_virus.rpy", line 12, in <module>
+    renpy.show("niko_plaid_neutral", at_list=[lower])
+NameError: name 'lower' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 99, in script call
-    call guessing_game2
-  File "game/guessing_game2.rpy", line 2, in script
+  File "game/script.rpy", line 98, in script call
+    call kill_virus
+  File "game/Managed_Memory/kill_virus.rpy", line 4, in script
     python:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/guessing_game2.rpy", line 5, in <module>
-    import submit_code
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loader.py", line 744, in load_module
-    code = compile(source, filename, 'exec', renpy.python.old_compile_flags, 1)
-IndentationError: expected an indented block (submit_code.py, line 2)
+  File "game/Managed_Memory/kill_virus.rpy", line 12, in <module>
+    renpy.show("niko_plaid_neutral", at_list=[lower])
+NameError: name 'lower' is not defined
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Wed Jul  3 11:23:36 2019
+Wed Jul  3 17:40:11 2019

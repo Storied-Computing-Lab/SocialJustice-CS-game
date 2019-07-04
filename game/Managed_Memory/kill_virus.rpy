@@ -1,14 +1,18 @@
 label kill_virus: #kill_virus is now the code that actually contains the bad code, but you have to delete root_virus1 to terminate its while loop I guess
 
+    #show niko_plaid_neutral at lower
     python:
         renpy.scene()
         renpy.show("desk_standing_behind")
 
-        renpy.show("clara phone")
+        #renpy.show("clara phone")
 
         renpy.show("clara phone",at_list=[lowered_left])
 
-        # JUNE 3 problem: 
+        renpy.show("niko_plaid_neutral", at_list=[lower_right])
+        renpy.show("niko_face_neutral", at_list=[upper_right])
+
+        # JUNE 3 problem:
         # I NEED HER TO SHOW UP AT THE OFFICE FIRST BEFORE THE PYTHON RUNS
 
         import shutil

@@ -16,6 +16,14 @@ transform lowered_left:
     xalign 0.0
     yalign -0.1
 
+transform lower_right:
+    xalign 1.0
+    yalign -.8
+
+transform upper_right:
+    xalign .83
+    yalign 0.15
+
 init python:
 
     import BaseStatsObject_CharacterStats
