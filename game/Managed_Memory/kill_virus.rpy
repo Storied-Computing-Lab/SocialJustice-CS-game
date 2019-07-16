@@ -3,13 +3,13 @@ label kill_virus: #kill_virus is now the code that actually contains the bad cod
     #show niko_plaid_neutral at lower
     python:
         renpy.scene()
-        renpy.show("desk_standing_behind")
+        renpy.show("personal_desk_not-in-final")
 
         #renpy.show("clara phone")
 
         renpy.show("clara phone",at_list=[lowered_left])
 
-        renpy.show("niko_plaid_neutral", at_list=[lower_right])
+        renpy.show("niko_plaid_neutral", at_list=[lowered_right])
         renpy.show("niko_face_neutral", at_list=[upper_right])
 
         # JUNE 3 problem:
@@ -20,6 +20,7 @@ label kill_virus: #kill_virus is now the code that actually contains the bad cod
         import glob
         import os
 
+        """
         counter = 0
         while counter != 3: #should eventually be while True
             try: #try to create a clone
@@ -31,3 +32,4 @@ label kill_virus: #kill_virus is now the code that actually contains the bad cod
             except: #suddenly root_virus1.py no longer exists
                 break
                 print("We got into the exception")
+        """

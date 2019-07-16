@@ -25,7 +25,7 @@ label guessing_game2:
                 reload_submit_guess()
             except Exception as e:
                 renpy.say("Clara","Error booting the password checker!")
-                renpy.say("Clara","[e]") #print(e)
+                renpy.say("Clara","[c]") #print(e)
                 renpy.say("Clara","Press enter to restart the computer")
                 continue
             if not solved:

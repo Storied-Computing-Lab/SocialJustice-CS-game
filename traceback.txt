@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 98, in script call
-    call kill_virus
-  File "game/Managed_Memory/kill_virus.rpy", line 4, in script
+  File "game/script.rpy", line 94, in script call
+    call Niko_reflect_1
+  File "game/Niko_reflect_1.rpy", line 2, in script
     python:
-  File "game/Managed_Memory/kill_virus.rpy", line 12, in <module>
-    renpy.show("niko_plaid_neutral", at_list=[lower])
-NameError: name 'lower' is not defined
+  File "game/Niko_reflect_1.rpy", line 10, in <module>
+    renpy.say(statement2)
+TypeError: say() takes at least 2 arguments (1 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 98, in script call
-    call kill_virus
-  File "game/Managed_Memory/kill_virus.rpy", line 4, in script
+  File "game/script.rpy", line 94, in script call
+    call Niko_reflect_1
+  File "game/Niko_reflect_1.rpy", line 2, in script
     python:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/Managed_Memory/kill_virus.rpy", line 12, in <module>
-    renpy.show("niko_plaid_neutral", at_list=[lower])
-NameError: name 'lower' is not defined
+  File "game/Niko_reflect_1.rpy", line 10, in <module>
+    renpy.say(statement2)
+TypeError: say() takes at least 2 arguments (1 given)
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Wed Jul  3 17:40:11 2019
+Tue Jul 16 16:21:50 2019

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 94: end of line expected.
-    call Managed_Memory/kill_virus
-                       ^
+File "game/script.rpy", line 88: expected python code
+    $
+     ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Wed Jul  3 10:59:39 2019
+Tue Jul 16 16:11:04 2019

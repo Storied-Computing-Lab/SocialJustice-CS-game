@@ -16,11 +16,15 @@ transform lowered_left:
     xalign 0.0
     yalign -0.1
 
-transform lower_right:
+transform lowered_right: #works with Niko's body
     xalign 1.0
     yalign -.8
 
-transform upper_right:
+transform t_lowered_right: #works with Tita's body
+    xalign 1.0
+    yalign -.1
+
+transform upper_right: #works with Niko's body
     xalign .83
     yalign 0.15
 
@@ -47,12 +51,16 @@ init python:
             'gender' : 'f',
             'age' : 22,
             'location' : 'airport',
-            'connections' : {'MC':1,'Tita':5}
+            'connections' : {}
         }
 
 default test_name = "Clara"
-define character.e = Character("[test_name]")
-default e = CharacterStats("e", location='japaneseGate', age=21)
+define character.c = Character("[test_name]")
+default c = CharacterStats("c", location='japaneseGate', age=21, connections = {'Niko': {},'Tita': {}})
+#July 16th programming tangent: this 'connections' web 'who knows who' needs to be maintained in another script, datastructure??
+
+define character.n = Character("Niko")
+default n = CharacterStats("n", age = 21, connections = {'Andrew':2,'Tita':5, 'Clara':5})
 
 # The game starts here.
 
@@ -73,48 +81,58 @@ label start:
 
     # These display lines of dialogue.
 
-    $how_much_tita_likes_me = e.connections['Tita']
-    $connections = e.connections
-    $print(connections)
-    $print(str(e.connections.keys()))
-    $print(str(e.connections.keys()[0]))
+    $how_much_tita_likes_me = c.connections['Tita']
+    $claras_conns = c.connections
+    $print("Clara's conns: " + str(claras_conns.keys()))
+    $print("Who Clara Knows: " + str(claras_conns.keys())) #returns [u'Tita', u'Niko']
+    $print(str(claras_conns.keys()[0]))
+
+    $print("Who Niko Knows: " + str(n.connections.keys()))
+
     $hwtl = str(how_much_tita_likes_me)
-    e "Hafa Adai, I'm Clara"
+    c "Hafa Adai, I'm Clara"
+    call Niko_reflect_1
+
     "Expected: Clara 21 japaneseGate 5
     \nReceived: [e.name] [e.age] [e.location] [hwtl]" #trouble getting [e.connections['MC']] to work, actually it doesn't like [e.connections.keys] either, I think
 
     show clara phone at lowered_left
 
-    e "Whoa, I'm coming alive!"
+    c "Whoa, I'm coming alive!"
 
     call appearing
 
     "Wow! Who are you?"
-    e "It's magic! She comes and goes!"
+    c "It's magic! She comes and goes!"
 
-    e "Begin the root_virus challenge"
+    c "Begin the root_virus challenge"
 
     #This call didn't work (June 20)
     call kill_virus
 
-    e "At this point, you should have finished the virus challenge"
+    c "At this point, you should have finished the virus challenge"
+
+
 
     #This call is having trouble (July 3)
     #call Managed_Memory/kill_virus
 
-    e "Well, now it's time to access the Navy's servers"
+
+    c "Well, now it's time to access the Navy's servers"
 
     call guessing_game2
 
-    e "We can see their servers now. I should tell the other activists."
+    c "We can see their servers now. I should tell the other activists."
 
     "We see Teresita walking from the center of the {i}siudát{/i}, or city"
     "It's strange how similar the language is to Spanish..."
     "siudát sounds just like ciudad..."
 
-    e "Hi Teresita! We just got a through to their servers"
-    e "But we've only got a few hours before they notice us"
-    e "After that we'll have to switch IP addresses again before our next hack."
+    show tita_neutral at t_lowered_right
+
+    c "Hi Teresita! We just got a through to their servers"
+    c "But we've only got a few hours before they notice us"
+    c "After that we'll have to switch IP addresses again before our next hack."
 
     t "Clara, are you sure this is the best way you want to help our cause?"
     t "You just have so many talents other than hacking"
@@ -128,27 +146,27 @@ label start:
     "{i}Who wouldn't be?{/i}"
 
     #change Clara expression
-    e "Don't worry Tita, we've set up security precautions"
+    c "Don't worry Tita, we've set up security precautions"
 
     #change Tita expression
     t "That's good. You have a good team, but don't think you have to stay, Clara"
     t "I like those computer boys but if you ever feel your interests lie elsewhere..."
 
     #change
-    e "....."
-    e "....."
+    c "....."
+    c "....."
     "FOR DRAFTING ONLY : player choose how to respond to Tita"
     "FOR DRAFTING ONLY : Whatever player chooses to do next, still say:"
 
     "{i}Tita doesn't exactly encourage me to be a coder{/i}"
     "{i}That's for sure{/i}"
     "{i}Why can't I be one of those \"computer guys\" she likes?{/i}"
-    e "Well..any social cause needs a diversity of approaches to activism"
+    c "Well..any social cause needs a diversity of approaches to activism"
     "DRAFTING ONLY: player chooses again whether or not to leave the hacking track here"
     # if hacking:
-    # e "But I am the gal to get it done through coding! I wanna keep trying."
+    # c "But I am the gal to get it done through coding! I wanna keep trying."
     # if 2nd time player affirms they wanna leave:
-    # e "So I think it's time to try another approach!"
+    # c "So I think it's time to try another approach!"
 
 
 
