@@ -60,7 +60,14 @@ default c = CharacterStats("c", location='japaneseGate', age=21, connections = {
 #July 16th programming tangent: this 'connections' web 'who knows who' needs to be maintained in another script, datastructure??
 
 define character.n = Character("Niko")
-default n = CharacterStats("n", age = 21, connections = {'Andrew':2,'Tita':5, 'Clara':5})
+default n = CharacterStats("n", age = 21, connections = {'Andrew':{},'Tita':{}, 'Clara':{}})
+
+define character.b = Character("Braelin")
+default b = CharacterStats("n", age = 21, connections = {'Andrew':{}})
+
+define character.e = Character("Esperansa")
+default e = CharacterStats("e", connections = {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
+
 
 # The game starts here.
 
@@ -89,12 +96,34 @@ label start:
 
     $print("Who Niko Knows: " + str(n.connections.keys()))
 
-    $hwtl = str(how_much_tita_likes_me)
-    c "Hafa Adai, I'm Clara"
+    $hwtl = str(how_much_tita_likes_me) #doesn't make sense anymore because Tita now points to a dictionary, not an int
+    e "Hafa Adai, I'm Esperansa, 'she, her, and hers'"
+
+    "Esperansa offers you a tired smile"
+
+    menu:
+        "I'm Clara, she, her, hers":
+            e "Great to meet you Clara!"
+        "I'm Clara":
+            e "Great to meet you Clara!"
+        "I'm Clara, why'd you list those pronouns?":
+            e "Great question Clara, I'm trying not to assume someone's gender when I first meet them"
+            menu:
+                "But isn't it more polite to assume just looking at me that I'm a girl?":
+                    e "I think gender is a spectrum, and male/female boxes restrict people. What do you think?"
+                "I still don't understand":
+                    e "That's ok, we can talk again soon!" #set Esperansa_revisit_gender_binary = True
+                "I think I understand":
+                    e "I'm still learning, too, but I think saying pronouns can mean a lot to people" #points towards some quest or unlocking of Ma'ase ?
+
+
+
+
+
     call Niko_reflect_1
 
-    "Expected: Clara 21 japaneseGate 5
-    \nReceived: [e.name] [e.age] [e.location] [hwtl]" #trouble getting [e.connections['MC']] to work, actually it doesn't like [e.connections.keys] either, I think
+    "Expected: Clara 21 japaneseGate\nReceived: [c.name] [c.age] [c.location]"
+    # trouble getting [c.connections['MC']] to work, actually it doesn't like [e.connections.keys] either, I think
 
     show clara phone at lowered_left
 

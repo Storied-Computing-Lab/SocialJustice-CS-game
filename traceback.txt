@@ -1,30 +1,50 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 94, in script call
-    call Niko_reflect_1
-  File "game/Niko_reflect_1.rpy", line 2, in script
+  File "renpy/common/00start.rpy", line 185, in script
     python:
-  File "game/Niko_reflect_1.rpy", line 10, in <module>
-    renpy.say(statement2)
-TypeError: say() takes at least 2 arguments (1 given)
+  File "renpy/common/00start.rpy", line 185, in script
+    python:
+  File "renpy/common/00start.rpy", line 186, in <module>
+    renpy.execute_default_statement(True)
+  File "game/script.rpy", line 69, in set_default
+    default e = CharacterStats("e", {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
+  File "game/script.rpy", line 69, in <module>
+    default e = CharacterStats("e", {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
+TypeError: __init__() takes exactly 2 arguments (3 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 94, in script call
-    call Niko_reflect_1
-  File "game/Niko_reflect_1.rpy", line 2, in script
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/bootstrap.py", line 313, in bootstrap
+    renpy.main.main()
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/main.py", line 525, in main
+    run(restart)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/main.py", line 139, in run
+    renpy.execution.run_context(True)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/execution.py", line 892, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 185, in script
+    python:
+  File "renpy/common/00start.rpy", line 185, in script
     python:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/Niko_reflect_1.rpy", line 10, in <module>
-    renpy.say(statement2)
-TypeError: say() takes at least 2 arguments (1 given)
+  File "renpy/common/00start.rpy", line 186, in <module>
+    renpy.execute_default_statement(True)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/exports.py", line 3452, in execute_default_statement
+    i.set_default(start)
+  File "game/script.rpy", line 69, in set_default
+    default e = CharacterStats("e", {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1954, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 69, in <module>
+    default e = CharacterStats("e", {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
+TypeError: __init__() takes exactly 2 arguments (3 given)
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Tue Jul 16 16:21:50 2019
+Thu Jul 18 17:59:15 2019
