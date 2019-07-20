@@ -116,31 +116,31 @@ label start:
                 "I think I understand":
                     e "I'm still learning, too, but I think saying pronouns can mean a lot to people" #points towards some quest or unlocking of Ma'ase ?
 
-    jump a_The_Build_Up
+    call a_The_Build_Up
 
-    jump aa_The_Disasters
+    call aa_The_Disasters
 
-    jump ab_The_Clash
+    call ab_The_Clash
 
-    jump ac_The_Meeting
+    call ac_The_Meeting
 
-    jump ad_The_Demands
+    call ad_The_Demands
 
-    jump ae_The_Resistance
+    call ae_The_Resistance
 
-    jump af_The_Translation
+    call af_The_Translation
 
-    jump ag_The_Silence
+    call ag_The_Silence
 
-    jump ah_The_Renewal
+    call ah_The_Renewal
 
-    jump ai_The_News
+    call ai_The_News
 
-    jump aj_The_Takeover
+    call aj_The_Takeover
 
-    jump ak_The_Reach
+    call ak_The_Reach
 
-    jump al_The_End
+    call al_The_End
 
 
 
