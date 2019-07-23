@@ -1,5 +1,13 @@
 label aa_The_Disasters:
 
+    menu:
+        "Explore the sugarcane crops"
+        "Meet cousin Niko at the Center for CHamoru Rights"
+        "Explore the Joint Region Marianas Naval Base"
+        "Meet Auntie Tita at the Food Not Bombs in Dededo"
+
+
+
     e "We made it to the fields"
     menu:
         "Explore the sugarcane crops":
