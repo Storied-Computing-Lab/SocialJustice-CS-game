@@ -1,10 +1,18 @@
 label aa_The_Disasters:
 
     menu:
-        "Explore the sugarcane crops"
-        "Meet cousin Niko at the Center for CHamoru Rights"
-        "Explore the Joint Region Marianas Naval Base"
-        "Meet Auntie Tita at the Food Not Bombs in Dededo"
+        "Explore the sugarcane crops":
+            $day = 1
+            call sugarcane
+        "Meet cousin Niko at the Center for CHamoru Rights":
+            $day = 2
+            call center
+        "Explore the Joint Region Marianas Naval Base":
+            $day = 3
+            call base
+        "Meet Auntie Tita at the Food Not Bombs in Dededo":
+            $day = 4
+            call dededo
 
     e "We made it to the fields"
     menu:

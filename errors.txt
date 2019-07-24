@@ -2,14 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 113: end of line expected.
-(Perhaps you left out a " at the end of the first line.)
-    e "I think gender is a spectrum, and male/female boxes restrict people. What do you think?""
-                                                                                               ^
-                    "I still don't understand":
-                        e "That's ok, we can talk again soon!" #set Esperansa_revisit_gender_binary = True
-                    "I think I understand":
-                        e "I'm still learning, too, but I think saying pronouns can mean a lot to people" #points towards some quest or unlocking of Ma'ase ?
+File "game/day_dependent_locations/base.rpy", line 9: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "what for"
+              ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Thu Jul 18 18:12:52 2019
+Wed Jul 24 11:31:28 2019

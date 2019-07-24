@@ -1,22 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 119, in script
-    jump a_The_Build_Up
-ScriptError: could not find label 'a_The_Build_Up'.
+  File "game/script.rpy", line 121, in script call
+    call aa_The_Disasters
+  File "game/chapters/aa_The_Disasters.rpy", line 6, in script call
+    call sugarcane
+  File "game/day_dependent_locations/sugarcane.rpy", line 2, in script
+    $print("sugarcane day is: " + day)
+  File "game/day_dependent_locations/sugarcane.rpy", line 2, in <module>
+    $print("sugarcane day is: " + day)
+TypeError: coercing to Unicode: need string or buffer, int found
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 119, in script
-    jump a_The_Build_Up
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 1678, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/script.py", line 886, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'a_The_Build_Up'.
+  File "game/script.rpy", line 121, in script call
+    call aa_The_Disasters
+  File "game/chapters/aa_The_Disasters.rpy", line 6, in script call
+    call sugarcane
+  File "game/day_dependent_locations/sugarcane.rpy", line 2, in script
+    $print("sugarcane day is: " + day)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/day_dependent_locations/sugarcane.rpy", line 2, in <module>
+    $print("sugarcane day is: " + day)
+TypeError: coercing to Unicode: need string or buffer, int found
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Fri Jul 19 16:52:09 2019
+Wed Jul 24 11:24:29 2019
