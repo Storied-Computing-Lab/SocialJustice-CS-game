@@ -5,6 +5,3 @@ def main():
     guess = read_guess_from_terminal()   #reads in your guess
     submit_guess(guess)   #checks if guess is correct
     return
-    '''
-    press command + S to save
-    '''
