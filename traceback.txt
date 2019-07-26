@@ -1,34 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 121, in script call
-    call aa_The_Disasters
-  File "game/chapters/aa_The_Disasters.rpy", line 6, in script call
-    call sugarcane
-  File "game/day_dependent_locations/sugarcane.rpy", line 2, in script
-    $print("sugarcane day is: " + day)
-  File "game/day_dependent_locations/sugarcane.rpy", line 2, in <module>
-    $print("sugarcane day is: " + day)
-TypeError: coercing to Unicode: need string or buffer, int found
+  File "game/script.rpy", line 102, in script call
+    call check_hack_get_in_the_game
+  File "game/check_hack_get_in_the_game.rpy", line 2, in script
+    python:
+  File "game/check_hack_get_in_the_game.rpy", line 4, in <module>
+    import trace
+ImportError: No module named trace
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 121, in script call
-    call aa_The_Disasters
-  File "game/chapters/aa_The_Disasters.rpy", line 6, in script call
-    call sugarcane
-  File "game/day_dependent_locations/sugarcane.rpy", line 2, in script
-    $print("sugarcane day is: " + day)
+  File "game/script.rpy", line 102, in script call
+    call check_hack_get_in_the_game
+  File "game/check_hack_get_in_the_game.rpy", line 2, in script
+    python:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/day_dependent_locations/sugarcane.rpy", line 2, in <module>
-    $print("sugarcane day is: " + day)
-TypeError: coercing to Unicode: need string or buffer, int found
+  File "game/check_hack_get_in_the_game.rpy", line 4, in <module>
+    import trace
+ImportError: No module named trace
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Wed Jul 24 11:24:29 2019
+Fri Jul 26 13:53:37 2019
