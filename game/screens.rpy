@@ -1433,6 +1433,14 @@ screen quick_menu():
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 
+screen simple_screen():
+    frame:
+        xalign 0.5 ypos 50
+        vbox:
+            text "Click to continue"
+            textbutton "Click me please how far out will the box go":
+                action Return(True)
+
 
 style window:
     variant "small"
