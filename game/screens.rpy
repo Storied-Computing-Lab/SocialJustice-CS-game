@@ -1437,9 +1437,21 @@ screen simple_screen():
     frame:
         xalign 0.5 ypos 50
         vbox:
-            text "Click to continue"
-            textbutton "Click me please how far out will the box go":
-                action Return(True)
+            text "Looking Around"
+            textbutton "There is no one here":
+                action Hide("simple_screen")
+
+screen player_actions():
+    frame:
+        xalign 0.8 ypos 50
+        vbox:
+            text "Actions"
+            #textbutton "Debate":
+                #action Return(True)
+            textbutton "Look Around":
+                action Show("simple_screen")
+            textbutton "Explore new Area":
+                action Jump("solar_system")
 
 
 style window:

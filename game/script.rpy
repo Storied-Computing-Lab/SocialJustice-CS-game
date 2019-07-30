@@ -99,8 +99,7 @@ label start:
     $hwtl = str(how_much_tita_likes_me) #doesn't make sense anymore because Tita now points to a dictionary, not an int
     e "Hafa Adai, I'm Esperansa, 'she, her, and hers'"
 
-    call screen simple_screen
-
+    show screen player_actions
     #call check_hack_get_in_the_game
 
     "Esperansa offers you a tired smile"
