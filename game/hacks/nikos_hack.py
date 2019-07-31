@@ -1,7 +1,7 @@
 def main():
     """
     This code only prints one message to the console.
-    Change "Hello World" to a new message & view your mod in the console
+    Change "Niko wuz here" to a new message & view your mod in the console
 
     All this text is a comment. Computers do not read between the """ """
     Press ctrl + s to save changes here.
@@ -9,7 +9,7 @@ def main():
     Press shift + o to open the console in the game anytime.
     """
 
-    print("Hello World")
+    print("Niko wuz here")
 
     #This is also a comment
     #BONUS: Can you print another message below the first?

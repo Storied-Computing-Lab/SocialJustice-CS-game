@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1452: Line is indented, but the preceding textbutton statement does not expect a block. Please check this line's indentation.
-    action Show(simple_screen)
-    ^
+File "game/screens.rpy", line 1454: u'hide' is not a keyword argument or valid child for the textbutton statement.
+    hide claras_computer_screen
+        ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Tue Jul 30 16:20:19 2019
+Wed Jul 31 14:40:19 2019

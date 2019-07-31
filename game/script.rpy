@@ -4,6 +4,7 @@
 # name of the character.
 
 image tinian japaneseGate = "tinian japaneseGate.png"
+image claras_computer_screen = "claras_computer_screen.png"
 define t = Character("Tita")
 
 $ config.console = True
@@ -88,36 +89,8 @@ label start:
 
     # These display lines of dialogue.
 
-    $how_much_tita_likes_me = c.connections['Tita']
-    $claras_conns = c.connections
-    $print("Clara's conns: " + str(claras_conns.keys()))
-    $print("Who Clara Knows: " + str(claras_conns.keys())) #returns [u'Tita', u'Niko']
-    $print(str(claras_conns.keys()[0]))
-
-    $print("Who Niko Knows: " + str(n.connections.keys()))
-
-    $hwtl = str(how_much_tita_likes_me) #doesn't make sense anymore because Tita now points to a dictionary, not an int
-    e "Hafa Adai, I'm Esperansa, 'she, her, and hers'"
-
     show screen player_actions
     #call check_hack_get_in_the_game
-
-    "Esperansa offers you a tired smile"
-
-    menu:
-        "I'm Clara, she, her, hers":
-            e "Great to meet you Clara!"
-        "I'm Clara":
-            e "Great to meet you Clara!"
-        "I'm Clara, why'd you list those pronouns?":
-            e "Great question Clara, I'm trying not to assume someone's gender when I first meet them"
-            menu:
-                "But isn't it more polite to assume just looking at me that I'm a girl?":
-                    e "I think gender is a spectrum, and male/female boxes restrict people. What do you think?"
-                "I still don't understand":
-                    e "That's ok, we can talk again soon!" #set Esperansa_revisit_gender_binary = True
-                "I think I understand":
-                    e "I'm still learning, too, but I think saying pronouns can mean a lot to people" #points towards some quest or unlocking of Ma'ase ?
 
     call a_The_Build_Up
 
@@ -145,10 +118,68 @@ label start:
 
     call al_The_End
 
+    screen planets: #Preparing the imagemap
+        imagemap:
+            ground "planets.png"
+            hover "planets-hover.png"
+
+            hotspot (62, 399, 90, 91) clicked Jump("mercury")
+            hotspot (227, 302, 141, 137) clicked Jump("venus")
+            hotspot (405, 218, 164, 118) clicked Jump("earth")
+            hotspot (591, 78, 123, 111) clicked Jump("mars")
+
+    # The game starts here.
+
+    "This is an imagemap tutorial."
+    jump solar_system
+
+    label solar_system:
+        call screen planets #Displaying the imagemap
+
+    label mercury:
+        "It is Mercury."
+        jump solar_system
+
+    label venus:
+        "It is Venus."
+        jump solar_system
+
+    label earth:
+        "It is Earth."
+        jump solar_system
+
+    label mars:
+        "It is Mars."
+        jump solar_system
 
 
+    $how_much_tita_likes_me = c.connections['Tita']
+    $claras_conns = c.connections
+    $print("Clara's conns: " + str(claras_conns.keys()))
+    $print("Who Clara Knows: " + str(claras_conns.keys())) #returns [u'Tita', u'Niko']
+    $print(str(claras_conns.keys()[0]))
 
+    $print("Who Niko Knows: " + str(n.connections.keys()))
 
+    $hwtl = str(how_much_tita_likes_me) #doesn't make sense anymore because Tita now points to a dictionary, not an int
+    e "Hafa Adai, I'm Esperansa, 'she, her, and hers'"
+
+    "Esperansa offers you a tired smile"
+
+    menu:
+        "I'm Clara, she, her, hers":
+            e "Great to meet you Clara!"
+        "I'm Clara":
+            e "Great to meet you Clara!"
+        "I'm Clara, why'd you list those pronouns?":
+            e "Great question Clara, I'm trying not to assume someone's gender when I first meet them"
+            menu:
+                "But isn't it more polite to assume just looking at me that I'm a girl?":
+                    e "I think gender is a spectrum, and male/female boxes restrict people. What do you think?"
+                "I still don't understand":
+                    e "That's ok, we can talk again soon!" #set Esperansa_revisit_gender_binary = True
+                "I think I understand":
+                    e "I'm still learning, too, but I think saying pronouns can mean a lot to people" #points towards some quest or unlocking of Ma'ase ?
 
     call Niko_reflect_1
 

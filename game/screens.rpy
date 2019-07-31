@@ -1441,6 +1441,19 @@ screen simple_screen():
             textbutton "There is no one here":
                 action Hide("simple_screen")
 
+screen claras_computer():
+    add "claras_computer_screen.png" xalign 0.5 yalign 0.4
+    text "Welcome Back Clara"
+    #text "press shift + D to see devtools"
+    #text "press esc to return here"
+    frame:
+        xalign 0.5 ypos 50
+        vbox:
+            text "Actions"
+            textbutton "Return":
+                #hide claras_computer_screen
+                action Jump("solar_system")
+
 screen player_actions():
     frame:
         xalign 0.8 ypos 50
@@ -1448,9 +1461,10 @@ screen player_actions():
             text "Actions"
             #textbutton "Debate":
                 #action Return(True)
-            textbutton "Look Around":
-                action Show("simple_screen")
-            textbutton "Explore new Area":
+            textbutton "Create":
+                #action Show("simple_screen")
+                action Show("claras_computer")
+            textbutton "Explore":
                 action Jump("solar_system")
 
 
