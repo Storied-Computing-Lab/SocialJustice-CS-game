@@ -95,6 +95,74 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+screen simple_screen():
+    frame:
+        xalign 0.5 ypos 50
+        vbox:
+            text "Looking Around"
+            textbutton "There is no one here":
+                action Hide("simple_screen")
+
+screen claras_computer():
+    add "claras_computer_screen.png" xalign 0.5 yalign 0.4
+    text "Welcome Back Clara"
+    #text "press shift + D to see devtools"
+    #text "press esc to return here"
+    frame:
+        xalign 0.5 ypos 50
+        vbox:
+            text "Actions"
+            textbutton "Return":
+                #hide claras_computer_screen
+                action Jump("solar_system")
+
+screen player_actions():
+    frame:
+        xalign 0.8 ypos 50
+        vbox:
+            text "Actions"
+            #textbutton "Debate":
+                #action Return(True)
+            textbutton "Create":
+                #action Show("simple_screen")
+                action Show("claras_computer")
+            textbutton "Explore":
+                action Jump("solar_system")
+
+screen planets: #Preparing the imagemap
+    imagemap:
+        ground "guahan.png"
+        hover "guahan_hover.png"
+
+        hotspot (62, 399, 90, 91) clicked Jump("mercury")
+        hotspot (227, 302, 141, 137) clicked Jump("venus")
+        hotspot (405, 218, 164, 118) clicked Jump("earth")
+        hotspot (591, 78, 123, 111) clicked Jump("mars")
+
+# The game starts here.
+
+"This is an imagemap tutorial."
+jump solar_system
+
+label solar_system:
+    call screen planets #Displaying the imagemap
+
+label mercury:
+    "It is Mercury."
+    jump solar_system
+
+label venus:
+    "It is Venus."
+    jump solar_system
+
+label earth:
+    "It is Earth."
+    jump solar_system
+
+label mars:
+    "It is Mars."
+    jump solar_system
+
 screen say(who, what):
     style_prefix "say"
 
@@ -1432,40 +1500,6 @@ screen quick_menu():
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
-
-screen simple_screen():
-    frame:
-        xalign 0.5 ypos 50
-        vbox:
-            text "Looking Around"
-            textbutton "There is no one here":
-                action Hide("simple_screen")
-
-screen claras_computer():
-    add "claras_computer_screen.png" xalign 0.5 yalign 0.4
-    text "Welcome Back Clara"
-    #text "press shift + D to see devtools"
-    #text "press esc to return here"
-    frame:
-        xalign 0.5 ypos 50
-        vbox:
-            text "Actions"
-            textbutton "Return":
-                #hide claras_computer_screen
-                action Jump("solar_system")
-
-screen player_actions():
-    frame:
-        xalign 0.8 ypos 50
-        vbox:
-            text "Actions"
-            #textbutton "Debate":
-                #action Return(True)
-            textbutton "Create":
-                #action Show("simple_screen")
-                action Show("claras_computer")
-            textbutton "Explore":
-                action Jump("solar_system")
 
 
 style window:

@@ -1,75 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 102, in script
-    call screen player_actions
-  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/screens.rpy", line 1444, in execute
-    screen player_actions():
-  File "game/screens.rpy", line 1444, in execute
-    screen player_actions():
-  File "game/screens.rpy", line 1445, in execute
-    frame:
-  File "game/screens.rpy", line 1447, in execute
-    vbox:
-  File "game/screens.rpy", line 1451, in execute
-    textbutton "Look Around":
-  File "game/screens.rpy", line 1451, in keywords
-    textbutton "Look Around":
-NameError: name 'simple_screen' is not defined
+  File "game/script.rpy", line 94, in script call
+    call check_nikos_hack
+  File "game/checkpoints/check_nikos_hack.rpy", line 2, in script
+    python:
+  File "game/checkpoints/check_nikos_hack.rpy", line 4, in <module>
+    from unittest.mock import patch, call
+ImportError: No module named unittest.mock
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 102, in script
-    call screen player_actions
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 1911, in execute
-    self.call("execute")
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 1899, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/statements.py", line 220, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/exports.py", line 2875, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ui.py", line 289, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2690, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 424, in visit_all
-    callback(self)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 434, in per_interact
-    self.update()
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 619, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 1444, in execute
-    screen player_actions():
-  File "game/screens.rpy", line 1444, in execute
-    screen player_actions():
-  File "game/screens.rpy", line 1445, in execute
-    frame:
-  File "game/screens.rpy", line 1447, in execute
-    vbox:
-  File "game/screens.rpy", line 1451, in execute
-    textbutton "Look Around":
-  File "game/screens.rpy", line 1451, in keywords
-    textbutton "Look Around":
-  File "<screen language>", line 1452, in <module>
-NameError: name 'simple_screen' is not defined
+  File "game/script.rpy", line 94, in script call
+    call check_nikos_hack
+  File "game/checkpoints/check_nikos_hack.rpy", line 2, in script
+    python:
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/checkpoints/check_nikos_hack.rpy", line 4, in <module>
+    from unittest.mock import patch, call
+ImportError: No module named unittest.mock
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Tue Jul 30 16:21:44 2019
+Mon Aug  5 08:42:35 2019
