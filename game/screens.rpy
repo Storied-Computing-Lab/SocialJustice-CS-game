@@ -131,8 +131,8 @@ screen player_actions():
 
 screen guahan_imagemap(): #Preparing the imagemap
     imagemap:
-        idle "guahan_idle1.png"
-        ground "guahan.png"
+        idle "guahan_idle.png"
+        #ground "guahan.png"
         hover "guahan_hover.png"
 
         hotspot (645, 136, 103, 71) clicked Jump("dededo")
