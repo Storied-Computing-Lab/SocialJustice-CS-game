@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 94, in script call
-    call check_nikos_hack
-  File "game/checkpoints/check_nikos_hack.rpy", line 2, in script
-    python:
-  File "game/checkpoints/check_nikos_hack.rpy", line 4, in <module>
-    from unittest.mock import patch, call
-ImportError: No module named unittest.mock
+  File "game/script.rpy", line 96, in script call
+    call a_The_Build_Up
+  File "game/day_dependent_locations/center.rpy", line 2, in script
+    $print("center day is: " + str(day))
+  File "game/day_dependent_locations/center.rpy", line 2, in <module>
+    $print("center day is: " + str(day))
+NameError: name 'day' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 94, in script call
-    call check_nikos_hack
-  File "game/checkpoints/check_nikos_hack.rpy", line 2, in script
-    python:
+  File "game/script.rpy", line 96, in script call
+    call a_The_Build_Up
+  File "game/day_dependent_locations/center.rpy", line 2, in script
+    $print("center day is: " + str(day))
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/checkpoints/check_nikos_hack.rpy", line 4, in <module>
-    from unittest.mock import patch, call
-ImportError: No module named unittest.mock
+  File "game/day_dependent_locations/center.rpy", line 2, in <module>
+    $print("center day is: " + str(day))
+NameError: name 'day' is not defined
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Mon Aug  5 08:42:35 2019
+Tue Aug  6 08:43:22 2019

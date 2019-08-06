@@ -1,6 +1,7 @@
 label base:
     $print("base day is: " + str(day))
 
+    "You made it to the navy base"
     if day == 3:
         e "We're going to a counter protest"
         menu:

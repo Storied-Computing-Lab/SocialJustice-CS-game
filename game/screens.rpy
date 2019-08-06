@@ -114,7 +114,7 @@ screen claras_computer():
             text "Actions"
             textbutton "Return":
                 #hide claras_computer_screen
-                action Jump("solar_system")
+                action Jump("guahan_imagemap")
 
 screen player_actions():
     frame:
@@ -127,41 +127,18 @@ screen player_actions():
                 #action Show("simple_screen")
                 action Show("claras_computer")
             textbutton "Explore":
-                action Jump("solar_system")
+                action Jump("guahan_imagemap")
 
-screen planets: #Preparing the imagemap
+screen guahan_imagemap(): #Preparing the imagemap
     imagemap:
+        idle "guahan_idle1.png"
         ground "guahan.png"
         hover "guahan_hover.png"
 
-        hotspot (62, 399, 90, 91) clicked Jump("mercury")
-        hotspot (227, 302, 141, 137) clicked Jump("venus")
-        hotspot (405, 218, 164, 118) clicked Jump("earth")
-        hotspot (591, 78, 123, 111) clicked Jump("mars")
-
-# The game starts here.
-
-"This is an imagemap tutorial."
-jump solar_system
-
-label solar_system:
-    call screen planets #Displaying the imagemap
-
-label mercury:
-    "It is Mercury."
-    jump solar_system
-
-label venus:
-    "It is Venus."
-    jump solar_system
-
-label earth:
-    "It is Earth."
-    jump solar_system
-
-label mars:
-    "It is Mars."
-    jump solar_system
+        hotspot (645, 136, 103, 71) clicked Jump("dededo")
+        hotspot (378, 256, 230, 58) clicked Jump("center")
+        hotspot (528, 529, 170, 66) clicked Jump("sugarcane")
+        hotspot (258, 326, 210, 55) clicked Jump("base")
 
 screen say(who, what):
     style_prefix "say"
