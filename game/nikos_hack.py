@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 
 def main():
     """
+    Welcome to your first hack!
+
     Change "Niko wuz here" to a new message & view your mod in the console
 
     All this text is a comment. Computers do not read between the """ """
