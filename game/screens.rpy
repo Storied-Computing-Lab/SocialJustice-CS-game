@@ -140,6 +140,16 @@ screen guahan_imagemap(): #Preparing the imagemap
         hotspot (528, 529, 170, 66) clicked Jump("sugarcane")
         hotspot (258, 326, 210, 55) clicked Jump("base")
 
+screen dededo_imagemap():
+    imagemap:
+        ground "dededo_village_center.png"
+        #ground "guahan.png"
+        hover "dededo_village_center_hover.png"
+
+        hotspot (6, 422, 128, 192) clicked Jump("fleamarket")
+        hotspot (1026, 513, 238, 203) clicked Jump("driving")
+        hotspot (664, 524, 237, 64) clicked Jump("skatepark")
+
 screen say(who, what):
     style_prefix "say"
 

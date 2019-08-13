@@ -1,6 +1,7 @@
+from __future__ import unicode_literals
+
 def main():
     """
-    This code only prints one message to the console.
     Change "Niko wuz here" to a new message & view your mod in the console
 
     All this text is a comment. Computers do not read between the """ """

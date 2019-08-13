@@ -5,6 +5,10 @@
 
 image tinian japaneseGate = "tinian japaneseGate.png"
 image claras_computer_screen = "claras_computer_screen.png"
+image center library_space = "library_computer_lab.png"
+image skatepark = "dededo_skatepark.jpg"
+image flea_market = "dededo_fleamarket1.jpg"
+image driving = "driving.jpg"
 define t = Character("Tita")
 
 $ config.console = True
@@ -79,7 +83,7 @@ label start:
     # images directory to show it.
 
     scene tinian japaneseGate
-    $ print("Hello world japaneseGate")
+    #$ print("Hello world japaneseGate")
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -91,9 +95,7 @@ label start:
 
     show screen player_actions
 
-    call check_nikos_hack
-
-    call a_The_Build_Up
+    #call a_The_Build_Up
 
     call aa_The_Disasters
 

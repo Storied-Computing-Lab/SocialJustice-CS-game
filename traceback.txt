@@ -1,21 +1,31 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'guahan_idle1.png'>:
-  File "game/script.rpy", line 96, in script call
-    call a_The_Build_Up
-  File "game/guahan_imagemap.rpy", line 2, in script
-    call screen guahan_imagemap
+While running game code:
+  File "game/script.rpy", line 100, in script call
+    call aa_The_Disasters
+  File "game/day_dependent_locations/dededo.rpy", line 2, in script
+    call screen dededo_imagemap
   File "renpy/common/000statements.rpy", line 531, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-IOError: Couldn't find file 'guahan_idle1.png'.
+  File "game/screens.rpy", line 143, in execute
+    screen dededo_imagemap():
+  File "game/screens.rpy", line 143, in execute
+    screen dededo_imagemap():
+  File "game/screens.rpy", line 144, in execute
+    imagemap:
+  File "game/screens.rpy", line 149, in execute
+    hotspot (6, 422, 128, 192) clicked Jump(fleamarket)
+  File "game/screens.rpy", line 149, in keywords
+    hotspot (6, 422, 128, 192) clicked Jump(fleamarket)
+NameError: name 'fleamarket' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 96, in script call
-    call a_The_Build_Up
-  File "game/guahan_imagemap.rpy", line 2, in script
-    call screen guahan_imagemap
+  File "game/script.rpy", line 100, in script call
+    call aa_The_Disasters
+  File "game/day_dependent_locations/dededo.rpy", line 2, in script
+    call screen dededo_imagemap
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 1911, in execute
     self.call("execute")
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 1899, in call
@@ -30,61 +40,36 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2690, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3174, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2086, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 516, in renpy.display.render.render_screen
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 669, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 740, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 1152, in render
-    back = render(style.background, bw, bh, st, at)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/imagemap.py", line 52, in render
-    cr = render(self.child, width, height, st, at)
-  File "render.pyx", line 151, in renpy.display.render.render
-  File "render.pyx", line 244, in renpy.display.render.render
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/im.py", line 580, in render
-    return cache.get(self, render=True)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/im.py", line 266, in get
-    surf = image.load()
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/im.py", line 625, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'guahan_idle1.png'.
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 424, in visit_all
+    callback(self)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 434, in per_interact
+    self.update()
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 619, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 143, in execute
+    screen dededo_imagemap():
+  File "game/screens.rpy", line 143, in execute
+    screen dededo_imagemap():
+  File "game/screens.rpy", line 144, in execute
+    imagemap:
+  File "game/screens.rpy", line 149, in execute
+    hotspot (6, 422, 128, 192) clicked Jump(fleamarket)
+  File "game/screens.rpy", line 149, in keywords
+    hotspot (6, 422, 128, 192) clicked Jump(fleamarket)
+  File "<screen language>", line 149, in <module>
+NameError: name 'fleamarket' is not defined
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 TestNovel1 1.0
-Tue Aug  6 09:13:35 2019
+Fri Aug  9 21:44:50 2019

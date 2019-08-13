@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 135: u'R' is not a keyword argument or valid child for the imagemap statement.
-    hover "guahan_hover.png"R
-                             ^
+The label flea_market is defined twice, at
+  File "game/day_dependent_locations/dededo.rpy", line 8 and
+  File "game/day_dependent_locations/dededo.rpy", line 16.
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Mon Aug  5 09:57:26 2019
+Fri Aug  9 21:42:47 2019
