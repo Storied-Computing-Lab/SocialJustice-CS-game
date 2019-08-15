@@ -5,6 +5,8 @@
 
 image tinian japaneseGate = "tinian japaneseGate.png"
 image claras_computer_screen = "claras_computer_screen.png"
+#image clara_desktop = "clara_desktop.png"
+image atom_opened = "atom-opened.png" 
 image center library_space = "library_computer_lab.png"
 image skatepark = "dededo_skatepark.jpg"
 image flea_market = "dededo_fleamarket1.jpg"

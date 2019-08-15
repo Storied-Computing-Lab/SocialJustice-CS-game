@@ -106,6 +106,11 @@ screen simple_screen():
 screen claras_computer():
     add "claras_computer_screen.png" xalign 0.5 yalign 0.4
     text "Welcome Back Clara"
+    imagemap:
+        idle "clara_desktop.png"
+        hover "clara_desktop_hover.png"
+
+        hotspot (1166, 428, 107, 134) clicked Show("atom_opened_screen")
     #text "press shift + D to see devtools"
     #text "press esc to return here"
     frame:
@@ -116,6 +121,9 @@ screen claras_computer():
                 #hide claras_computer_screen
                 action Jump("guahan_imagemap")
 
+screen atom_opened_screen():
+    add "atom-game-opened.png" xalign .5 yalign .4
+
 screen player_actions():
     frame:
         xalign 0.8 ypos 50
@@ -125,7 +133,7 @@ screen player_actions():
                 #action Return(True)
             textbutton "Create":
                 #action Show("simple_screen")
-                action Show("claras_computer")
+                action Show("claras_computer") #this is maybe not great?
             textbutton "Explore":
                 action Jump("guahan_imagemap")
 
