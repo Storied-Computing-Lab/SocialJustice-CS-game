@@ -6,7 +6,7 @@
 image tinian japaneseGate = "tinian japaneseGate.png"
 image claras_computer_screen = "claras_computer_screen.png"
 #image clara_desktop = "clara_desktop.png"
-image atom_opened = "atom-opened.png" 
+image atom_opened = "atom-opened.png"
 image center library_space = "library_computer_lab.png"
 image skatepark = "dededo_skatepark.jpg"
 image flea_market = "dededo_fleamarket1.jpg"
@@ -23,7 +23,7 @@ transform lowered_left:
     xalign 0.0
     yalign -0.1
 
-transform lowered_right: #works with Niko's body
+transform nb_lowered_right: #works with Niko's body
     xalign 1.0
     yalign -.8
 
@@ -31,9 +31,9 @@ transform t_lowered_right: #works with Tita's body
     xalign 1.0
     yalign -.1
 
-transform upper_right: #works with Niko's body
-    xalign .83
-    yalign 0.15
+transform nh_upper_right: #works with Niko's head?
+    xalign .825
+    yalign -.03
 
 init python:
 
@@ -91,13 +91,9 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show clara phone at lowered_center
-
-    # These display lines of dialogue.
-
     show screen player_actions
 
-    #call a_The_Build_Up
+    call a_The_Build_Up
 
     call aa_The_Disasters
 
