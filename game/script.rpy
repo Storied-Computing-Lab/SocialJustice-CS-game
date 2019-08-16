@@ -25,15 +25,15 @@ transform lowered_left:
 
 transform nb_lowered_right: #works with Niko's body
     xalign 1.0
-    yalign -.8
+    yalign -1.5 #negative moves it down, positive moves it up. Recompile all of renpy
 
 transform t_lowered_right: #works with Tita's body
     xalign 1.0
     yalign -.1
 
 transform nh_upper_right: #works with Niko's head?
-    xalign .825
-    yalign -.03
+    xalign .835
+    yalign -.01 #more negative moves it up?
 
 init python:
 
@@ -91,7 +91,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show screen player_actions
+    #show screen player_actions
 
     call a_The_Build_Up
 
