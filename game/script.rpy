@@ -56,21 +56,20 @@ init python:
 
         STAT_DEFAULTS = {
             'gender' : 'f',
-            'age' : 22,
             'location' : 'airport',
             'connections' : {}
         }
 
 default test_name = "Clara"
 define character.c = Character("[test_name]")
-default c = CharacterStats("c", location='japaneseGate', age=21, connections = {'Niko': {},'Tita': {}})
+default c = CharacterStats("c", location='japaneseGate', connections = {'Niko': {},'Tita': {}})
 #July 16th programming tangent: this 'connections' web 'who knows who' needs to be maintained in another script, datastructure??
 
 define character.n = Character("Niko")
-default n = CharacterStats("n", age = 21, connections = {'Andrew':{},'Tita':{}, 'Clara':{}})
+default n = CharacterStats("n", connections = {'Andrew':{},'Tita':{}, 'Clara':{}})
 
 define character.b = Character("Braelin")
-default b = CharacterStats("n", age = 21, connections = {'Andrew':{}})
+default b = CharacterStats("n", connections = {'Andrew':{}})
 
 define character.e = Character("Esperansa")
 default e = CharacterStats("e", connections = {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
