@@ -23,16 +23,47 @@ label a_The_Build_Up:
             n "and I've told YOU before that it might be weird if you're the only girl"
             label radical_convo1:
                 c "C'mon Niko!"
-                n "sorry, you're right. That's sexist. I'm sorry"
-                c "and anyways, right now YOU're the only Chamoru in the group!"
-                $ pass#No player choices need to interrupt, but here just like KK:H some reward for reimaging could fly into the air? idk it's a good plot point?
-                menu: #I'm mostly ok slash kinda excited about this player choice, I just want to make their input EVEN MORE CRUCIAL
-                    "With me that would make two Chamorus in the group":
-                        c "But Niko with me that would make two Chamorus in the group!"
-                        """
-                        This choice needs more consequences
-                        """
+                n "sorry..."
+                c "Wouldn't it be better for all of us if you guys had a new perspective on the team?"
+                n "I guess. I'm just worried about how you'd fit in with the guys"
+                menu: #both choices need to have POSTIIVE and NEGATIVE clear consequences
+                    "I'm pretty flexible":
+                    """
+                    THIS ONE REALLY NEEDS SOME WORK:
+                    """
+                        n "I don't know Clara. I know you're smart, but the guys..."
+                        n "...."
+                        n "They just really... ACT like guys, you know?"
+                        c "I said I can handle it. Trust me."
+                        c "And you've got my back, right Niko?"
+                        n "--"
+                        n "----"
+                        n "yeah of course Cuz"
+                        "Niko's hesitation was kind of weird. So you try another angle"
+                        $pass #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
+                    "They would need to do some work to adjust to a new perspective":
+                        n "oh-- Do some work to adjust--? Adjust to you?"
+                        c "We all have to do the work we have to so that we all 'fit in' together."
+                        $pass #the change the game choice. The
+                """
+                be explicit with the player how you leveled up yourself:
+                You just helped Clara cope with master's concerns cloak coping versus master is accountable. Both are anti-oppression work?)
+                """
+
+                """ Not really there yet, but eventually:
+                be explicit with the player how you leveled up Niko (internalized misogyny)
+                """
+
+                c "and plus, right now YOU're the only Chamoru in the group!":
+                n "So?"
+                menu: #I'm mostly ok slash kinda excited about this player choice, I just want to make their input EVEN MORE CRUCIAL,
+                #like the player choice that happens later in choosing Tita's evacuation versus Esperansa's stand and defend
+                #In ^that case, it will really change the course of the story. What does THISv choice do?
+                    "With me that would make TWO Chamorus in the group!":
+                        c "Soooo! Niko with me that would make TWO Chamorus in the group!"
+                        n ""
                         $ x = 1 #something to level up her breaking in and disrupting score I guess
+                        $ pass#No player choices need to interrupt, but here just like KK:H some reward for reimaging could fly into the air? idk it's a good plot point?
                     "Maybe we should form a brand new hacker group of Chamorus!":
                         c "Maybe you and I could form a brand new Chamoru hacker group Niko"
                         c "It could focus on Chamoru specific issues. What do you think?"
