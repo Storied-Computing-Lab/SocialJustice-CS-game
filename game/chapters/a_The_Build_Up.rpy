@@ -14,6 +14,10 @@ label a_The_Build_Up:
 
     n "It's fine why are you so interested?"
 
+    """
+    On second playthrough of this dialogue, Aug 26, I'm less horrified of the player choices, just need to be more rewarding or to really change responsive from Niko
+    """
+
     menu:
         "I've told ya before I've been working on my hacking and I wanna join too":
             n "and I've told YOU before that it might be weird if you're the only girl"
@@ -21,9 +25,13 @@ label a_The_Build_Up:
                 c "C'mon Niko!"
                 n "sorry, you're right. That's sexist. I'm sorry"
                 c "and anyways, right now YOU're the only Chamoru in the group!"
-                menu:
+                $ pass#No player choices need to interrupt, but here just like KK:H some reward for reimaging could fly into the air? idk it's a good plot point?
+                menu: #I'm mostly ok slash kinda excited about this player choice, I just want to make their input EVEN MORE CRUCIAL
                     "With me that would make two Chamorus in the group":
-                        c "With me that would make two Chamorus in the group!"
+                        c "But Niko with me that would make two Chamorus in the group!"
+                        """
+                        This choice needs more consequences
+                        """
                         $ x = 1 #something to level up her breaking in and disrupting score I guess
                     "Maybe we should form a brand new hacker group of Chamorus!":
                         c "Maybe you and I could form a brand new Chamoru hacker group Niko"
