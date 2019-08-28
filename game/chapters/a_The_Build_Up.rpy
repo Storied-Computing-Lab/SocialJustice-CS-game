@@ -43,7 +43,7 @@ label a_The_Build_Up:
                         $pass #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
                     "They would need to do some work to adjust to a new perspective":
                         n "oh-- Do some work to adjust--? Adjust to you?"
-                        c "We all have to do the work we have to so that we all 'fit in' together."
+                        c "We each have to do the work so that we all 'fit in' together."
                         $pass #the change the game choice. The
                 """
                 be explicit with the player how you leveled up yourself:
