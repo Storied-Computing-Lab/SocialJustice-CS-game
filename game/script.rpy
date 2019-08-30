@@ -19,13 +19,13 @@ transform lowered_center:
     xalign 0.5
     yalign -0.1
 
-transform lowered_left:
-    xalign 0.0
-    yalign -0.1
+transform lowered_left_2:
+    xalign -0.1
+    yalign 1.0
 
 transform nb_lowered_right: #works with Niko's body
     xalign 1.0
-    yalign -1.5 #negative moves it down, positive moves it up. Recompile all of renpy
+    yalign -0.1 #aparently not?? #negative moves it down, positive moves it up. Recompile all of renpy
 
 transform t_lowered_right: #works with Tita's body
     xalign 1.0

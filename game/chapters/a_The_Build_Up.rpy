@@ -11,13 +11,12 @@ label a_The_Build_Up:
 
     $claras_computer_locked = True
 
-    show clara phone at lowered_center
-    show niko_neutral_body at nb_lowered_right
-    show niko_face_calm at nh_upper_right
+    show clara_neutral_eyes_open at lowered_left_2
+    show niko_neutral_eyes_neutral at nb_lowered_right
 
     c "Hey cousin"
-    hide niko_face_calm
-    show niko_face_raisedeyebrow at nh_upper_right
+    #hide niko_neutral_eyes_neutral
+    #show niko_neutral_eyes_slight_smile at nb_lowered_right
     """
     On second playthrough of this dialogue, Aug 26, I'm less horrified of the player choices, just need to be more rewarding or to really change responsive from Niko
     """
