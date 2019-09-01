@@ -105,7 +105,7 @@ label a_The_Build_Up:
             n "They don't say racist things or discriminate against me for being Chamoru"
             c "But isn't there a reason you said 'it might be cool' to just be Chamoru hackers together?"
             $ x = 1 #helping Niko be critical using her ability should be a reward somehow, unlock something? idk
-            n "A reason? Yeah...I think we might be able to "
+            n "A reason? Hm... It does piss me off when they say shit about the poorer parts of town."
         "Maybe he's right, but does he experience any discrimination?": #learn or level up imagining ability by learning how to imagine together
             show text "+10% Reclaim our imagination" at text_choice_effect
             c "Yeah, I guess it's hard to say if someone is racist or not. What do you think?"
@@ -125,12 +125,9 @@ label a_The_Build_Up:
     c "What should we do?"
     n "I've got a new hacker challenge for you to try."
 
+    #c "Well anyways, I really do want another challenge. They can't keep rejecting me after all the great programming I've done so far"
 
-
-
-    c "Well anyways, I really do want another challenge. They can't keep rejecting me after all the great programming I've done so far"
-
-    n "Well I wasn't gonna say it but the new challenge is out if you're ready to try again."
+    #n "Well I wasn't gonna say it but the new challenge is out if you're ready to try again."
 
     menu:
         "Well I'm glad you said something! I can do it today!":
