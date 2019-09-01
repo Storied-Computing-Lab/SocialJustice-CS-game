@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/a_The_Build_Up.rpy", line 64: end of line expected.
-    c "and plus, right now YOU're the only Chamoru in the group!":
-                                                                 ^
+File "game/chapters/a_The_Build_Up.rpy", line 35: expected 'simple_expression' not found.
+    show niko_neutral_eyes_worried at
+                                     ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Thu Aug 29 10:07:33 2019
+Sun Sep  1 11:19:04 2019
