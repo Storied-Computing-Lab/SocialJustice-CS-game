@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-image tinian japaneseGate = "tinian japaneseGate.png"
+image tinian japaneseGate = "misc/tinian-japaneseGate.png"
 image claras_computer_screen = "claras_computer_screen.png"
 #image clara_desktop = "clara_desktop.png"
 image atom_opened = "atom-opened.png"

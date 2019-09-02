@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/a_The_Build_Up.rpy", line 108: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                n "A reason? Hm... It does piss me off when they say shit about the poorer parts of town.""
+File "game/script.rpy", line 86: expected 'image_name_component' not found.
+    show "tinian-japaneseGate.png"
+         ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Sun Sep  1 12:23:16 2019
+Mon Sep  2 10:51:56 2019
