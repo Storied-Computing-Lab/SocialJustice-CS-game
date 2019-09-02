@@ -1,5 +1,0 @@
-label Niko_reflect_1:
-    python:
-        Niko_relation_reflect_1 = renpy.input("How did I feel about that conversation with Niko?")
-        claras_conns = c.connections
-        claras_conns['Niko']['relation_reflect_1'] = Niko_relation_reflect_1
