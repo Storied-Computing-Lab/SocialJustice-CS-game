@@ -98,31 +98,31 @@ label start:
 
     #show screen player_actions
 
-    call a_The_Build_Up from _call_a_The_Build_Up
+    call a_The_Build_Up
 
-    call aa_The_Disasters from _call_aa_The_Disasters
+    call aa_The_Disasters
 
-    call ab_The_Clash from _call_ab_The_Clash
+    call ab_The_Clash
 
-    call ac_The_Meeting from _call_ac_The_Meeting
+    call ac_The_Meeting
 
-    call ad_The_Demands from _call_ad_The_Demands
+    call ad_The_Demands
 
-    call ae_The_Resistance from _call_ae_The_Resistance
+    call ae_The_Resistance
 
-    call af_The_Translation from _call_af_The_Translation
+    call af_The_Translation
 
-    call ag_The_Silence from _call_ag_The_Silence
+    call ag_The_Silence
 
-    call ah_The_Renewal from _call_ah_The_Renewal
+    call ah_The_Renewal
 
-    call ai_The_News from _call_ai_The_News
+    call ai_The_News
 
-    call aj_The_Takeover from _call_aj_The_Takeover
+    call aj_The_Takeover
 
-    call ak_The_Reach from _call_ak_The_Reach
+    call ak_The_Reach
 
-    call al_The_End from _call_al_The_End
+    call al_The_End
 
     $how_much_tita_likes_me = c.connections['Tita']
     $claras_conns = c.connections
@@ -152,7 +152,7 @@ label start:
                 "I think I understand":
                     e "I'm still learning, too, but I think saying pronouns can mean a lot to people" #points towards some quest or unlocking of Ma'ase ?
 
-    call Niko_reflect_1 from _call_Niko_reflect_1
+    call Niko_reflect_1
 
     "Expected: Clara 21 japaneseGate\nReceived: [c.name] [c.age] [c.location]"
     # trouble getting [c.connections['MC']] to work, actually it doesn't like [e.connections.keys] either, I think
@@ -161,7 +161,7 @@ label start:
 
     c "Whoa, I'm coming alive!"
 
-    call appearing from _call_appearing
+    call appearing
 
     "Wow! Who are you?"
     c "It's magic! She comes and goes!"
@@ -169,7 +169,7 @@ label start:
     c "Begin the root_virus challenge"
 
     #This call didn't work (June 20)
-    call kill_virus from _call_kill_virus
+    call kill_virus
 
     c "At this point, you should have finished the virus challenge"
 
@@ -181,7 +181,7 @@ label start:
 
     c "Well, now it's time to access the Navy's servers"
 
-    call guessing_game2 from _call_guessing_game2
+    call guessing_game2
 
     c "We can see their servers now. I should tell the other activists."
 
