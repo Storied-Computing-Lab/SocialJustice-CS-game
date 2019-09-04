@@ -42,7 +42,7 @@ init python:
 
 init python:
 
-    import BaseStatsObject_CharacterStats
+    import utilities.BaseStatsObject_CharacterStats as BS_CS
 
     class Connections(object):
         def __init__(self):
@@ -50,7 +50,7 @@ init python:
             self.connections.connections = {}
 
 
-    class CharacterStats(BaseStatsObject):
+    class CharacterStats(BS_CS.BaseStatsObject):
 
         # Set the store.{prefix}.character_id value
         # STORE_PREFIX = "character_stats"
@@ -68,17 +68,17 @@ init python:
 
 default test_name = "Clara"
 define character.c = Character("[test_name]")
-default c = CharacterStats("c", location='japaneseGate', connections = {'Niko': {},'Tita': {}})
+#default c = CharacterStats("c", location='japaneseGate', connections = {'Niko': {},'Tita': {}})
 #July 16th programming tangent: this 'connections' web 'who knows who' needs to be maintained in another script, datastructure??
 
 define character.n = Character("Niko")
-default n = CharacterStats("n", connections = {'Andrew':{},'Tita':{}, 'Clara':{}})
+#default n = CharacterStats("n", connections = {'Andrew':{},'Tita':{}, 'Clara':{}})
 
 define character.b = Character("Braelin")
-default b = CharacterStats("n", connections = {'Andrew':{}})
+#default b = CharacterStats("n", connections = {'Andrew':{}})
 
 define character.e = Character("Esperansa")
-default e = CharacterStats("e", connections = {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
+#default e = CharacterStats("e", connections = {'Andrew':{},'Tita':{}, 'Clara':{}, 'Cdr Rubino':{}, 'deRoche':{}, 'MaAse':{}})
 
 
 # The game starts here.

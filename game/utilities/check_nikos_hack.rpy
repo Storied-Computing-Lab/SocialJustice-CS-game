@@ -1,7 +1,7 @@
 label check_nikos_hack:
     python:
         from __future__ import unicode_literals
-        import nikos_hack
+        import NIKO_WUZ_HERE_LOL
         import sys
         #print(sys.path)
         #print(sys.version)
@@ -14,7 +14,7 @@ label check_nikos_hack:
         while True:
             try:
                 nikos_hack.main()
-                nikos_hack = reload(nikos_hack)
+                nikos_hack = reload(NIKO_WUZ_HERE_LOL)
                 with mock.patch('sys.stdout', new_callable = StringIO.StringIO) as mock_stdout:
                     nikos_hack.main()
                     if mock_stdout.getvalue() == 'Niko wuz here\n':
