@@ -1,5 +1,5 @@
 label aa_The_Disasters:
-
+    return
     menu:
         "Explore the sugarcane crops":
             $day = 1

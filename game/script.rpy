@@ -23,6 +23,10 @@ transform lowered_left_2:
     xalign -0.1
     yalign 1.0
 
+transform lowered_left:
+    xalign -0.1
+    yalign -0.1
+
 transform nb_lowered_right: #works with Niko's body
     xalign 1.0
     yalign -0.1 #aparently not?? #negative moves it down, positive moves it up. Recompile all of renpy
@@ -124,115 +128,13 @@ label start:
 
     call al_The_End from _call_al_The_End
 
-    $how_much_tita_likes_me = c.connections['Tita']
-    $claras_conns = c.connections
-    $print("Clara's conns: " + str(claras_conns.keys()))
-    $print("Who Clara Knows: " + str(claras_conns.keys())) #returns [u'Tita', u'Niko']
-    $print(str(claras_conns.keys()[0]))
-
-    $print("Who Niko Knows: " + str(n.connections.keys()))
-
-    $hwtl = str(how_much_tita_likes_me) #doesn't make sense anymore because Tita now points to a dictionary, not an int
-    e "Hafa Adai, I'm Esperansa, 'she, her, and hers'"
-
-    "Esperansa offers you a tired smile"
-
-    menu:
-        "I'm Clara, she, her, hers":
-            e "Great to meet you Clara!"
-        "I'm Clara":
-            e "Great to meet you Clara!"
-        "I'm Clara, why'd you list those pronouns?":
-            e "Great question Clara, I'm trying not to assume someone's gender when I first meet them"
-            menu:
-                "But isn't it more polite to assume just looking at me that I'm a girl?":
-                    e "I think gender is a spectrum, and male/female boxes restrict people. What do you think?"
-                "I still don't understand":
-                    e "That's ok, we can talk again soon!" #set Esperansa_revisit_gender_binary = True
-                "I think I understand":
-                    e "I'm still learning, too, but I think saying pronouns can mean a lot to people" #points towards some quest or unlocking of Ma'ase ?
-
-    call Niko_reflect_1 from _call_Niko_reflect_1
-
-    "Expected: Clara 21 japaneseGate\nReceived: [c.name] [c.age] [c.location]"
-    # trouble getting [c.connections['MC']] to work, actually it doesn't like [e.connections.keys] either, I think
 
     show clara phone at lowered_left
-
-    c "Whoa, I'm coming alive!"
-
-    call appearing from _call_appearing
-
-    "Wow! Who are you?"
-    c "It's magic! She comes and goes!"
-
-    c "Begin the root_virus challenge"
-
-    #This call didn't work (June 20)
-    call kill_virus from _call_kill_virus
-
-    c "At this point, you should have finished the virus challenge"
-
-
-
-    #This call is having trouble (July 3)
-    #call Managed_Memory/kill_virus
-
-
-    c "Well, now it's time to access the Navy's servers"
-
-    call guessing_game2 from _call_guessing_game2
-
-    c "We can see their servers now. I should tell the other activists."
-
-    "We see Teresita walking from the center of the {i}siudát{/i}, or city"
-    "It's strange how similar the language is to Spanish..."
-    "siudát sounds just like ciudad..."
-
     show tita_neutral at t_lowered_right
 
-    c "Hi Teresita! We just got a through to their servers"
-    c "But we've only got a few hours before they notice us"
-    c "After that we'll have to switch IP addresses again before our next hack."
-
-    t "Clara, are you sure this is the best way you want to help our cause?"
-    t "You just have so many talents other than hacking"
-    t "Are you sure hacking really for {i}you{/i}?"
-
-    '''
-    MAYBE NOT HERE BUT PLAYER CAN CHOOSE FROM A FEW OPTIONS WHICH OTHER TALENTS CLARA HAS
-    '''
-
-    "{i}It seems that Teresita is uncomfortable with the idea of hacking the powerful US Navy.{/i}"
-    "{i}Who wouldn't be?{/i}"
-
-    #change Clara expression
-    c "Don't worry Tita, we've set up security precautions"
-
-    #change Tita expression
-    t "That's good. You have a good team, but don't think you have to stay, Clara"
-    t "I like those computer boys but if you ever feel your interests lie elsewhere..."
-
-    #change
-    c "....."
-    c "....."
-    "FOR DRAFTING ONLY : player choose how to respond to Tita"
-    "FOR DRAFTING ONLY : Whatever player chooses to do next, still say:"
-
-    "{i}Tita doesn't exactly encourage me to be a coder{/i}"
-    "{i}That's for sure{/i}"
-    "{i}Why can't I be one of those \"computer guys\" she likes?{/i}"
-    c "Well..any social cause needs a diversity of approaches to activism"
-    "DRAFTING ONLY: player chooses again whether or not to leave the hacking track here"
-    # if hacking:
-    # c "But I am the gal to get it done through coding! I wanna keep trying."
-    # if 2nd time player affirms they wanna leave:
-    # c "So I think it's time to try another approach!"
-
-
-
-
-
+    "Here ends the HEARST DEMO"
+    "THANK YOU FOR PLAYING!"
+    "GOODBYE"
 
     # This ends the game.
 
