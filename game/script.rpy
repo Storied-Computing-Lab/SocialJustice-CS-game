@@ -12,6 +12,9 @@ image skatepark = "dededo_skatepark.jpg"
 image flea_market = "dededo_fleamarket1.jpg"
 image driving = "driving.jpg"
 define t = Character("Tita")
+default stand_s = 0
+default imagine_s = 0
+default norms_s = 0
 
 $ config.console = True
 
@@ -101,6 +104,8 @@ label start:
     # directory.
 
     #show screen player_actions
+
+    show screen control()
 
     call a_The_Build_Up from _call_a_The_Build_Up
 

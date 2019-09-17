@@ -63,6 +63,7 @@ label a_The_Build_Up:
         "I'm pretty flexible":
             #THIS ONE REALLY NEEDS SOME WORK:
             show text "+10% Stand your ground" at text_choice_effect
+            $stand_s += .10
             n "I don't know Clara. I know you're smart, but the guys..."
             n "...."
             n "They just really... ACT like guys, you know?"
@@ -71,10 +72,10 @@ label a_The_Build_Up:
             n "--"
             n "----"
             n "yeah of course Cuz"
-            "Niko's hesitation was kind of weird. So you try another angle"
-            $pass #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
+            "Niko's hesitation was kind of weird. So you try another angle" #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
         "They'd need to adjust to a new perspective":
             show text "+10% Challenging norms" at text_choice_effect
+            $norms_s += .10
             c "Well as far as fitting in,"
             c "I acutally think THEY would need to do work to adjust and welecome a Chamoru, female perspective!"
             n "oh-- Do some work to adjust--? Adjust to you?"
@@ -101,17 +102,17 @@ label a_The_Build_Up:
     #In ^that case, it will really change the course of the story. What does THISv choice do?
         "With me that would make TWO Chamorus in the group!":
             show text "+10% Stand your ground" at text_choice_effect
+            $stand_s += .10 #something to level up her breaking in and disrupting score I guess
             c "Soooo! Niko with me that would make TWO Chamorus in the group!"
             n "Hm. Maybe you're right that would improve things..."
             n "They do sometimes look at me weird whenever I question their jokes about people from Dededo"
-            $ x = 1 #something to level up her breaking in and disrupting score I guess
             $ pass#No player choices need to interrupt, but here just like KK:H some reward for reimaging could fly into the air? idk it's a good plot point?
         "Maybe we should form a brand new hacker group of Chamorus!":
             show text "+10% Reclaim our imagination" at text_choice_effect
+            $imagine_s += .10#an animation to level up Clara's reimagining skill
             c "Maybe you and I could form a brand new Chamoru hacker group Niko"
             c "It could focus on Chamoru specific issues. What do you think?"
             n "That actually might be cool"
-            $ x = 1 #an animation to level up Clara's reimagining skill
             $ x = 1 #< -- but Niko and the PLAYER still need to help her somehow reimagine ??
             $ x = 1 #an animation to level up Niko's radicalization
     n "Hm. Yeah. But I don't think the hacker boys are 'racist'..."
@@ -126,8 +127,8 @@ label a_The_Build_Up:
             n "A reason? Hm... It does piss me off when they say shit about the poorer parts of town."
         "Maybe he's right, but does he experience any discrimination?": #learn or level up imagining ability by learning how to imagine together
             show text "+10% Reclaim our imagination" at text_choice_effect
+            $imagine_s += .10 #giving Niko the space to imagine together? Show his colors
             c "Yeah, I guess it's hard to say if someone is racist or not. What do you think?"
-            $ x = 1 #giving Niko the space to imagine together? Show his colors
             n "Well I was thinking about the Chamoru hacker group you mentioned."
 
     n "What if the Chamoru hackers really did a different type of hacking?"
