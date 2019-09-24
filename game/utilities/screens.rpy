@@ -341,6 +341,7 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Stats") action ShowMenu('statistics')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -392,6 +393,8 @@ screen navigation():
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
+
+        textbutton _("Statistics") action ShowMenu("statistics")
 
         if _in_replay:
 
@@ -950,7 +953,82 @@ style slider_button_text:
 
 style slider_vbox:
     xsize 450
+## Statistics screen ##############################################################
+##frame:
+##
+##
+##
 
+screen statistics():
+    tag menu
+
+    use game_menu(_("Statistics"), scroll="viewport"):
+
+        vbox:
+
+            hbox:
+                #box_wrap True
+
+                vbox:
+                    label _("Critique")
+                    text "Stand your ground: [stand_s]"
+                    text "Challenge norms: [norms_s]"
+                xpos 300
+                vbox:
+                    #xalign 1.5
+                    label _("Imagine")
+                    text "Reclaim our imagination: [imagine_s]"
+
+            null height (4 * gui.pref_spacing)
+
+            hbox:
+                style_prefix "slider"
+                box_wrap True
+
+                vbox:
+
+                    label _("Text Speed")
+
+                    bar value Preference("text speed")
+
+                    label _("Auto-Forward Time")
+
+                    bar value Preference("auto-forward time")
+
+                vbox:
+
+                    if config.has_music:
+                        label _("Music Volume")
+
+                        hbox:
+                            bar value Preference("music volume")
+
+                    if config.has_sound:
+
+                        label _("Sound Volume")
+
+                        hbox:
+                            bar value Preference("sound volume")
+
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
+
+
+                    if config.has_voice:
+                        label _("Voice Volume")
+
+                        hbox:
+                            bar value Preference("voice volume")
+
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
+
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
+
+                        textbutton _("Mute All"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
 
 ## History screen ##############################################################
 ##
