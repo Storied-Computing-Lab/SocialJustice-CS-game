@@ -95,23 +95,6 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-
-#This is your control screen that will allow you to show/hide the stat screen
-screen control():
-    frame:
-        xalign 0.95
-        yalign 0.7
-        textbutton "Stat Box" action If(renpy.get_screen("stat_box"), Hide("stat_box"), Show("stat_box"))
-
-#This is your stat_box Screen
-screen stat_box():
-    frame:
-        align (0.5,0.5)
-        vbox:
-            text "Stand your ground: [stand_s]"
-            text "Reclaim our imagination: [imagine_s]"
-            text "Challenge norms: [norms_s]"
-
 screen simple_screen():
     frame:
         xalign 0.5 ypos 50
@@ -968,12 +951,11 @@ screen statistics():
 
             hbox:
                 #box_wrap True
-
+                spacing 45
                 vbox:
                     label _("Critique")
                     text "Stand your ground: [stand_s]"
                     text "Challenge norms: [norms_s]"
-                xpos 300
                 vbox:
                     #xalign 1.5
                     label _("Imagine")

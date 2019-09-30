@@ -1,94 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 264, in script
-    python:
-  File "renpy/common/00start.rpy", line 264, in script
-    python:
-  File "renpy/common/00start.rpy", line 268, in <module>
-    renpy.call_in_new_context("_main_menu")
-  File "game/utilities/screens.rpy", line 961, in execute
-    screen statistics():
-  File "game/utilities/screens.rpy", line 961, in execute
-    screen statistics():
-  File "game/utilities/screens.rpy", line 964, in execute
-    use game_menu(_("Statistics"), , scroll="viewport"):
-SyntaxError: unexpected EOF while parsing (screens.rpy, line 963)
+  File "game/script.rpy", line 108, in script
+    show screen control()
+  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+Exception: Screen control is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/bootstrap.py", line 313, in bootstrap
-    renpy.main.main()
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/main.py", line 525, in main
-    run(restart)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/main.py", line 139, in run
-    renpy.execution.run_context(True)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/execution.py", line 892, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 264, in script
-    python:
-  File "renpy/common/00start.rpy", line 264, in script
-    python:
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00start.rpy", line 268, in <module>
-    renpy.call_in_new_context("_main_menu")
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/game.py", line 332, in call_in_new_context
-    return renpy.execution.run_context(False)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/execution.py", line 892, in run_context
-    context.run()
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ui.py", line 289, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2690, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 424, in visit_all
-    callback(self)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 434, in per_interact
-    self.update()
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 619, in update
-    self.screen.function(**self.scope)
-  File "game/utilities/screens.rpy", line 961, in execute
-    screen statistics():
-  File "game/utilities/screens.rpy", line 961, in execute
-    screen statistics():
-  File "game/utilities/screens.rpy", line 964, in execute
-    use game_menu(_("Statistics"), , scroll="viewport"):
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 190, in evaluate
-    args.append(renpy.python.py_eval(v, locals=scope))
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1959, in py_eval
-    code = py_compile(code, 'eval')
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 690, in py_compile
-    raise e
-SyntaxError: unexpected EOF while parsing (screens.rpy, line 963)
+  File "game/script.rpy", line 108, in script
+    show screen control()
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 1911, in execute
+    self.call("execute")
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 1899, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/statements.py", line 220, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
+    renpy.show_screen(name, *args, **kwargs)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 1077, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen control is not known.
+
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 Guaiya Means Love 1.0
-Tue Sep 24 09:54:15 2019
+Wed Sep 25 10:42:50 2019

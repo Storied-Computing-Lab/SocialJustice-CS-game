@@ -25,7 +25,7 @@ label check_nikos_hack:
             except Exception as e:
                 renpy.say("Clara","Error with nIKO_WUZ_HERE_LOL.py")
                 renpy.say("Clara",str(e))
-                renpy.say("Clara","Press enter to restart")
+                #renpy.say("Clara","Press enter to restart")
                 continue
 
         #$claras_computer_locked = False

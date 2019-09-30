@@ -17,6 +17,8 @@ default imagine_s = 0
 default norms_s = 0
 
 $ config.console = True
+$ config.developer = True
+$ config.debug = True
 
 transform lowered_center:
     xalign 0.5
@@ -43,8 +45,8 @@ transform nh_upper_right: #works with Niko's head?
     yalign -.01 #more negative moves it up?
 
 init python:
-    build.name = "Guaiya_09.03.19"
-    build.directory_name = "Guaiya_09.03.19"
+    build.name = "Guaiya_09.25.19"
+    build.directory_name = "Guaiya_09.25.19"
     build.executable_name = "Guaiya_Means_Love"
 
 init python:
@@ -104,8 +106,6 @@ label start:
     # directory.
 
     #show screen player_actions
-
-    show screen control()
 
     call a_The_Build_Up from _call_a_The_Build_Up
 
