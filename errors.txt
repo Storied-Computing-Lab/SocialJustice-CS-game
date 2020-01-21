@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/utilities/screens.rpy", line 961: style property frame is not known.
-    frame:
-         ^
+File "game/script.rpy", line 47: expected ':' not found.
+    transform t_lowered_right_icls
+                                  ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Tue Sep 24 09:57:19 2019
+Fri Nov 22 17:33:16 2019

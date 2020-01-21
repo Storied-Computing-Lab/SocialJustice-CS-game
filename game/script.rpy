@@ -25,8 +25,12 @@ transform lowered_center:
     yalign -0.1
 
 transform lowered_left_2:
-    xalign -0.1
+    xalign -0.3
     yalign 1.0
+
+transform lowered_left_icls:
+    xalign 0.0
+    yalign 0.5
 
 transform lowered_left:
     xalign -0.1
@@ -40,14 +44,18 @@ transform t_lowered_right: #works with Tita's body
     xalign 1.0
     yalign -.1
 
+transform t_icls:
+    xalign 0.9
+    yalign -1.8
+
 transform nh_upper_right: #works with Niko's head?
     xalign .835
     yalign -.01 #more negative moves it up?
 
 init python:
-    build.name = "Guaiya_09.25.19"
-    build.directory_name = "Guaiya_09.25.19"
-    build.executable_name = "Guaiya_Means_Love"
+    build.name = "Guaiya_11.04.19"
+    build.directory_name = "Guaiya_11.04.19"
+    build.executable_name = "Guaiya_Means_Love.v2"
 
 init python:
 
@@ -106,6 +114,19 @@ label start:
     # directory.
 
     #show screen player_actions
+
+    "DELete: For ICLS screenshot"
+    image tita_icls = im.Scale("images/tita/tita_neutral.png", 500, 750) #Enter specific numbers <--
+    image clara_icls = im.Scale("images/clara/clara_neutral_eyes_open.png", 1000, 1000)
+
+    show clara_neutral_eyes_open at lowered_left_2 with dissolve
+    show tita_icls at t_icls
+
+    menu:
+        "We should resist. (Esperansa's approach)":
+            "delete!"
+        "We should evacuate. (Tita's approach)":
+            "delete!"
 
     call a_The_Build_Up from _call_a_The_Build_Up
 

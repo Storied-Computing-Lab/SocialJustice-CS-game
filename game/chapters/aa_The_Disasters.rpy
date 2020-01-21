@@ -1,5 +1,34 @@
 label aa_The_Disasters:
     return
+
+    #show Esperansa at lowered_right
+    e "Hi! I'm Esperansa."
+    c "Hi! Niko mentioned you're involved in social justice movements here on our islands?"
+    e "That's right!"
+    e "What's your background with social justice issues?"
+    e "Or, like, what's got you interested?"
+
+    menu:
+        "I've experienced gender inequality in hacking":
+            e "That's real."
+            c "Are you doing any work to address gender inequality?"
+            e "Yes! That's something our community is really concerned with actually."
+        "I want to learn about the challenges other islanders face"
+            e "The U.S. military buildup is one big problem facing a lot of us now."
+            c "Why is that?"
+            e "Great question!!"
+        "I'm not sure"
+            e "No worries! I'm glad you're curious about social justice."
+            e "There's a lot of ways to help out, and help is always needed."
+
+    e "This weekend we're having a town meeting to discuss this and other issues"
+    e "and we need to spread the word. Would you help us?"
+    c "Sure! I've got coding experience too if that helps"
+    e "That's just what I was hoping for"
+
+    # PUT 100 flyers challenge here!!!!!!!!!!
+
+
     menu:
         "Explore the sugarcane crops":
             $day = 1

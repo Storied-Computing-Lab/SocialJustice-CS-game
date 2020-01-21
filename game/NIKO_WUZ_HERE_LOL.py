@@ -8,7 +8,6 @@ def main():
 
     All this text is a comment. Computers do not read between the """ """
     Press command + s to save changes here.
-    Press shift + r inside the game to rerun this and all game code after you make changes.
     Press shift + o inside the game to view the console in the game anytime.
     """
 
