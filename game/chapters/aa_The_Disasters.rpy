@@ -13,11 +13,11 @@ label aa_The_Disasters:
             e "That's real."
             c "Are you doing any work to address gender inequality?"
             e "Yes! That's something our community is really concerned with actually."
-        "I want to learn about the challenges other islanders face"
+        "I want to learn about the challenges other islanders face":
             e "The U.S. military buildup is one big problem facing a lot of us now."
             c "Why is that?"
             e "Great question!!"
-        "I'm not sure"
+        "I'm not sure":
             e "No worries! I'm glad you're curious about social justice."
             e "There's a lot of ways to help out, and help is always needed."
 

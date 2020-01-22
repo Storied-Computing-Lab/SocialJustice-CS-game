@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 47: expected ':' not found.
-    transform t_lowered_right_icls
-                                  ^
+The label _call_check_nikos_hack is defined twice, at
+  File "game/chapters/a_The_Build_Up.rpy", line 18 and
+  File "game/chapters/a_The_Build_Up.rpy", line 179.
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Fri Nov 22 17:33:16 2019
+Wed Jan 22 11:05:55 2020
