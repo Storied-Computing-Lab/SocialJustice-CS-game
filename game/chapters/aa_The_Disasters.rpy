@@ -28,6 +28,20 @@ label aa_The_Disasters:
 
     # PUT 100 flyers challenge here!!!!!!!!!!
 
+    #could the "town meeting" be the Tita conversation comic?
+    #could we end this challenge change up this dialgoue to be Tita and Clara
+    """
+    Could I just do 2 digital background?
+    - 1 that has a FNB table?
+    - 2nd one is the inside of the Task Force. (easier to draw, larger)
+    Oops. The comic book snippet actually did a lot of work for this!
+    This is where the dialogue continues:
+    You return to the FNB table as Tita finishes speaking, and Esperansa says, “Tita why hasn’t the task force considered even more resistance? We should fight for our right to stay, instead of giving up and fleeing as they thieve and demolish our ancestral land!”
+    Tita’s face turns grave, “Esperansa I’ve told you a million times, when lives are in danger, it's time to act pragmatically. When the time comes the Navy will get what they want.”
+	“What if we expose these human rights violations? What if we can prove that the military buildup is death to our people? Clara, what do you think?”
+
+    """
+
 
     menu:
         "Explore the sugarcane crops":

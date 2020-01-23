@@ -8,8 +8,8 @@ While running game code:
   File "game/utilities/check_100_posters.rpy", line 2, in script
     python:
   File "game/utilities/check_100_posters.rpy", line 5, in <module>
-    from hacks import hack_100_posters
-ImportError: No module named hacks
+    from game.chapters.hacks import hack_100_posters
+ImportError: No module named game.chapters.hacks
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -25,10 +25,10 @@ Full traceback:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
   File "game/utilities/check_100_posters.rpy", line 5, in <module>
-    from hacks import hack_100_posters
-ImportError: No module named hacks
+    from game.chapters.hacks import hack_100_posters
+ImportError: No module named game.chapters.hacks
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 Guaiya Means Love 1.0
-Wed Jan 22 11:18:36 2020
+Wed Jan 22 19:31:11 2020
