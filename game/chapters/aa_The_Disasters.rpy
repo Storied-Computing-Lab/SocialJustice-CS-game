@@ -2,6 +2,10 @@ label aa_The_Disasters:
     return
 
     #show Esperansa at lowered_right
+    "You come to the table that says 'Food Not Bombs'"
+    "People are serving food to anyone who walks by, for free."
+    "Not a huge crowd. You see the girl with the braids."
+    "Then she sees you."
     e "Hi! I'm Esperansa."
     c "Hi! Niko mentioned you're involved in social justice movements here on our islands?"
     e "That's right!"
@@ -13,7 +17,7 @@ label aa_The_Disasters:
             e "That's real."
             c "Are you doing any work to address gender inequality?"
             e "Yes! That's something our community is really concerned with actually."
-        "I want to learn about the challenges other islanders face":
+        "What's going on with the U.S. Military?":
             e "The U.S. military buildup is one big problem facing a lot of us now."
             c "Why is that?"
             e "Great question!!"
@@ -21,27 +25,37 @@ label aa_The_Disasters:
             e "No worries! I'm glad you're curious about social justice."
             e "There's a lot of ways to help out, and help is always needed."
 
-    e "This weekend we're having a town meeting to discuss this and other issues"
+    "Tita walks up to the table."
+    e "Hey Tita, have you met Clara?"
+    "Esperansa, Clara is my niece!"
+    e "Wow! Shoulda known."
+    c "Why? Haha"
+    e "Tita, doesn't Clara know your work?"
+    c "No, I don't know!"
+    "Clara, will you walk with me?"
+    c "Sure."
+
+    """
+    Comic here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    """
+
+    "You return to the FNB table as Tita finishes speaking."
+    "Esperansa looks troubled."
+    e "Tita why hasn’t the task force considered even more resistance?"
+    e "We should fight for our right to stay, instead of giving up and fleeing as they thieve and demolish our ancestral land!"
+    "Tita’s face turns grave"
+    "Esperansa I’ve told you a million times,"
+    "when lives are in danger, it's time to act pragmatically. When the time comes the Navy will get what they want."
+	e "What if we expose these human rights violations? What if we can prove that the military buildup is death to our people? Clara, what do you think?”
+    #Then she decides,
+
     e "and we need to spread the word. Would you help us?"
     c "Sure! I've got coding experience too if that helps"
-    e "That's just what I was hoping for"
-
+    e "That's just what we need!"
     # PUT 100 flyers challenge here!!!!!!!!!!
-
-    #could the "town meeting" be the Tita conversation comic?
-    #could we end this challenge change up this dialgoue to be Tita and Clara
-    """
-    Could I just do 2 digital background?
-    - 1 that has a FNB table?
-    - 2nd one is the inside of the Task Force. (easier to draw, larger)
-    Oops. The comic book snippet actually did a lot of work for this!
-    This is where the dialogue continues:
-    You return to the FNB table as Tita finishes speaking, and Esperansa says, “Tita why hasn’t the task force considered even more resistance? We should fight for our right to stay, instead of giving up and fleeing as they thieve and demolish our ancestral land!”
-    Tita’s face turns grave, “Esperansa I’ve told you a million times, when lives are in danger, it's time to act pragmatically. When the time comes the Navy will get what they want.”
-	“What if we expose these human rights violations? What if we can prove that the military buildup is death to our people? Clara, what do you think?”
-
-    """
-
+        """
+        Then she does the hack of posters. Either "EVACUATION. RIGHTS FOR REFUGEES" or "RESIST. PROTECT THE LAND"
+        """
 
     menu:
         "Explore the sugarcane crops":
