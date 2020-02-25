@@ -1,4 +1,5 @@
 label check_nikos_hack:
+    show screen simple_screen
     python:
         from __future__ import unicode_literals
         import nIKO_WUZ_HERE_LOL

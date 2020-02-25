@@ -102,6 +102,8 @@ screen simple_screen():
             text "Looking Around"
             textbutton "There is no one here":
                 action Hide("simple_screen")
+            textbutton "Try to say something":
+                action Function(renpy.say, who="Niko", what="Hello World Niko can speak from inside a screen.")
 
 screen claras_computer():
     add "claras_computer_screen.png" xalign 0.5 yalign 0.4

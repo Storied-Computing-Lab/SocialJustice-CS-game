@@ -45,17 +45,15 @@ label aa_The_Disasters:
     e "We should fight for our right to stay, instead of giving up and fleeing as they thieve and demolish our ancestral land!"
     "Tita’s face turns grave"
     "Esperansa I’ve told you a million times,"
-    "when lives are in danger, it's time to act pragmatically. When the time comes the Navy will get what they want."
-	e "What if we expose these human rights violations? What if we can prove that the military buildup is death to our people? Clara, what do you think?”
-    #Then she decides,
-
+    "when lives are in danger, it\'s time to act pragmatically. When the time comes the Navy will get what they want."
+    e "What if we expose these human rights violations? What if we can prove that the military buildup is death to our people? Clara, what do you think?"
+    #THEN SHE DECIDES!!!!!!!!!!!
     e "and we need to spread the word. Would you help us?"
     c "Sure! I've got coding experience too if that helps"
     e "That's just what we need!"
-    # PUT 100 flyers challenge here!!!!!!!!!!
-        """
-        Then she does the hack of posters. Either "EVACUATION. RIGHTS FOR REFUGEES" or "RESIST. PROTECT THE LAND"
-        """
+# PUT 100 flyers challenge here!!!!!!!!!!
+
+#Then she does the hack of posters. Either 'EVACUATION. RIGHTS FOR REFUGEES' or 'RESIST. PROTECT THE LAND'
 
     menu:
         "Explore the sugarcane crops":

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-The label _call_check_nikos_hack is defined twice, at
-  File "game/chapters/a_The_Build_Up.rpy", line 18 and
-  File "game/chapters/a_The_Build_Up.rpy", line 179.
+File "game/utilities/screens.rpy", line 106: expected a keyword argument or child statement.
+    $args = ["Niko", "Hello World Niko can speak from inside a screen."]
+    ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Wed Jan 22 11:05:55 2020
+Tue Feb 25 10:48:33 2020
