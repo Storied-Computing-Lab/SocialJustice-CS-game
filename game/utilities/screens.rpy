@@ -95,15 +95,21 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+screen hidden_screen():
+    imagebutton:
+        idle "misc/tinian-japaneseGate.png"
+        action Show("simple_screen")
+
 screen simple_screen():
     frame:
-        xalign 0.5 ypos 50
+        $x, y = renpy.get_mouse_pos()
+        xalign x ypos y
         vbox:
             text "Looking Around"
             textbutton "There is no one here":
                 action Hide("simple_screen")
             textbutton "Try to say something":
-                action Function(renpy.say, who="Niko", what="Hello World Niko can speak from inside a screen.")
+                action Function(ui.callsinnewcontext("hint1"))
 
 screen claras_computer():
     add "claras_computer_screen.png" xalign 0.5 yalign 0.4

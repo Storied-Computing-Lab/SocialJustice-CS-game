@@ -1,4 +1,4 @@
-Tue Feb 25 10:57:14 2020
+Mon Mar  2 11:23:34 2020
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
  
@@ -6,31 +6,31 @@ Ren'Py 7.2.2.491
 Bootstrap to the start of init.init took 0.12s
 Early init took 0.00s
 Loader init took 0.04s
-Loading error handling took 0.04s
-Loading script took 0.58s
+Loading error handling took 0.05s
+Loading script took 0.65s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.11s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
+Loading analysis data took 0.08s
+Analyze and compile ATL took 0.03s
+Index archives took 0.06s
 Backing up script files to '/Users/princesssteffykins/Library/RenPy/backups/SocialJustice-CS-game':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.22s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.04s
 DPI scale factor: 1.000000
-Creating interface object took 0.79s
+Creating interface object took 0.35s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.04s
-Save screen analysis took 0.11s
-Prepare screens took 0.13s
-Save pyanalysis. took 0.18s
-Save bytecode. took 0.09s
+Save screen analysis took 0.12s
+Prepare screens took 0.21s
+Save pyanalysis. took 0.32s
+Save bytecode. took 0.10s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.05s
@@ -185,17 +185,17 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.96178913116s
+Total time until interface ready: 3.08676099777s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016856 seconds.
-- Frame drawn at 0.032048 seconds.
-- Frame drawn at 0.049937 seconds.
-- Frame drawn at 0.065744 seconds.
-- 0.065744 seconds to render 5 frames.
+- Frame drawn at 0.019356 seconds.
+- Frame drawn at 0.053651 seconds.
+- Frame drawn at 0.114410 seconds.
+- Frame drawn at 0.148428 seconds.
+- 0.148428 seconds to render 5 frames.
 
 Full traceback:
-  File "game/script.rpy", line 119, in script
+  File "game/script.rpy", line 120, in script
     "DELete: For ICLS screenshot"
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 694, in execute
     renpy.exports.say(who, what, *args, **kwargs)
@@ -211,51 +211,42 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2690, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3493, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 697, in event
-    rv = self.child.event(ev, x, y, st)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 244, in event
-    rv = d.event(ev, x - xo, y - yo, st)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 923, in event
-    return handle_click(self.clicked)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 858, in handle_click
-    rv = run(action)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 320, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 517, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/exports.py", line 1320, in say
-    renpy.store.say(who, what, *args, **kwargs)
-  File "renpy/common/00library.rpy", line 295, in say
-    who(what, interact=interact, *args, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/character.py", line 1127, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/character.py", line 842, in do_display
-    **display_args)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/character.py", line 591, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ui.py", line 289, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2668, in interact
-    raise Exception("Cannot start an interaction in the middle of an interaction, without creating a new context.")
-Exception: Cannot start an interaction in the middle of an interaction, without creating a new context.
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 424, in visit_all
+    callback(self)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 434, in per_interact
+    self.update()
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 619, in update
+    self.screen.function(**self.scope)
+  File "game/utilities/screens.rpy", line 103, in execute
+    screen simple_screen():
+  File "game/utilities/screens.rpy", line 103, in execute
+    screen simple_screen():
+  File "game/utilities/screens.rpy", line 104, in execute
+    frame:
+  File "game/utilities/screens.rpy", line 104, in keywords
+    frame:
+  File "<screen language>", line 106, in <module>
+NameError: name 'x' is not defined
 
 While running game code:
-  File "game/script.rpy", line 119, in script
+  File "game/script.rpy", line 120, in script
     "DELete: For ICLS screenshot"
-  File "renpy/common/00action_other.rpy", line 517, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "renpy/common/00library.rpy", line 295, in say
-    who(what, interact=interact, *args, **kwargs)
-Exception: Cannot start an interaction in the middle of an interaction, without creating a new context.
+  File "game/utilities/screens.rpy", line 103, in execute
+    screen simple_screen():
+  File "game/utilities/screens.rpy", line 103, in execute
+    screen simple_screen():
+  File "game/utilities/screens.rpy", line 104, in execute
+    frame:
+  File "game/utilities/screens.rpy", line 104, in keywords
+    frame:
+NameError: name 'x' is not defined

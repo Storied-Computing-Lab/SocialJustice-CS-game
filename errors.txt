@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/utilities/screens.rpy", line 106: expected a keyword argument or child statement.
-    $args = ["Niko", "Hello World Niko can speak from inside a screen."]
-    ^
+File "game/utilities/screens.rpy", line 101: end of line expected.
+    text: "How big is this screen?"
+          ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Tue Feb 25 10:48:33 2020
+Mon Mar  2 11:02:35 2020

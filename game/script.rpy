@@ -114,7 +114,8 @@ label start:
     # directory.
 
     #show screen player_actions
-    show screen simple_screen
+    show screen hidden_screen
+    #show screen simple_screen
 
     "DELete: For ICLS screenshot"
     image tita_icls = im.Scale("images/tita/tita_neutral.png", 500, 750) #Enter specific numbers <--
