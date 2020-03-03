@@ -95,21 +95,44 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+default jungle_click_counter=0
+init python:
+    def hint_screen_counter():
+        global jungle_click_counter
+        print jungle_click_counter
+        if jungle_click_counter==3:
+            renpy.show_screen("hint_screen")
+            print "inside IF"
+            print jungle_click_counter
+            jungle_click_counter=0
+        else:
+            print "inside ELSE"
+            print jungle_click_counter
+            jungle_click_counter+=1
+
 screen hidden_screen():
     imagebutton:
         idle "misc/tinian-japaneseGate.png"
-        action Show("simple_screen")
+        action Function(hint_screen_counter)
 
-screen simple_screen():
+default mouse_xy = (0, 0)
+init python:
+    def getMousePos():
+        global mouse_xy
+        mouse_xy = renpy.get_mouse_pos()
+
+screen hint_screen():
+    on "show" action Function(getMousePos)
     frame:
-        $x, y = renpy.get_mouse_pos()
-        xalign x ypos y
+        xalign mouse_xy[0] ypos mouse_xy[1]
         vbox:
             text "Looking Around"
             textbutton "There is no one here":
                 action Hide("simple_screen")
             textbutton "Try to say something":
                 action Function(ui.callsinnewcontext("hint1"))
+
+
 
 screen claras_computer():
     add "claras_computer_screen.png" xalign 0.5 yalign 0.4

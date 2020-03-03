@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/utilities/screens.rpy", line 101: end of line expected.
-    text: "How big is this screen?"
-          ^
+File "game/utilities/screens.rpy", line 113: invalid syntax
+            show screen hint_screen
+                       ^
+    
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Mon Mar  2 11:02:35 2020
+Mon Mar  2 17:34:07 2020

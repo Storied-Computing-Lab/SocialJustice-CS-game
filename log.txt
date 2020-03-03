@@ -1,44 +1,43 @@
-Mon Mar  2 11:23:34 2020
+Mon Mar  2 17:47:17 2020
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
  
 
-Bootstrap to the start of init.init took 0.12s
+Bootstrap to the start of init.init took 0.22s
 Early init took 0.00s
-Loader init took 0.04s
-Loading error handling took 0.05s
-Loading script took 0.65s
+Loader init took 0.05s
+Loading error handling took 0.06s
+Loading script took 0.27s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.11s
-Loading analysis data took 0.08s
-Analyze and compile ATL took 0.03s
-Index archives took 0.06s
-Backing up script files to '/Users/princesssteffykins/Library/RenPy/backups/SocialJustice-CS-game':
-Dump and make backups. took 0.22s
+Running init code took 0.22s
+Loading analysis data took 0.40s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.13s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.07s
 DPI scale factor: 1.000000
-Creating interface object took 0.35s
+Creating interface object took 0.44s
 Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.12s
-Prepare screens took 0.21s
-Save pyanalysis. took 0.32s
-Save bytecode. took 0.10s
+Init translation took 0.07s
+Build styles took 0.02s
+Load screen analysis took 1.34s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.19s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.20s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.05s
+Interface start took 0.10s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1084, 610) drawable=(1084, 610)
+Screen sizes: virtual=(1280, 720) physical=(1179, 663) drawable=(1179, 663)
 Vendor: 'Intel Inc.'
 Renderer: 'Intel(R) HD Graphics 5300'
 Version: '2.1 INTEL-10.36.25'
@@ -185,68 +184,31 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 3.08676099777s
+Total time until interface ready: 4.24301195145s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.019356 seconds.
-- Frame drawn at 0.053651 seconds.
-- Frame drawn at 0.114410 seconds.
-- Frame drawn at 0.148428 seconds.
-- 0.148428 seconds to render 5 frames.
+- Frame drawn at 0.021365 seconds.
+- Frame drawn at 0.031316 seconds.
+- Frame drawn at 0.049716 seconds.
+- Frame drawn at 0.064382 seconds.
+- 0.064382 seconds to render 5 frames.
+0
+inside ELSE
+0
+1
+inside ELSE
+1
+2
+inside ELSE
+2
+3
+inside IF
+3
+0
+inside ELSE
+0
 
-Full traceback:
-  File "game/script.rpy", line 120, in script
-    "DELete: For ICLS screenshot"
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 694, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/exports.py", line 1322, in say
-    who(what, *args, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/character.py", line 1127, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/character.py", line 842, in do_display
-    **display_args)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/character.py", line 591, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ui.py", line 289, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2690, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 424, in visit_all
-    callback(self)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 434, in per_interact
-    self.update()
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 619, in update
-    self.screen.function(**self.scope)
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 104, in execute
-    frame:
-  File "game/utilities/screens.rpy", line 104, in keywords
-    frame:
-  File "<screen language>", line 106, in <module>
-NameError: name 'x' is not defined
-
-While running game code:
-  File "game/script.rpy", line 120, in script
-    "DELete: For ICLS screenshot"
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 104, in execute
-    frame:
-  File "game/utilities/screens.rpy", line 104, in keywords
-    frame:
-NameError: name 'x' is not defined
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(1179, 826) drawable=(1179, 826)

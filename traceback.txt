@@ -3,15 +3,11 @@
 While running game code:
   File "game/script.rpy", line 120, in script
     "DELete: For ICLS screenshot"
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 104, in execute
-    frame:
-  File "game/utilities/screens.rpy", line 104, in keywords
-    frame:
-NameError: name 'x' is not defined
+  File "renpy/common/00action_other.rpy", line 517, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/utilities/screens.rpy", line 101, in hint_screen_counter
+    print jungle_click_counter
+UnboundLocalError: local variable 'jungle_click_counter' referenced before assignment
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -32,34 +28,31 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2690, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 534, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 424, in visit_all
-    callback(self)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3074, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 434, in per_interact
-    self.update()
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 619, in update
-    self.screen.function(**self.scope)
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 103, in execute
-    screen simple_screen():
-  File "game/utilities/screens.rpy", line 104, in execute
-    frame:
-  File "game/utilities/screens.rpy", line 104, in keywords
-    frame:
-  File "<screen language>", line 106, in <module>
-NameError: name 'x' is not defined
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3493, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 697, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 923, in event
+    return handle_click(self.clicked)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 858, in handle_click
+    rv = run(action)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 320, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 517, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/utilities/screens.rpy", line 101, in hint_screen_counter
+    print jungle_click_counter
+UnboundLocalError: local variable 'jungle_click_counter' referenced before assignment
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 Guaiya Means Love 1.0
-Mon Mar  2 11:23:43 2020
+Mon Mar  2 17:44:58 2020
