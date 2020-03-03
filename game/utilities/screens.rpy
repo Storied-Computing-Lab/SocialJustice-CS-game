@@ -99,7 +99,6 @@ default jungle_click_counter=0
 init python:
     def hint_screen_counter():
         global jungle_click_counter
-        print jungle_click_counter
         if jungle_click_counter==3:
             renpy.show_screen("hint_screen")
             print "inside IF"
@@ -113,7 +112,7 @@ init python:
 screen hidden_screen():
     imagebutton:
         idle "misc/tinian-japaneseGate.png"
-        action Function(hint_screen_counter)
+        action [Function(hint_screen_counter), Show("hidden_screen")]
 
 default mouse_xy = (0, 0)
 init python:
