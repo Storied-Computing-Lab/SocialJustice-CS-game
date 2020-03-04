@@ -95,19 +95,18 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-default jungle_click_counter=0
+define persistent.jungle_click_counter=0
 init python:
-    def hint_screen_counter():
-        global jungle_click_counter
-        if jungle_click_counter==3:
+    def hint_screen_counter(): #This code does not really work as expected. User has to click quickly in succession to get the hint to generate, and once it does, it doesn't generate in the correct x position, although y position seems to be captured
+        if persistent.jungle_click_counter==2:
             renpy.show_screen("hint_screen")
             print "inside IF"
-            print jungle_click_counter
-            jungle_click_counter=0
+            print persistent.jungle_click_counter
+            persistent.jungle_click_counter=0
         else:
             print "inside ELSE"
-            print jungle_click_counter
-            jungle_click_counter+=1
+            print persistent.jungle_click_counter
+            persistent.jungle_click_counter+=1
 
 screen hidden_screen():
     imagebutton:
@@ -123,6 +122,7 @@ init python:
 screen hint_screen():
     on "show" action Function(getMousePos)
     frame:
+        #$print mouse_xy[0], mouse_xy[1]
         xalign mouse_xy[0] ypos mouse_xy[1]
         vbox:
             text "Looking Around"
