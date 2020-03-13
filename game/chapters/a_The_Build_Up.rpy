@@ -6,7 +6,7 @@ label a_The_Build_Up:
         linear 10 ypos 800
         pause 10
 
-    transform bounce:
+    transform bounce1:
         pause .15
         yoffset 0
         easein .175 yoffset -10

@@ -5,6 +5,7 @@
 
 image tinian japaneseGate = "misc/tinian-japaneseGate.png"
 image claras_computer_screen = "claras_computer_screen.png"
+image DisastersComic1 = "misc/TheDisastersComic1.png"
 #image clara_desktop = "clara_desktop.png"
 image atom_opened = "atom-opened.png"
 image center library_space = "library_computer_lab.png"
@@ -53,9 +54,9 @@ transform nh_upper_right: #works with Niko's head?
     yalign -.01 #more negative moves it up?
 
 init python:
-    build.name = "Guaiya_11.04.19"
-    build.directory_name = "Guaiya_11.04.19"
-    build.executable_name = "Guaiya_Means_Love.v2"
+    build.name = "Guaiya_03.05.20"
+    build.directory_name = "Guaiya_03.05.20"
+    build.executable_name = "Guaiya_Means_Love.v2.1"
 
 init python:
 
@@ -114,8 +115,16 @@ label start:
     # directory.
 
     #show screen player_actions
-    show screen hidden_screen
     #show screen simple_screen
+
+    #DELETE THE NEXT LINE AFTER I'VE GOT HACK2 WORKING!!!!!!!!!!!!!!!
+    call aa_The_Disasters from _call_aa_The_Disasters
+
+    #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
+    call a_The_Build_Up from _call_a_The_Build_Up
+
+    #UNCOMMENT THIS LINE!!!!!!!!!!!!!!!!!!!!!!
+    #call aa_The_Disasters from _call_aa_The_Disasters
 
     "DELete: For ICLS screenshot"
     image tita_icls = im.Scale("images/tita/tita_neutral.png", 500, 750) #Enter specific numbers <--
@@ -129,10 +138,6 @@ label start:
             "delete!"
         "We should evacuate. (Tita's approach)":
             "delete!"
-
-    call a_The_Build_Up from _call_a_The_Build_Up
-
-    call aa_The_Disasters from _call_aa_The_Disasters
 
     call ab_The_Clash from _call_ab_The_Clash
 

@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/utilities/screens.rpy", line 113: invalid syntax
-            show screen hint_screen
-                       ^
-    
+The label _call_aa_The_Disasters is defined twice, at
+  File "game/script.rpy", line 132 and
+  File "game/script.rpy", line 137.
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Mon Mar  2 17:34:07 2020
+Wed Mar 11 13:32:50 2020

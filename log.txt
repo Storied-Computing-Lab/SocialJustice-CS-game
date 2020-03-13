@@ -1,43 +1,44 @@
-Wed Mar  4 09:49:28 2020
+Thu Mar 12 16:20:17 2020
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
  
 
-Bootstrap to the start of init.init took 0.18s
+Bootstrap to the start of init.init took 0.49s
 Early init took 0.01s
-Loader init took 0.08s
-Loading error handling took 0.05s
-Loading script took 0.26s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
+Loader init took 0.35s
+Loading error handling took 0.15s
+Loading script took 1.50s
+Loading save slot metadata. took 0.26s
+Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.23s
-Loading analysis data took 0.54s
-Analyze and compile ATL took 0.01s
+Running init code took 0.56s
+Loading analysis data took 0.19s
+Analyze and compile ATL took 0.18s
 Index archives took 0.00s
-Dump and make backups. took 0.12s
+Backing up script files to '/Users/princesssteffykins/Library/RenPy/backups/SocialJustice-CS-game':
+Dump and make backups. took 0.44s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.09s
+Initial gc. took 0.12s
 DPI scale factor: 1.000000
-Creating interface object took 0.56s
+Creating interface object took 1.85s
 Cleaning stores took 0.00s
-Init translation took 0.07s
+Init translation took 0.13s
 Build styles took 0.03s
-Load screen analysis took 1.49s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.20s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.23s
-Running _start took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.09s
+Save screen analysis took 0.39s
+Prepare screens took 0.53s
+Save pyanalysis. took 0.60s
+Save bytecode. took 0.33s
+Running _start took 0.01s
 Performance test:
-Interface start took 0.10s
+Interface start took 0.09s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1179, 663) drawable=(1179, 663)
+Screen sizes: virtual=(1280, 720) physical=(1662, 935) drawable=(1662, 935)
 Vendor: 'Intel Inc.'
 Renderer: 'Intel(R) HD Graphics 5300'
 Version: '2.1 INTEL-10.36.25'
@@ -184,21 +185,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 4.80198001862s
+Total time until interface ready: 10.1116480827s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.021922 seconds.
-- Frame drawn at 0.033793 seconds.
-- Frame drawn at 0.045555 seconds.
-- Frame drawn at 0.064870 seconds.
-- 0.064870 seconds to render 5 frames.
-inside ELSE
-1
-inside IF
-2
-inside ELSE
-0
-inside ELSE
-1
-inside IF
-2
+- Frame drawn at 0.037560 seconds.
+- Frame drawn at 0.054847 seconds.
+- Frame drawn at 0.079518 seconds.
+- Frame drawn at 0.100786 seconds.
+- 0.100786 seconds to render 5 frames.

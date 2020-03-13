@@ -1,16 +1,50 @@
 label aa_The_Disasters:
-    return
 
+    transform bounce:
+        pause .15
+        yoffset 0
+        easein .175 yoffset -10
+        easeout .175 yoffset 0
+        easein .175 yoffset -4
+        easeout .175 yoffset 0
+        yoffset 0
+
+    """
+    Maybe a zoomed up picture of the city square, and the FNB table ?? instead of Tinian japaneseGate?
+    """
+    #
+    #
+    #
     #show Esperansa at lowered_right
     "You come to the table that says 'Food Not Bombs'"
     "People are serving food to anyone who walks by, for free."
     "Not a huge crowd. You see the girl with the braids."
     "Then she sees you."
+    show clara_neutral_eyes_open at lowered_left_2 with dissolve
+    show neutral_face_arms_neutral at nb_lowered_right with dissolve
     e "Hi! I'm Esperansa."
-    c "Hi! Niko mentioned you're involved in social justice movements here on our islands?"
-    e "That's right!"
-    e "What's your background with social justice issues?"
+    hide clara_neutral_eyes_open
+    show clara_neutral_eyes_closed at lowered_left_2
+    c "Hi! I'm Clara."
+    hide clara_neutral_eyes_closed
+    show clara_pointer_left_eyes_open at lowered_left_2
+    show clara_pointer_left_eyes_open at bounce
+    c "Niko mentioned you're involved in social justice movements here on our islands?"
+    hide neutral_face_arms_neutral
+    show closed_neutral_arms_neutral at nb_lowered_right
+    e "That's right! I'm really passionate about social justice in all areas of life."
+    hide clara_pointer_left_eyes_open
+    show clara_neutral_eyes_open at lowered_left_2
+    hide closed_neutral_arms_neutral
+    show neutral_face_arms_neutral at nb_lowered_right
+    e "So, Clara..What's your background with social justice issues?"
+    hide neutral_face_arms_neutral
+    show closed_neutral_arms_neutral at nb_lowered_right
+    show closed_neutral_arms_neutral at bounce
+
     e "Or, like, what's got you interested?"
+    hide closed_neutral_arms_neutral
+    show neutral_face_arms_neutral at nb_lowered_right
 
     menu:
         "I've experienced gender inequality in hacking":
@@ -26,6 +60,9 @@ label aa_The_Disasters:
             e "There's a lot of ways to help out, and help is always needed."
 
     "Tita walks up to the table."
+    image tita_icls = im.Scale("images/tita/tita_neutral.png", 500, 750) #Enter specific numbers <--
+    show tita_icls at center with dissolve
+    
     e "Hey Tita, have you met Clara?"
     "Esperansa, Clara is my niece!"
     e "Wow! Shoulda known."
@@ -35,9 +72,9 @@ label aa_The_Disasters:
     "Clara, will you walk with me?"
     c "Sure."
 
-    """
-    Comic here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    """
+    scene DisastersComic1:
+        yalign 0.5
+        xalign 0.5
 
     "You return to the FNB table as Tita finishes speaking."
     "Esperansa looks troubled."
@@ -54,7 +91,7 @@ label aa_The_Disasters:
 # PUT 100 flyers challenge here!!!!!!!!!!
 
 #Then she does the hack of posters. Either 'EVACUATION. RIGHTS FOR REFUGEES' or 'RESIST. PROTECT THE LAND'
-
+    return
     menu:
         "Explore the sugarcane crops":
             $day = 1
