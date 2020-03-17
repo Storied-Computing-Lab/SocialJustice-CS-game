@@ -26,25 +26,47 @@ label check_100_posters:
             return helper
 
         @call_counter
-        def print_poster_once(my_string): #eventually_string_that_is_actually_filepath_to_an_image
-            print(my_string)
-
+        def print_poster_once(): #eventually_string_that_is_actually_filepath_to_an_image
+            pass
 
         def reload_hack_100_posters():
             reloaded_hack = reload(hack_100_posters)
             reloaded_hack.print_poster_once = print_poster_once
             print_poster_once.calls = 0
 
+        """
+        Display which poster we are printing
+        """
+        if which_poster == "resist":
+            renpy.show("resist_poster",at_list=[top])
+        else:
+            renpy.show("evacuate_poster",at_list=[top])
+
+        """
+        Function for updating the GUI to show num_posters_printed
+        """
+        num_posters_printed = 0
+        def update_printed_poster_number():
+            theText = Text("[num_posters_printed]", size=40, color="#f00")
+            renpy.show("dummyName", at_list=[truecenter], what=theText)
+
+        """
+        Forever loop that waits until hack_100_posters.main() prints 100 posters
+        """
         while True:
             try:
                 reload_hack_100_posters()
                 hack_100_posters.main()
-                if print_poster_once.calls != 100:
+                #set the number display on the GUI to display print_poster_once.calls
+                num_posters_printed = print_poster_once.calls
+                update_printed_poster_number()
+                if print_poster_once.calls < 100:
                     renpy.say("Clara","Looks like I only printed " + str(print_poster_once.calls) + " posters!")
+                    renpy.say("Clara","I wonder where I can find the printer's source code?")
                 else:
                     break
             except Exception as e:
-                renpy.say("Clara","Error with check_100_posters.py")
+                renpy.say("Clara","Error with hack_100_posters.py")
                 renpy.say("Clara",str(e))
                 #renpy.say("Clara","Press enter to restart")
                 continue

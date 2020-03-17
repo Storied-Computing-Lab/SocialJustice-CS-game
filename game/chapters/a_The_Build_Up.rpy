@@ -17,8 +17,6 @@ label a_The_Build_Up:
 
     "You walk into the Center for Chamoru Rights and look out the window."
 
-    call check_100_posters from _call_check_100_posters
-
     "The green fronds of palm trees sway lazily in the wind."
     "An innoncence and beauty that frustrates you"
     "Because you don't know how to protect it."

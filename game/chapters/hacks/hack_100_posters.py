@@ -2,16 +2,9 @@ from __future__ import unicode_literals
 
 def main():
 
-    #print_poster_once("precious_bodies_flier.png")
-    #print_poster_once("precious_bodies_flier.png")
-
-    """
-    What if you change what's inside print_flier_once()
-    to "precious_bodies_flier_PINK.png"  ?
-    """
-
-    for i in range(100):
-        print_poster_once("blah")
+    #uncomment these two calls to print_poster_once!
+    print_poster_once()
+    print_poster_once()
 
     #This code will do something 5 times
     #for i in range(5):

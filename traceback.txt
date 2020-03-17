@@ -1,34 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 55, in script
-    init python:
-  File "game/script.rpy", line 59, in <module>
-    build.classify("You_are_on_the_right_track.txt", all)
-  File "renpy/common/00build.rpy", line 170, in classify
-    base_patterns.append((pattern, make_file_lists(file_list)))
-  File "renpy/common/00build.rpy", line 45, in make_file_lists
-    raise Exception("Expected a string, list, or None.")
-Exception: Expected a string, list, or None.
+  File "game/script.rpy", line 121, in script call
+    call aa_The_Disasters from _call_aa_The_Disasters
+  File "game/chapters/aa_The_Disasters.rpy", line 38, in script call
+    call check_100_posters from _call_check_100_posters
+  File "game/utilities/check_100_posters.rpy", line 2, in script
+    python:
+  File "game/utilities/check_100_posters.rpy", line 48, in <module>
+    update_printed_poster_number(20000000)
+  File "game/utilities/check_100_posters.rpy", line 45, in update_printed_poster_number
+    theText = Text("[num_posters_printed]", size=40, color="#f00")
+KeyError: u'num_posters_printed'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 55, in script
-    init python:
+  File "game/script.rpy", line 121, in script call
+    call aa_The_Disasters from _call_aa_The_Disasters
+  File "game/chapters/aa_The_Disasters.rpy", line 38, in script call
+    call check_100_posters from _call_check_100_posters
+  File "game/utilities/check_100_posters.rpy", line 2, in script
+    python:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 59, in <module>
-    build.classify("You_are_on_the_right_track.txt", all)
-  File "renpy/common/00build.rpy", line 170, in classify
-    base_patterns.append((pattern, make_file_lists(file_list)))
-  File "renpy/common/00build.rpy", line 45, in make_file_lists
-    raise Exception("Expected a string, list, or None.")
-Exception: Expected a string, list, or None.
+  File "game/utilities/check_100_posters.rpy", line 48, in <module>
+    update_printed_poster_number(20000000)
+  File "game/utilities/check_100_posters.rpy", line 45, in update_printed_poster_number
+    theText = Text("[num_posters_printed]", size=40, color="#f00")
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/text/text.py", line 1479, in __init__
+    self.set_text(text, scope, substitute)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/text/text.py", line 1598, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/substitutions.py", line 244, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
+KeyError: u'num_posters_printed'
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
- 
-Thu Mar  5 21:30:47 2020
+Guaiya Means Love 1.0
+Mon Mar 16 17:25:37 2020
