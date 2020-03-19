@@ -117,27 +117,10 @@ label start:
     #show screen player_actions
     #show screen simple_screen
 
-    #DELETE THE NEXT LINE AFTER I'VE GOT HACK2 WORKING!!!!!!!!!!!!!!!
-    call aa_The_Disasters from _call_aa_The_Disasters
-
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
-    call a_The_Build_Up from _call_a_The_Build_Up
+    #call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
 
-    #UNCOMMENT THIS LINE!!!!!!!!!!!!!!!!!!!!!!
-    #call aa_The_Disasters from _call_aa_The_Disasters
-
-    "DELete: For ICLS screenshot"
-    image tita_icls = im.Scale("images/tita/tita_neutral.png", 500, 750) #Enter specific numbers <--
-    image clara_icls = im.Scale("images/clara/clara_neutral_eyes_open.png", 1000, 1000)
-
-    show clara_neutral_eyes_open at lowered_left_2 with dissolve
-    show tita_icls at t_icls
-
-    menu:
-        "We should resist. (Esperansa's approach)":
-            "delete!"
-        "We should evacuate. (Tita's approach)":
-            "delete!"
+    call aa_The_Disasters from _call_aa_The_Disasters #Hack2. Baby social justice for-loop.
 
     call ab_The_Clash from _call_ab_The_Clash
 
@@ -165,7 +148,7 @@ label start:
     show clara phone at lowered_left
     show tita_neutral at t_lowered_right
 
-    "Here ends the HEARST DEMO"
+    "Here ends the DEMO"
     "THANK YOU FOR PLAYING!"
     "GOODBYE"
 

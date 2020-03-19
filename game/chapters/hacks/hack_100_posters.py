@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 
 def main():
 
-    #uncomment these two calls to print_poster_once!
     print_poster_once()
     print_poster_once()
 

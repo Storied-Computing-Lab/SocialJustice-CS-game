@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-The label _call_check_100_posters is defined twice, at
-  File "game/chapters/a_The_Build_Up.rpy", line 20 and
-  File "game/chapters/aa_The_Disasters.rpy", line 26.
+File "game/chapters/aa_The_Disasters.rpy", line 160: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                t "Yes, and the Tinian Evacuation Task force is voting to contribute to a strike fund
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Mon Mar 16 11:54:09 2020
+Wed Mar 18 11:07:26 2020
