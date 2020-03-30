@@ -1,48 +1,66 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 121, in script call
-    call aa_The_Disasters from _call_aa_The_Disasters
-  File "game/chapters/aa_The_Disasters.rpy", line 38, in script call
-    call check_100_posters from _call_check_100_posters
-  File "game/utilities/check_100_posters.rpy", line 2, in script
-    python:
-  File "game/utilities/check_100_posters.rpy", line 48, in <module>
-    update_printed_poster_number(20000000)
-  File "game/utilities/check_100_posters.rpy", line 45, in update_printed_poster_number
-    theText = Text("[num_posters_printed]", size=40, color="#f00")
-KeyError: u'num_posters_printed'
+  File "renpy/common/00action_file.rpy", line 452, in __call__
+    renpy.load(fn)
+AttributeError: 'StoreModule' object has no attribute 'redraw_comic'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 121, in script call
-    call aa_The_Disasters from _call_aa_The_Disasters
-  File "game/chapters/aa_The_Disasters.rpy", line 38, in script call
-    call check_100_posters from _call_check_100_posters
-  File "game/utilities/check_100_posters.rpy", line 2, in script
-    python:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ast.py", line 900, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 1930, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/utilities/check_100_posters.rpy", line 48, in <module>
-    update_printed_poster_number(20000000)
-  File "game/utilities/check_100_posters.rpy", line 45, in update_printed_poster_number
-    theText = Text("[num_posters_printed]", size=40, color="#f00")
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/text/text.py", line 1479, in __init__
-    self.set_text(text, scope, substitute)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/text/text.py", line 1598, in set_text
-    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/substitutions.py", line 244, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
-KeyError: u'num_posters_printed'
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 2690, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/core.py", line 3493, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/transition.py", line 47, in event
+    return self.new_widget.event(ev, x, y, st)  # E1101
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/screen.py", line 697, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 244, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 244, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 244, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 923, in event
+    return handle_click(self.clicked)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 858, in handle_click
+    rv = run(action)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 320, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_file.rpy", line 452, in __call__
+    renpy.load(fn)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loadsave.py", line 752, in load
+    roots, log = loads(location.load(filename))
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/loadsave.py", line 63, in loads
+    return cPickle.loads(s)
+AttributeError: 'StoreModule' object has no attribute 'redraw_comic'
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 Guaiya Means Love 1.0
-Mon Mar 16 17:25:37 2020
+Mon Mar 30 12:11:37 2020

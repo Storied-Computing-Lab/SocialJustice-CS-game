@@ -1,36 +1,35 @@
-Thu Mar 19 10:33:07 2020
+Mon Mar 30 12:22:46 2020
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
  
 
 Bootstrap to the start of init.init took 0.12s
-Early init took 0.01s
+Early init took 0.00s
 Loader init took 0.05s
-Loading error handling took 0.07s
-Loading script took 1.18s
-Loading save slot metadata. took 0.17s
+Loading error handling took 0.04s
+Loading script took 0.23s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.19s
-Loading analysis data took 0.04s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Backing up script files to '/Users/princesssteffykins/Library/RenPy/backups/SocialJustice-CS-game':
-Dump and make backups. took 0.09s
+Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.06s
+Initial gc. took 0.03s
 DPI scale factor: 1.000000
-Creating interface object took 0.50s
+Creating interface object took 0.39s
 Cleaning stores took 0.00s
 Init translation took 0.05s
 Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.33s
-Prepare screens took 0.19s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.17s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.15s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.05s
@@ -38,7 +37,7 @@ Interface start took 0.05s
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1662, 935) drawable=(1662, 935)
+Screen sizes: virtual=(1280, 720) physical=(1342, 755) drawable=(1342, 755)
 Vendor: 'Intel Inc.'
 Renderer: 'Intel(R) HD Graphics 5300'
 Version: '2.1 INTEL-10.36.25'
@@ -185,18 +184,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 3.81698298454s
+Total time until interface ready: 1.92307019234s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.022853 seconds.
-- Frame drawn at 0.030681 seconds.
-- Frame drawn at 0.042704 seconds.
-- Frame drawn at 0.061995 seconds.
-- 0.061995 seconds to render 5 frames.
-Cleaning stores took 0.00s
-Init translation took 0.36s
-Build styles took 0.05s
-Load screen analysis took 0.20s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.01s
+- Frame drawn at 0.017849 seconds.
+- Frame drawn at 0.034294 seconds.
+- Frame drawn at 0.047371 seconds.
+- Frame drawn at 0.063822 seconds.
+- 0.063822 seconds to render 5 frames.

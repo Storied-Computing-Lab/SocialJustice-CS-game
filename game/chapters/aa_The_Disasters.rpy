@@ -93,16 +93,17 @@ label aa_The_Disasters:
     show clara_neutral_eyes_open at lowered_left_2
     c "Sure."
 
+    init python:
+        def redraw_comic():
+            renpy.scene()
+            renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
+            renpy.pause()
     window hide #note, this command gets rid of all the sprites, too!
     python:
         renpy.scene()
         renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
         renpy.with_statement(dissolve)
         renpy.pause()
-        def redraw_comic():
-            renpy.scene()
-            renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
-            renpy.pause()
         while True:
             keep_reading = renpy.display_menu([("Keep Reading", True), ("Continue", False)])
             if keep_reading:
