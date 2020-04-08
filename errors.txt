@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/aa_The_Disasters.rpy", line 160: is not terminated with a newline. (Check strings and parenthesis.)
+File "game/script.rpy", line 59: is not terminated with a newline. (Check strings and parenthesis.)
 (Perhaps you left out a " at the end of the first line.)
-                t "Yes, and the Tinian Evacuation Task force is voting to contribute to a strike fund
+        build.executable_name = "Guaiya_Means_Love.DEBUGGING.April
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Wed Mar 18 11:07:26 2020
+Mon Mar 30 12:30:57 2020

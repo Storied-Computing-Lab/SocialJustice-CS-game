@@ -18,8 +18,13 @@ default imagine_s = 0
 default norms_s = 0
 
 $ config.console = True
-$ config.developer = True
+$ config.developer = True #is this actually persisting during build? because of stdout_line needs it to be True
 $ config.debug = True
+
+init -999 python:
+    config.console = True
+    config.developer = True #is this actually persisting during build? because of stdout_line needs it to be True
+    config.debug = True
 
 transform lowered_center:
     xalign 0.5
@@ -54,9 +59,9 @@ transform nh_upper_right: #works with Niko's head?
     yalign -.01 #more negative moves it up?
 
 init python:
-    build.name = "Guaiya_03.20.20"
-    build.directory_name = "Guaiya_03.20.20"
-    build.executable_name = "Guaiya_Means_Love.03.20.20"
+    build.name = "Guaiya_DEBUGGING.April_6"
+    build.directory_name = "Guaiya_DEBUGGING.April_6"
+    build.executable_name = "Guaiya_Means_Love.DEBUGGING.April_6"
 
 init python:
 
@@ -118,8 +123,12 @@ label start:
     #show screen simple_screen
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
-    #call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
+    "Hello from inside the {b}the beginning{/b}"
+    call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
+    #$ import os; print(os.environ)
 
+    #$ print("Hello from inside the first call to print")
+    #$ import sys; sys.stdout.write("Hello sys.stdout.write just ran\n")
     call aa_The_Disasters from _call_aa_The_Disasters #Hack2. Baby social justice for-loop.
 
     call ab_The_Clash from _call_ab_The_Clash

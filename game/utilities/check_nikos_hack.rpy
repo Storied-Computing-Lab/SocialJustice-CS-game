@@ -20,7 +20,7 @@ label check_nikos_hack:
                     nIKO_WUZ_HERE_LOL.main()
                     if mock_stdout.getvalue() == 'Niko wuz here\n':
                         renpy.say("Clara", "I am still locked out of my computer!")
-                        renpy.say("Clara", "I wonder where Niko might have hidden his hack")
+                        renpy.say("Clara", "I wonder where {b}Niko{/b} might have hidden his hack")
                     else:
                         break
             except Exception as e:

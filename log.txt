@@ -1,38 +1,39 @@
-Mon Mar 30 12:22:46 2020
+Wed Apr  8 11:40:18 2020
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
  
 
-Bootstrap to the start of init.init took 0.12s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.04s
-Loading script took 0.23s
-Loading save slot metadata. took 0.02s
+Bootstrap to the start of init.init took 0.24s
+Early init took 0.01s
+Loader init took 0.12s
+Loading error handling took 0.07s
+Loading script took 1.21s
+Loading save slot metadata. took 0.09s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.19s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.01s
+Running init code took 0.28s
+Loading analysis data took 0.08s
+Analyze and compile ATL took 0.02s
 Index archives took 0.00s
-Dump and make backups. took 0.08s
+Backing up script files to '/Users/princesssteffykins/Library/RenPy/backups/SocialJustice-CS-game':
+Dump and make backups. took 0.26s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.08s
 DPI scale factor: 1.000000
-Creating interface object took 0.39s
+Creating interface object took 1.07s
 Cleaning stores took 0.00s
-Init translation took 0.05s
+Init translation took 0.08s
 Build styles took 0.01s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.15s
+Load screen analysis took 0.00s
+Analyze screens took 0.05s
+Save screen analysis took 0.18s
+Prepare screens took 0.25s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
+Save bytecode. took 0.22s
+Running _start took 0.01s
 Performance test:
-Interface start took 0.05s
+Interface start took 0.06s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
@@ -184,11 +185,13 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.92307019234s
+Total time until interface ready: 5.17747807503s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.017849 seconds.
-- Frame drawn at 0.034294 seconds.
-- Frame drawn at 0.047371 seconds.
-- Frame drawn at 0.063822 seconds.
-- 0.063822 seconds to render 5 frames.
+- Frame drawn at 0.017168 seconds.
+- Frame drawn at 0.029132 seconds.
+- Frame drawn at 0.046003 seconds.
+- Frame drawn at 0.084181 seconds.
+- 0.084181 seconds to render 5 frames.
+Niko wuz here
+Niko wuz here

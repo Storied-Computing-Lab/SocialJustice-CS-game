@@ -5,6 +5,10 @@ def main():
     print_poster_once()
     print_poster_once()
 
+    for i in range(5):
+        print("hi")
+        print(i)
+
     #This code will do something 5 times
     #for i in range(5):
         #print("hi")

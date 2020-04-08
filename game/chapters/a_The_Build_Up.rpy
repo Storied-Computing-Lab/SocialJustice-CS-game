@@ -17,6 +17,8 @@ label a_The_Build_Up:
 
     "You walk into the Center for Chamoru Rights and look out the window."
 
+    call check_nikos_hack from _call_check_nikos_hack
+
     "The green fronds of palm trees sway lazily in the wind."
     "An innoncence and beauty that frustrates you"
     "Because you don't know how to protect it."
@@ -172,7 +174,7 @@ label a_The_Build_Up:
     c "Oh my gosh. *Only you* would think of a hack like this Niko ya jerk!"
 
 
-    call check_nikos_hack from _call_check_nikos_hack
+    #call check_nikos_hack from _call_check_nikos_hack
 
     "You have two hours. Enough time to complete two actions"
 
