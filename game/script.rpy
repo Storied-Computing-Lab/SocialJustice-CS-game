@@ -123,7 +123,6 @@ label start:
     #show screen simple_screen
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
-    "Hello from inside the {b}the beginning{/b}"
     call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
     #$ import os; print(os.environ)
 
