@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 59: is not terminated with a newline. (Check strings and parenthesis.)
+File "game/chapters/aa_The_Disasters.rpy", line 240: is not terminated with a newline. (Check strings and parenthesis.)
 (Perhaps you left out a " at the end of the first line.)
-        build.executable_name = "Guaiya_Means_Love.DEBUGGING.April
+                t "However, we've been having problems getting the word out.
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Mon Mar 30 12:30:57 2020
+Wed Apr 22 10:32:38 2020

@@ -13,6 +13,13 @@ label aa_The_Disasters:
     #
     #
     #show Esperansa at lowered_right
+    "You're so excited about your first hack, you just want to keep nerding out with Niko."
+    "But you're still concerned with the way the Hacker Boyz exclude girls."
+    c "Maybe I should meet Esperansa. I could use someone to talk to about this."
+
+    scene black with dissolve
+    "After a few hours, you decide to head to the town center"
+    scene tinian japaneseGate
 
     "You come to the table that says 'Food Not Bombs'"
     "People are serving food to anyone who walks by, for free."
@@ -202,6 +209,9 @@ label aa_The_Disasters:
             c "But I love this land. I want to protect it."
             c "Let me have a look at the remote printer's source code."
             c "I'll get those communications out as soon as possible."
+            e "Tita mentioned that the remote printer has a bug, and is only sending 2 posters."
+            e "But there are at least 100 libraries, community groups, families, and activist orgs who have asked us to send the poster"
+            e "If you can get this working, we can really start a movement!"
         "We should evacuate. (Tita's approach)":
             $which_poster = "evacuate"
             c "I think we need to evacuate!"
@@ -215,7 +225,7 @@ label aa_The_Disasters:
             hide fierce_face_arms_crossed
             show face_neutral_arms_crossed at nb_lowered_right
             c "Yeah. I think we need to gather supplies and support each other."
-            c "We have to have....solidarity? With our most vulnerable."
+            c "We have to have....solidarity with our most vulnerable."
             t "Yeah, more specifically this kind of work is called 'harm reduction', or 'mutual aid'!"
             e "I'll see you two around soon."
             e "I'm going to start cleaning up the Food Not Bombs table and dishes."
@@ -227,10 +237,12 @@ label aa_The_Disasters:
             hide tita_concerned1
             show tita_neutral1 at center
             t "We are getting the word out to people on Tinian and Pågan about resources provided by the Task Force."
-            t "However, we need to send the posters digitally through unofficial channels."
-            t "One of our tactics is striking, and we want our organizing communications to remain confidential."
-            t "Do you have any experience hacking source code? There may be a way to send 100 posters automatically"
-            t "through a more secure channel."
+            t "However, we've been having problems getting the word out."
+            t "We need to print 100 posters but the printer has a bug and only prints 2."
+            t "Since we started protesting the military build-up, the city has been witholding technical support for local libraries."
+            t "since the city leadership knows that we do a lot of our agitation and organizing in free spaces like community centers and libraries."
+            t "We think there is a bug in the source code of the printer at the Center for Chamoru rights."
+            t "Do you have experience hacking source code? There may be a way to reprogram the printer to print 100 posters instead of just 2."
             c "I do actually! Niko suggested that you all needed help with digital communications."
             c "And I do have experience hacking past an artificial block Niko put on my own machine."
             t "Niko Rubino, your cousin? What a rascal."
@@ -240,8 +252,8 @@ label aa_The_Disasters:
             t "So many of my friends have left the islands. With climate change their sugarcane crops are suffering badly."
             t "The Navy has really impacted the land, Clara. Poisoned our soil, paved over graves."
             c "I'm here to help, Auntie Tita."
-            c "Let me have a look at the remote printer's source code."
-            c "I'll get those communications out as soon as possible."
+            c "Let me have a look at the printer's source code."
+            c "I'll try to get 100 posters printing!"
 
     "You walk to the Center for Chamoru Rights and you find the printer and plug in your laptop"
     "You are able to extract the source code from the printer"

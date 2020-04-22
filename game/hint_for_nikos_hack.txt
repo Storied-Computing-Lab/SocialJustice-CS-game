@@ -1,0 +1,3 @@
+Niko locked you out of your computer!
+His hack is located in
+"game/nIKO_WUZ_HERE_LOL.py"

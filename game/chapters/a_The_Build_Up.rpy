@@ -17,8 +17,6 @@ label a_The_Build_Up:
 
     "You walk into the Center for Chamoru Rights and look out the window."
 
-    call check_nikos_hack from _call_check_nikos_hack
-
     "The green fronds of palm trees sway lazily in the wind."
     "An innoncence and beauty that frustrates you"
     "Because you don't know how to protect it."
@@ -154,7 +152,7 @@ label a_The_Build_Up:
     "In this game you will have to hack your way to justice."
     "Try to fix niko's hack to continue on in the game."
     "You'll need those skills later"
-    scene tinian japaneseGate
+    scene tinian japaneseGate with dissolve
     #c "Well anyways, I really do want another challenge. They can't keep rejecting me after all the great programming I've done so far"
 
     #n "Well I wasn't gonna say it but the new challenge is out if you're ready to try again."
@@ -173,10 +171,22 @@ label a_The_Build_Up:
     c "what???"
     c "Oh my gosh. *Only you* would think of a hack like this Niko ya jerk!"
 
-
+    call check_nikos_hack from _call_check_nikos_hack
     #call check_nikos_hack from _call_check_nikos_hack
 
-    "You have two hours. Enough time to complete two actions"
+    n "Nice one Clara! That was a pretty tough problem."
+    n "It took me way longer to finish when I did it."
+    n "I have to say, the Hacker Boyz are definitely going to reconsider your application"
+
+    c "Yeah, or again, you and me, starting our own club!"
+    n "You know who you should talk to about this kind of stuff?"
+    c "Who?"
+    n "Esperansa. She's really into the whole social justice thing."
+    c "Oh yeah?"
+    n "Yeah, I always see her at the town center in Dededo. Giving out food to homeless people"
+    c "Oh, wow!"
+    n "I'm heading out, but let's talk more later"
+    n "I underestimated you cousin!"
 
 
 
