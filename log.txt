@@ -1,38 +1,39 @@
-Mon May 18 14:54:15 2020
+Mon May 18 15:11:29 2020
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
  
 
-Bootstrap to the start of init.init took 0.14s
+Bootstrap to the start of init.init took 0.12s
 Early init took 0.01s
-Loader init took 0.04s
-Loading error handling took 0.06s
-Loading script took 0.25s
-Loading save slot metadata. took 0.05s
+Loader init took 0.05s
+Loading error handling took 0.05s
+Loading script took 0.67s
+Loading save slot metadata. took 0.11s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.52s
+Running init code took 0.15s
 Loading analysis data took 0.04s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Dump and make backups. took 0.10s
+Backing up script files to '/Users/princesssteffykins/Library/RenPy/backups/SocialJustice-CS-game':
+Dump and make backups. took 0.12s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.06s
 DPI scale factor: 1.000000
-Creating interface object took 0.38s
+Creating interface object took 0.57s
 Cleaning stores took 0.00s
-Init translation took 0.05s
+Init translation took 0.06s
 Build styles took 0.01s
-Load screen analysis took 0.05s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.18s
+Load screen analysis took 0.00s
+Analyze screens took 0.05s
+Save screen analysis took 0.12s
+Prepare screens took 0.16s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.33s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.06s
+Interface start took 0.05s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
@@ -184,12 +185,311 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.46110105515s
+Total time until interface ready: 3.40708613396s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.019456 seconds.
-- Frame drawn at 0.033937 seconds.
-- Frame drawn at 0.049448 seconds.
-- Frame drawn at 0.067173 seconds.
-- 0.067173 seconds to render 5 frames.
-Niko was here
+- Frame drawn at 0.015817 seconds.
+- Frame drawn at 0.030555 seconds.
+- Frame drawn at 0.045386 seconds.
+- Frame drawn at 0.066580 seconds.
+- 0.066580 seconds to render 5 frames.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99

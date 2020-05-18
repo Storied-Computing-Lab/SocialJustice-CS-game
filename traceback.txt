@@ -7,7 +7,7 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00action_file.rpy", line 372, in __call__
     renpy.save(fn, extra_info=save_name)
-Exception: Could not pickle <module 'mock' (built-in)>. (perhaps store.mock = <module 'mock' (built-in)>)
+Exception: Could not pickle <module 'StringIO' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/StringIO.pyo'>. (perhaps store.StringIO = <module 'StringIO' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/StringIO.pyo'>)
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -42,16 +42,14 @@ Full traceback:
     rv = d.event(ev, x - xo, y - yo, st)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 244, in event
-    rv = d.event(ev, x - xo, y - yo, st)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 998, in event
     rv = i.event(ev, x - xo, y - yo, cst)
-  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/layout.py", line 244, in event
-    rv = d.event(ev, x - xo, y - yo, st)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 923, in event
     return handle_click(self.clicked)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 858, in handle_click
     rv = run(action)
+  File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 313, in run
+    new_rv = run(i, *args, **kwargs)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/display/behavior.py", line 320, in run
     return action(*args, **kwargs)
   File "renpy/common/00action_file.rpy", line 372, in __call__
@@ -64,9 +62,9 @@ Full traceback:
     cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
   File "/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/renpy/python.py", line 2024, in module_pickle
     raise Exception("Could not pickle {!r}.".format(module))
-Exception: Could not pickle <module 'mock' (built-in)>. (perhaps store.mock = <module 'mock' (built-in)>)
+Exception: Could not pickle <module 'StringIO' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/StringIO.pyo'>. (perhaps store.StringIO = <module 'StringIO' from '/Users/princesssteffykins/Downloads/RENPY PROJECTS/renpy-7.2.2-sdk/lib/pythonlib2.7/StringIO.pyo'>)
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
 Guaiya Means Love 1.0
-Mon May 18 13:00:53 2020
+Mon May 18 15:10:46 2020

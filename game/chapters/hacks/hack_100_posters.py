@@ -6,9 +6,9 @@ def main():
     print_poster_once()
 
     #This code will do something 5 times
-    #for i in range(5):
-        #print("hi")
-        #print(i)
+    for i in range(100):
+        print_poster_once()
+        print(i)
     #print("Hello inside hack_100_posters main function")
     #What is changing each time in the loop? What's staying the same?
     #Remember to use shift + o to see what prints out to the console!

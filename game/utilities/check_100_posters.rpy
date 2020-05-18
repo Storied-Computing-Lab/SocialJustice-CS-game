@@ -72,6 +72,8 @@ label check_100_posters:
                 #renpy.say("Clara","Press enter to restart")
                 continue
 
+        del hack_100_posters
+        del StringIO
         #$claras_computer_locked = False
         renpy.say("Clara", "Great. We have enough posters!!")
         renpy.say("Clara", "Welcome Back Clara")
