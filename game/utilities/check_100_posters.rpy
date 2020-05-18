@@ -8,7 +8,7 @@ label check_100_posters:
         import sys
         #print(sys.path)
         #print(sys.version)
-        import mock
+        #import mock
         #print(mock.__name__)
         import StringIO
         from functools import wraps

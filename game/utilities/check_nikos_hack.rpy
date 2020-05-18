@@ -18,7 +18,7 @@ label check_nikos_hack:
         while True:
             try:
                 nIKO_WUZ_HERE_LOL.main()
-                nIKO_WUZ_HERE_LOL = reload(nIKO_WUZ_HERE_LOL)
+                reload(nIKO_WUZ_HERE_LOL)
                 with mock.patch('sys.stdout', new_callable = StringIO.StringIO) as mock_stdout:
                     nIKO_WUZ_HERE_LOL.main()
                     if mock_stdout.getvalue() == 'Niko wuz here\n':
@@ -32,6 +32,9 @@ label check_nikos_hack:
                 #renpy.say("Clara","Press enter to restart")
                 continue
 
+        del nIKO_WUZ_HERE_LOL
+        del StringIO
+        del mock
         #$claras_computer_locked = False
         renpy.say("Clara", "You got into your computer!!")
         renpy.say("Clara", "Welcome Back Clara")

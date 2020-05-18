@@ -1,26 +1,43 @@
-Wed Apr 22 10:32:37 2020
+Mon May 18 14:54:15 2020
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.2.2.491
  
 
-Bootstrap to the start of init.init took 0.15s
+Bootstrap to the start of init.init took 0.14s
 Early init took 0.01s
-Loader init took 0.18s
-Loading error handling took 0.07s
-Loading script took 0.42s
+Loader init took 0.04s
+Loading error handling took 0.06s
+Loading script took 0.25s
 Loading save slot metadata. took 0.05s
 Loading persistent took 0.00s
-
-File "game/chapters/aa_The_Disasters.rpy", line 240: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                t "However, we've been having problems getting the word out.
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.52s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
 DPI scale factor: 1.000000
-Interface start took 1.61s
+Creating interface object took 0.38s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.18s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.06s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1342, 755) drawable=(1342, 755)
+Screen sizes: virtual=(1280, 720) physical=(1537, 865) drawable=(1537, 865)
 Vendor: 'Intel Inc.'
 Renderer: 'Intel(R) HD Graphics 5300'
 Version: '2.1 INTEL-10.36.25'
@@ -167,4 +184,12 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 3.29827284813s
+Total time until interface ready: 2.46110105515s
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.019456 seconds.
+- Frame drawn at 0.033937 seconds.
+- Frame drawn at 0.049448 seconds.
+- Frame drawn at 0.067173 seconds.
+- 0.067173 seconds to render 5 frames.
+Niko was here

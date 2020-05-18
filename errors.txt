@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/chapters/aa_The_Disasters.rpy", line 240: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                t "However, we've been having problems getting the word out.
+File "game/utilities/screens.rpy", line 306: u'yalgin' is not a keyword argument or valid child for the window statement.
+    yalgin 0.5
+          ^
 
 Ren'Py Version: Ren'Py 7.2.2.491
-Wed Apr 22 10:32:38 2020
+Tue May  5 19:59:31 2020

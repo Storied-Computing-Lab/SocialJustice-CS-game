@@ -59,9 +59,9 @@ transform nh_upper_right: #works with Niko's head?
     yalign -.01 #more negative moves it up?
 
 init python:
-    build.name = "Guaiya_DEBUGGING.April_16"
-    build.directory_name = "Guaiya_DEBUGGING.April_16"
-    build.executable_name = "Guaiya_Means_Love.DEBUGGING.April_16"
+    build.name = "Guaiya_MayDEBUG"
+    build.directory_name = "Guaiya_MayDEBUG"
+    build.executable_name = "Guaiya_Means_Love.MayDEBUG"
 
 init python:
 
@@ -105,7 +105,8 @@ define character.e = Character("Esperansa")
 
 
 # The game starts here.
-
+#Used to make the text bigger for better screenshots: 
+#define gui.choice_button_text_size = 60
 label start:
     $day = 0
     # Show a background. This uses a placeholder by default, but you can
