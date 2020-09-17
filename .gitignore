@@ -1,0 +1,16 @@
+*.rpyc
+*.rpyb
+*.rpymc
+*.pyc
+*.pyo
+
+*.bak
+
+log.txt
+errors.txt
+traceback.txt
+
+game/saves/
+game/cache/
+
+.DS_Store
