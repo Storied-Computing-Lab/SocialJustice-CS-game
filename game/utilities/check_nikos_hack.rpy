@@ -5,7 +5,7 @@ label check_nikos_hack:
         $ style.hyperlink_text.hover_bold = True
     python:
         from __future__ import unicode_literals
-        import nIKO_WUZ_HERE_LOL
+        import game.hacks.ClarasComputer.NIKO_WUZ_HERE_LOL as nIKO_WUZ_HERE_LOL
         import sys
         #print(sys.path)
         #print(sys.version)
