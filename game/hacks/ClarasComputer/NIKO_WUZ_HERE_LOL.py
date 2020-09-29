@@ -11,7 +11,7 @@ def main():
     Press shift + o inside the game to view the console in the game anytime.
     """
 
-    print("Niko wuz here")
+    print("Niko wuz here lol")
 
     #This is also a comment
     #BONUS: Can you print another message below the first?

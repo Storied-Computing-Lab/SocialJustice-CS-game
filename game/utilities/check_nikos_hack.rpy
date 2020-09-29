@@ -5,7 +5,7 @@ label check_nikos_hack:
         $ style.hyperlink_text.hover_bold = True
     python:
         from __future__ import unicode_literals
-        import game.hacks.ClarasComputer.NIKO_WUZ_HERE_LOL as nIKO_WUZ_HERE_LOL
+        from game.hacks.ClarasComputer import NIKO_WUZ_HERE_LOL 
         import sys
         #print(sys.path)
         #print(sys.version)
@@ -15,24 +15,30 @@ label check_nikos_hack:
         import sys
 
         #nikos_hack.main() #no problems here. It has to do with mock , new_callable = StringIO.StringIO
+
+        print_value = ""
         while True:
-            try:
-                nIKO_WUZ_HERE_LOL.main()
-                reload(nIKO_WUZ_HERE_LOL)
-                with mock.patch('sys.stdout', new_callable = StringIO.StringIO) as mock_stdout:
-                    nIKO_WUZ_HERE_LOL.main()
-                    if mock_stdout.getvalue() == 'Niko wuz here\n':
-                        renpy.say("Clara", "I am still locked out of my computer!")
-                        renpy.say("Clara", "I wonder where {a=hint1}Niko{/a} might have hidden his hack")
-                    else:
-                        break
-            except Exception as e:
+            #try:
+            reload(NIKO_WUZ_HERE_LOL)
+            with mock.patch('sys.stdout', new_callable = StringIO.StringIO) as mock_stdout:
+                NIKO_WUZ_HERE_LOL.main()
+                """
+                if user doesnt print, set print_value to a "print something statement"
+                """
+                print_value = mock_stdout.getvalue()
+                if print_value == 'Niko wuz here\n':
+                    renpy.say("Clara", "I am still locked out of my computer!")
+                    renpy.say("Clara", "I wonder where {a=hint1}Niko{/a} might have hidden his hack")
+                else:
+                    break
+            print(print_value)
+            """except Exception as e:
                 renpy.say("Clara","Error with nIKO_WUZ_HERE_LOL.py")
                 renpy.say("Clara",str(e))
                 #renpy.say("Clara","Press enter to restart")
-                continue
-
-        del nIKO_WUZ_HERE_LOL
+                continue"""
+        print(print_value)
+        del NIKO_WUZ_HERE_LOL
         del StringIO
         del mock
         #$claras_computer_locked = False
