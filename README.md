@@ -35,5 +35,7 @@ See [The RenPy Documention](https://www.renpy.org/doc/html/language_basics.html#
 
 Inside the RenPy Launcher screen, make sure your project is the Active Project in the upper right hand corner. In the right hand panel, select "Build Distributions." RenPy will scan the project and alert you for any compilation errors. Select whether the build is for Mac, PC, etc. and then hit "Build." 
 
+The build distribution process produces a folder whose name ends with `-dists`. Open, and inside you will find the zipped game which you can unzip to reveal an executable game app. It can be helpful to test your code by doing a build, since dev mode and built games will accept player changes to the source code (i.e. the Hacks) differently.  
+
 ## Pull Requests
 Please test your code and document how the code was tested. PRs will be merged into master only if the game a) builds successfully and b) does not break through a manual play-through of the effected conversation trees and levels. Please, please document how testing was done! For example, if commenting out certain levels or chapters made testing the code easier, this process should be documented in under the heading "Testing Steps" in the PR. 
