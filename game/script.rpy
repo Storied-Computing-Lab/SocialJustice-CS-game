@@ -12,6 +12,8 @@ image center library_space = "library_computer_lab.png"
 image skatepark = "dededo_skatepark.jpg"
 image flea_market = "dededo_fleamarket1.jpg"
 image driving = "driving.jpg"
+image cypher = "firstcypher.jpg"
+
 define t = Character("Tita")
 default stand_s = 0
 default imagine_s = 0
@@ -105,16 +107,48 @@ define character.e = Character("Esperansa")
 
 
 # The game starts here.
-#Used to make the text bigger for better screenshots: 
+#Used to make the text bigger for better screenshots:
 #define gui.choice_button_text_size = 60
+
+
+#testing screen
+
+    #show tinianJapanese-gate
+    #show cipher-screen
+    #show tinianJapanese-gate
+
+
+
+#The code for the screen called in the in game pop up below
+#This is just an image of an example notebook that I have thrown into the images directory
+screen notebook():
+    add "notebook.jpg"
+
+# clickable icon
+#This clickable icon is called in /chapters/a_The_Buid_Up
+#It essentially adds the icon to the top left and allows it to be clicked
+#However it needs to be able to be closed !!! Potential fix: Add .png of a red 'x' to the side thats clickable
+#FIX ME
+screen ingamemenu:
+       vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
+            imagebutton auto "notebookicon_%s.png" action Show("notebook")
+            #imagebutton auto takes in the notebook icon photo in the image directory
+            #you have to have two images in order for it to work, hence the "_%s"
+            #this then shows the notebook screen which is in line 124
+
+
+
+
 label start:
     $day = 0
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+    #scene cypher
+    #"Niko: Get to your hack!"
 
     scene tinian japaneseGate
-    #$ print("Hello world japaneseGate")
+    $ print("Hello world japaneseGate")
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -123,12 +157,16 @@ label start:
     #show screen player_actions
     #show screen simple_screen
 
+
+
+    #show screen ingamemenu
+
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
     call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
-    #$ import os; print(os.environ)
+    $ import os; print(os.environ)
 
-    #$ print("Hello from inside the first call to print")
-    #$ import sys; sys.stdout.write("Hello sys.stdout.write just ran\n")
+    $ print("Hello from inside the first call to print")
+    $ import sys; sys.stdout.write("Hello sys.stdout.write just ran\n")
     call aa_The_Disasters from _call_aa_The_Disasters #Hack2. Baby social justice for-loop.
 
     call ab_The_Clash from _call_ab_The_Clash
