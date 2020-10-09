@@ -1,2 +1,3 @@
 The printer source code is the file:
+
 "game/hacks/printer/hack_100_posters.py"
