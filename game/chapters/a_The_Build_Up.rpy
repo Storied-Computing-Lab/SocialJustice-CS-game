@@ -178,7 +178,9 @@ label a_The_Build_Up:
     n "Heres a clue, deciper this to get to your first hack..."
     n "This cypher was named after a famous Roman emperor. Try shifting by the string length of Guam"
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
-    call screen ingamemenu
+    #FIX ME DOES NOT MOVE ON TO CHECK NIKOS HACK
+    #call screen ingamemenu
+    #c "Let me get my notebook for this"
     call check_nikos_hack from _call_check_nikos_hack
     #call check_nikos_hack from _call_check_nikos_hack
     #Background of game is then reset after hack and cypher dissapears! :)

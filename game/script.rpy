@@ -125,8 +125,8 @@ define character.e = Character("Esperansa")
 #questions: how do we move on? can we align within a screen?
 screen notebook():
     add "notebook.jpg"
-    vbox xalign 0.668 yalign 0.0:
-            imagebutton auto "exit_%s.png" action renpy.hide_screen("notebook")
+   #vbox xalign 0.668 yalign 0.0:
+            #imagebutton auto "exit_%s.png" action renpy.hide_screen("notebook")
     
 
 # clickable icon
@@ -137,6 +137,8 @@ screen notebook():
 screen ingamemenu:
         vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
             imagebutton auto "notebookicon_%s.png" action Show("notebook")
+        vbox xalign 0.668 yalign 0.0:
+            imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
             #imagebutton auto takes in the notebook icon photo in the image directory
             #you have to have two images in order for it to work, hence the "_%s"
             #this then shows the notebook screen which is in line 124
@@ -166,7 +168,7 @@ label start:
 
 
 
-    show screen ingamemenu
+    #show screen ingamemenu
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
     call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
