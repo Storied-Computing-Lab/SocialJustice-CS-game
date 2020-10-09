@@ -2,7 +2,7 @@ label check_100_posters:
     python:
         from __future__ import unicode_literals
         #from hacks import hack_100_flyers does not work, gets error "no module named hacks even with __init__.py"
-        from game.chapters.hacks import hack_100_posters
+        from game.hacks.printer import hack_100_posters
         #Line 5 generates an error because "no module named hacks." To get hack_100_posters to be imported,
         #it looks like hack_100_posters still has to live in the game folder unfortunately!
         import sys
