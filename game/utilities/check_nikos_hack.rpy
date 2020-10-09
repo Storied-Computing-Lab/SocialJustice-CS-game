@@ -15,10 +15,10 @@ label check_nikos_hack:
         import sys
 
         #nikos_hack.main() #no problems here. It has to do with mock , new_callable = StringIO.StringIO
-
+        
+        # save a variable print_value to print to the main stdout that is called into mock_stdout instead of the main stdout
         print_value = ""
         while True:
-            #try:
             reload(NIKO_WUZ_HERE_LOL)
             with mock.patch('sys.stdout', new_callable = StringIO.StringIO) as mock_stdout:
                 NIKO_WUZ_HERE_LOL.main()
