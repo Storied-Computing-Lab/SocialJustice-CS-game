@@ -54,23 +54,18 @@ label check_100_posters:
         Forever loop that waits until hack_100_posters.main() prints 100 posters
         """
         while True:
-            try:
-                reload_hack_100_posters()
-                hack_100_posters.main()
-                #set the number display on the GUI to display print_poster_once.calls
-                num_posters_printed = print_poster_once.calls
-                update_printed_poster_number()
-                if print_poster_once.calls < 100:
-                    renpy.say("Clara","Looks like I only printed " + str(print_poster_once.calls) + " posters!")
-                    renpy.say("Clara","I should try to send at least 100")
-                    renpy.say("Clara","I wonder where I can find the printer's source code?")
-                else:
-                    break
-            except Exception as e:
-                renpy.say("Clara","Error with hack_100_posters.py")
-                renpy.say("Clara",str(e))
-                #renpy.say("Clara","Press enter to restart")
-                continue
+            reload_hack_100_posters()
+            hack_100_posters.main()
+            #set the number display on the GUI to display print_poster_once.calls
+            num_posters_printed = print_poster_once.calls
+            update_printed_poster_number()
+            if print_poster_once.calls < 100:
+                renpy.say("Clara","Looks like I only printed " + str(print_poster_once.calls) + " posters!")
+                renpy.say("Clara","I should try to send at least 100")
+                renpy.say("Clara","I wonder where I can find the printer's source code?")
+            else:
+                break
+                
 
         del hack_100_posters
         del StringIO
