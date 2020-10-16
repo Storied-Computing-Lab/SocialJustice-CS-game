@@ -124,9 +124,12 @@ define character.e = Character("Esperansa")
 
 #questions: how do we move on? can we align within a screen?
 screen notebook():
+    modal True
     add "notebook.jpg"
-   #vbox xalign 0.668 yalign 0.0:
-            #imagebutton auto "exit_%s.png" action renpy.hide_screen("notebook")
+    #vbox xalign 0.668 yalign 0.0:
+        #imagebutton auto "exit_%s.png" 
+    vbox xalign 0.668 yalign 0.0:
+        imagebutton auto "exit_%s.png" action Hide("notebook", dissolve)
     
 
 # clickable icon
@@ -135,10 +138,11 @@ screen notebook():
 #However it needs to be able to be closed !!! Potential fix: Add .png of a red 'x' to the side thats clickable
 #FIX ME
 screen ingamemenu:
-        vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
-            imagebutton auto "notebookicon_%s.png" action Show("notebook")
-        vbox xalign 0.668 yalign 0.0:
-            imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
+    vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
+        imagebutton auto "notebookicon_%s.png" action Show("notebook", dissolve)
+    
+        #vbox xalign 0.668 yalign 0.0:
+            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
             #imagebutton auto takes in the notebook icon photo in the image directory
             #you have to have two images in order for it to work, hence the "_%s"
             #this then shows the notebook screen which is in line 124
