@@ -173,12 +173,14 @@ label a_The_Build_Up:
 
     #Scene Cypher is just a background that gets called... it contains the images of my proposed cypher and the instructions are then
     #told through niko via the games text below
-    scene cypher
-    c "Let me get my notebook for this"
+    scene cypher1_pc
+    #scene cypher1_pc commented out whichever one you need to call upon
+    # For the sake of simplicity for the test run on 11/2 I think its best to leave the cypher as an actual screen rather than a hoverable, or else the user testers might miss it on their own
     n "Heres a clue, deciper this to get to your first hack..."
-    n "This cypher was named after a famous Roman emperor. Try shifting by the string length of Guam"
+    n "This cypher will give you a hint for where to go for your first hack! It's a Cesar Cypher thats shifted by four... GOODLUCK!"
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
     #FIX ME DOES NOT MOVE ON TO CHECK NIKOS HACK
+    c "Let me get my notebook for this"
     show screen ingamemenu
     #c "Let me get my notebook for this"
     call check_nikos_hack from _call_check_nikos_hack

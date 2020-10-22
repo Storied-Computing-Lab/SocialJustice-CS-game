@@ -12,8 +12,9 @@ image center library_space = "library_computer_lab.png"
 image skatepark = "dededo_skatepark.jpg"
 image flea_market = "dededo_fleamarket1.jpg"
 image driving = "driving.jpg"
-image cypher = "firstcypher.jpg"
-
+image cypher1_mac = "Hack_1_Mac.jpg"
+image cypher1_pc = "Hack_1_PC.jpg"
+image cypher2 = "Hack_2.jpg"
 define t = Character("Tita")
 default stand_s = 0
 default imagine_s = 0
@@ -127,10 +128,10 @@ screen notebook():
     modal True
     add "notebook.jpg"
     #vbox xalign 0.668 yalign 0.0:
-        #imagebutton auto "exit_%s.png" 
+        #imagebutton auto "exit_%s.png"
     vbox xalign 0.668 yalign 0.0:
         imagebutton auto "exit_%s.png" action Hide("notebook", dissolve)
-    
+
 
 # clickable icon
 #This clickable icon is called in /chapters/a_The_Buid_Up
@@ -140,16 +141,32 @@ screen notebook():
 screen ingamemenu:
     vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
         imagebutton auto "notebookicon_%s.png" action Show("notebook", dissolve)
-    
+
         #vbox xalign 0.668 yalign 0.0:
             #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
             #imagebutton auto takes in the notebook icon photo in the image directory
             #you have to have two images in order for it to work, hence the "_%s"
             #this then shows the notebook screen which is in line 124
-        
-        
 
+# Clickable icon/popup for the second in game hack based on the code aboce that was used for the in game notebook...
+#Cypher used for the hint of the hack #2 dealing with printers, has to be clickable popup since main screen in that scene is the interactive pciture of the flyer
+screen cypher2():
+    modal True
+    add "Hack_2.jpg"
+    #vbox xalign 0.668 yalign 0.0:
+        #imagebutton auto "exit_%s.png"
+    vbox xalign 0.850 yalign 0.0:
+        imagebutton auto "exit_%s.png" action Hide("cypher2", dissolve)
 
+screen ingamecypher:
+    vbox xalign 0.0 yalign 0.5: #vbox can call on where the pop up will be. Theyre coordinates
+        imagebutton auto "Cypher_%s.png" action Show("cypher2", dissolve)
+
+        #vbox xalign 0.668 yalign 0.0:
+            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
+            #imagebutton auto takes in the notebook icon photo in the image directory
+            #you have to have two images in order for it to work, hence the "_%s"
+            #this then shows the notebook screen which is in line 124
 
 
 label start:
@@ -176,11 +193,13 @@ label start:
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
     call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
+    #This is the first instance in which cypher 1 for PC or MAC is called ^
     $ import os; print(os.environ)
 
     $ print("Hello from inside the first call to print")
     $ import sys; sys.stdout.write("Hello sys.stdout.write just ran\n")
     call aa_The_Disasters from _call_aa_The_Disasters #Hack2. Baby social justice for-loop.
+    #cypher 2 called up here ^
 
     call ab_The_Clash from _call_ab_The_Clash
 

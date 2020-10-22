@@ -5,7 +5,7 @@ label check_nikos_hack:
         $ style.hyperlink_text.hover_bold = True
     python:
         from __future__ import unicode_literals
-        from game.hacks.ClarasComputer import NIKO_WUZ_HERE_LOL 
+        from game.hacks.ClarasComputer import NIKO_WUZ_HERE_LOL
         import sys
         #print(sys.path)
         #print(sys.version)
@@ -15,7 +15,7 @@ label check_nikos_hack:
         import sys
 
         #nikos_hack.main() #no problems here. It has to do with mock , new_callable = StringIO.StringIO
-        
+
         # save a variable print_value to print to the main stdout that is called into mock_stdout instead of the main stdout
         print_value = ""
         while True:
@@ -25,7 +25,7 @@ label check_nikos_hack:
                 print_value = mock_stdout.getvalue()
                 if print_value == 'Niko wuz here\n':
                     renpy.say("Clara", "I am still locked out of my computer!")
-                    renpy.say("Clara", "I wonder where {a=hint1}Niko{/a} might have hidden his hack")
+                    renpy.say("Clara", "Cesar Cypher... shifted by 4? That should tell me where the hack is!")
                 else:
                     break
             print(print_value)
