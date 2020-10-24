@@ -193,7 +193,7 @@ label start:
 
 
 
-    show screen ingamemenu
+    #show screen ingamemenu
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
     call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
