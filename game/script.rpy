@@ -18,6 +18,9 @@ define t = Character("Tita")
 default stand_s = 0
 default imagine_s = 0
 default norms_s = 0
+default hack_s = 1
+default notebook_images = ["notebook.jpg", "firstcypher_copy.jpg"]
+
 
 $ config.console = True
 $ config.developer = True #is this actually persisting during build? because of stdout_line needs it to be True
@@ -27,6 +30,7 @@ init -999 python:
     config.console = True
     config.developer = True #is this actually persisting during build? because of stdout_line needs it to be True
     config.debug = True
+    pic_index = {"picture_index": 0}
 
 transform lowered_center:
     xalign 0.5
@@ -122,14 +126,31 @@ define character.e = Character("Esperansa")
 #The code for the screen called in the in game pop up below
 #This is just an image of an example notebook that I have thrown into the images directory
 
-#questions: how do we move on? can we align within a screen?
+#Have an internal notebook counter variable saved in pic_index dictionary to dictate picture shown in notebook
+#making sure that variable doesn't go over the variable that indicates the hack that you are on/under 0
+#foward/back buttons increment/decrement internal counter variable and refresh notebook so that a new picture is loaded
 screen notebook():
     modal True
-    add "notebook.jpg"
-    #vbox xalign 0.668 yalign 0.0:
-        #imagebutton auto "exit_%s.png" 
+    python:
+        def picture_inc():
+            if pic_index["picture_index"] == hack_s - 1:
+                pic_index["picture_index"] = hack_s - 1;
+            else:
+                pic_index["picture_index"] += 1
+        def picture_dec():
+            if pic_index["picture_index"] <= 0:
+                pic_index["picture_index"] = 0
+            else:
+                pic_index["picture_index"] -= 1
+    add notebook_images[pic_index["picture_index"]]
     vbox xalign 0.668 yalign 0.0:
         imagebutton auto "exit_%s.png" action Hide("notebook", dissolve)
+
+    vbox xalign 0.658 yalign 0.92:
+        imagebutton auto "foward_button_%s.png" action picture_inc, Show("notebook")
+    vbox xalign 0.0 yalign 0.92:
+        imagebutton auto "backwards_button_%s.png" action picture_dec, Show("notebook")
+
     
 
 # clickable icon
@@ -172,7 +193,7 @@ label start:
 
 
 
-    #show screen ingamemenu
+    show screen ingamemenu
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
     call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
