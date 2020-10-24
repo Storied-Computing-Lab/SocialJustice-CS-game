@@ -175,6 +175,9 @@ label a_The_Build_Up:
     #FIX ME DOES NOT MOVE ON TO CHECK NIKOS_HACK
     show screen ingamemenu
     call check_nikos_hack from _call_check_nikos_hack
+
+    #increment hack counter variable after hack is complete
+    $hack_s += 1
     #call check_nikos_hack from _call_check_nikos_hack
     #Background of game is then reset after hack and cypher dissapears! :)
     scene tinian japaneseGate

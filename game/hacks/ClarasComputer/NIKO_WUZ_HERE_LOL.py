@@ -12,7 +12,7 @@ def main():
     Once hack is completed, press space/click forward in the game as usual to proceed in the game
     """
 
-    print("Niko wuz here")
+    print("Niko wuz here lol")
 
     #This is also a comment
     #BONUS: Can you print another message below the first?
