@@ -12,6 +12,22 @@ image center library_space = "library_computer_lab.png"
 image skatepark = "dededo_skatepark.jpg"
 image flea_market = "dededo_fleamarket1.jpg"
 image driving = "driving.jpg"
+#assign cypher1 image depending on OS
+# DOES NOT WORK RIGHT NOW
+#init python:
+    #import platform
+    #os_name=platform.system()
+#assign cypher1 image depending on OS
+# DOES NOT WORK RIGHT NOW. Need python block?
+#Is there an easier way to automate this
+#So we can assign a lot of variables
+#Dependent on the OS and not have to
+#Go through and change Os-dependent artwor
+#Manually?
+#if os_name == "Darwin":
+#    image cypher1 = "Hack_1_Mac.jpg"
+#else:
+#    image cypher1 = "Hack_1_PC.jpg"
 image cypher1_mac = "Hack_1_Mac.jpg"
 image cypher1_pc = "Hack_1_PC.jpg"
 image cypher2 = "Hack_2.jpg"
@@ -62,9 +78,9 @@ transform nh_upper_right: #works with Niko's head?
     yalign -.01 #more negative moves it up?
 
 init python:
-    build.name = "Guaiya_MayDEBUG"
-    build.directory_name = "Guaiya_MayDEBUG"
-    build.executable_name = "Guaiya_Means_Love.MayDEBUG"
+    build.name = "Guaiya_Fall20"
+    build.directory_name = "Guaiya_Fall20"
+    build.executable_name = "Guaiya_Means_Love.Guaiya_Fall20"
 
 init python:
 

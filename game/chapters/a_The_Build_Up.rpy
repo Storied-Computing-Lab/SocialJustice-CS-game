@@ -106,11 +106,13 @@ label a_The_Build_Up:
             $stand_s += .10 #something to level up her breaking in and disrupting score I guess
             c "Soooo! Niko with me that would make TWO Chamorus in the group!"
             n "Hm. Maybe you're right that would improve things..."
-            n "They do sometimes look at me weird whenever I question their jokes about people from Dededo"
+            n "They do sometimes look at me weird whenever I question their jokes about poor Chamoru communities in Dededo"
+            $ you_the_only_Chamoru = "with me that makes two"
             $ pass#No player choices need to interrupt, but here just like KK:H some reward for reimaging could fly into the air? idk it's a good plot point?
         "Maybe we should form a brand new hacker group of Chamorus!":
             show text "+10% Reclaim our imagination" at text_choice_effect
             $imagine_s += .10#an animation to level up Clara's reimagining skill
+            $ you_the_only_Chamoru = "with us as Chamoru hackers"
             c "Maybe you and I could form a brand new Chamoru hacker group Niko"
             c "It could focus on Chamoru specific issues. What do you think?"
             n "That actually might be cool"
@@ -122,18 +124,31 @@ label a_The_Build_Up:
     menu:
         "Why do you say they're not racist?": #use critical ability
             show text "NEW ABILITY: CRITIQUE" at text_choice_effect
+            c "Why do you say they aren't racist?"
             n "They don't say racist things or discriminate against me for being Chamoru"
             c "But isn't there a reason you said 'it might be cool' to just be Chamoru hackers together?"
             $ x = 1 #helping Niko be critical using her ability should be a reward somehow, unlock something? idk
             n "A reason? Hm... It does piss me off when they say shit about the poorer parts of town."
+            $ hacker_boys_racist = "the shit they say about poorer folks in Dededo"
         "Maybe he's right, but does he experience any discrimination?": #learn or level up imagining ability by learning how to imagine together
             show text "+10% Reclaim our imagination" at text_choice_effect
             $imagine_s += .10 #giving Niko the space to imagine together? Show his colors
-            c "Yeah, I guess it's hard to say if someone is racist or not. What do you think?"
-            n "Well I was thinking about the Chamoru hacker group you mentioned."
+            c "Maybe you're right, but do they make any comments."
+            c "Like do they encourage your Chamoru side"
+            c "Or do they only like your ideas when you make them comfortable?"
+            "Niko shifts his weight from left to right."
+            "So you try to open him up one more time"
+            $ hacker_boys_racist = "experiencing discrimination"
 
-    n "What if the Chamoru hackers really did a different type of hacking?"
-
+    c "Do you experience any other type of discrimination?"
+    if you_the_only_Chamoru == "with me that makes two":
+        n "Well I was thinking about having two Chamorus in the group, like you said"
+        n "Would that really be enough to combat discrimination?"
+        c "We could look out for each other."
+        c "What if Chamoru hackers really did a different type of hacking?"
+    else:
+        n "Well I was thinking about the Chamoru hacker group you mentioned."
+        n "What if Chamoru hackers really did a different type of hacking?"
 
     hide niko_neutral_eyes_neutral
     hide clara_neutral_eyes_open
@@ -157,37 +172,28 @@ label a_The_Build_Up:
 
     #n "Well I wasn't gonna say it but the new challenge is out if you're ready to try again."
 
-    menu:
-        "Well I'm glad you said something! I can do it today!":
-            n "Sweet."
-        "Hm.. I am SO ready to give it a try, but I need a little more time":
-            n "Cool. Let's meet at the Center for Chamoru Rights when you're ready!"
-            "Sorry no time to explore in this demo!"
-            ":)"
-            n "Cool you're back. Let's get hacking"
+    #menu:
+        #"Well I'm glad you said something! I can do it today!":
+            #n "Sweet."
+        #"Hm.. I am SO ready to give it a try, but I need a little more time":
+            #n "Cool. Let's meet at the Center for Chamoru Rights when you're ready!"
+            #"Sorry no time to explore in this demo!"
+            #":)"
+            #n "Cool you're back. Let's get hacking"
 
+    c "Well I'm glad you said something! I can do it today!"
     n "Well guess what? You're locked out of your computer!"
-
     c "what???"
     c "Oh my gosh. *Only you* would think of a hack like this Niko ya jerk!"
-<<<<<<< HEAD
 
     #Scene Cypher is just a background that gets called... it contains the images of my proposed cypher and the instructions are then
     #told through niko via the games text below
     scene cypher1_pc
     #scene cypher1_pc commented out whichever one you need to call upon
     # For the sake of simplicity for the test run on 11/2 I think its best to leave the cypher as an actual screen rather than a hoverable, or else the user testers might miss it on their own
-    n "Heres a clue, deciper this to get to your first hack..."
-    n "This cypher will give you a hint for where to go for your first hack! It's a Cesar Cypher thats shifted by four... GOODLUCK!"
+    n "Heres a clue, deciper this to reveal a hint for the location of your first hack!"
+    n "It's a Caesar Cipher that is shifted by four... GOODLUCK!"
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
-    #FIX ME DOES NOT MOVE ON TO CHECK NIKOS HACK
-    c "Let me get my notebook for this"
-=======
-    c "Let me get my notebook for this"
-    #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
-    #FIX ME DOES NOT MOVE ON TO CHECK NIKOS_HACK
->>>>>>> develop
-    show screen ingamemenu
     call check_nikos_hack from _call_check_nikos_hack
     #call check_nikos_hack from _call_check_nikos_hack
     #Background of game is then reset after hack and cypher dissapears! :)
@@ -196,8 +202,16 @@ label a_The_Build_Up:
     n "Nice one Clara! That was a pretty tough problem."
     n "It took me way longer to finish when I did it."
     n "I have to say, the Hacker Boyz are definitely going to reconsider your application"
-
     c "Yeah, or again, you and me, starting our own club!"
+
+    n "Keep this cipher, and your notes from this exercise."
+    n "They may come in handy, later."
+    c "Thanks Niko. I'll keep them in my notebook!"
+    show screen ingamemenu
+    "You just earned two new pages in your notebook!"
+
+    n "Great work again, Clara."
+    n "And I was thinking about what you said, about the Hacker Boyz and [hacker_boys_racist]."
     n "You know who you should talk to about this kind of stuff?"
     c "Who?"
     n "Esperansa. She's really into the whole social justice thing."
