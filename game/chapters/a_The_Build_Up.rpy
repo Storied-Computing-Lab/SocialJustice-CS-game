@@ -170,6 +170,7 @@ label a_The_Build_Up:
 
     c "what???"
     c "Oh my gosh. *Only you* would think of a hack like this Niko ya jerk!"
+<<<<<<< HEAD
 
     #Scene Cypher is just a background that gets called... it contains the images of my proposed cypher and the instructions are then
     #told through niko via the games text below
@@ -181,8 +182,12 @@ label a_The_Build_Up:
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
     #FIX ME DOES NOT MOVE ON TO CHECK NIKOS HACK
     c "Let me get my notebook for this"
+=======
+    c "Let me get my notebook for this"
+    #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
+    #FIX ME DOES NOT MOVE ON TO CHECK NIKOS_HACK
+>>>>>>> develop
     show screen ingamemenu
-    #c "Let me get my notebook for this"
     call check_nikos_hack from _call_check_nikos_hack
     #call check_nikos_hack from _call_check_nikos_hack
     #Background of game is then reset after hack and cypher dissapears! :)
