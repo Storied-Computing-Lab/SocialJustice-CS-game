@@ -195,6 +195,9 @@ label a_The_Build_Up:
     n "It's a Caesar Cipher that is shifted by four... GOODLUCK!"
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
     call check_nikos_hack from _call_check_nikos_hack
+
+    #increment hack counter variable after hack is complete
+    $hack_s += 1
     #call check_nikos_hack from _call_check_nikos_hack
     #Background of game is then reset after hack and cypher dissapears! :)
     scene tinian japaneseGate
