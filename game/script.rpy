@@ -148,7 +148,6 @@ define character.e = Character("Esperansa")
 #foward/back buttons increment/decrement internal counter variable and refresh notebook so that a new picture is loaded
 screen notebook():
     modal True
-<<<<<<< HEAD
     python:
         def picture_inc():
             if pic_index["picture_index"] == hack_s - 1:
@@ -169,15 +168,7 @@ screen notebook():
     vbox xalign 0.0 yalign 0.92:
         imagebutton auto "backwards_button_%s.png" action picture_dec, Show("notebook")
 
-    
-=======
-    add "notebook.jpg"
-    #vbox xalign 0.668 yalign 0.0:
-        #imagebutton auto "exit_%s.png"
-    vbox xalign 0.668 yalign 0.0:
-        imagebutton auto "exit_%s.png" action Hide("notebook", dissolve)
 
->>>>>>> develop
 
 # clickable icon
 #This clickable icon is called in /chapters/a_The_Buid_Up
