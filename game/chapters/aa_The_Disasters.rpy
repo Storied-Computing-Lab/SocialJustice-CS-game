@@ -103,6 +103,7 @@ label aa_The_Disasters:
     show clara_neutral_eyes_open at lowered_left_2
     c "Sure."
 
+    hide screen ingamemenu
     init python:
         def redraw_comic():
             renpy.scene()
@@ -122,6 +123,7 @@ label aa_The_Disasters:
             else:
                 break
     scene tinian japaneseGate with dissolve
+    show screen ingamemenu
     "You return to the FNB table as Tita finishes speaking."
     show clara_neutral_eyes_open at lowered_left_2 with dissolve
     show tita_neutral1 at center with dissolve
