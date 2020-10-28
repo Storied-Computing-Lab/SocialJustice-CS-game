@@ -59,35 +59,39 @@ label a_The_Build_Up:
     hide clara_neutral_eyes_closed
     show clara_neutral_eyes_open at lowered_left_2
     c "Wouldn't it be better for everyone if the Hacker Boyz had a new perspective on the team?"
-    n "I guess. I'm just worried about how you'd fit in with the guys"
-    menu: #both choices need to have POSTIIVE and NEGATIVE clear consequences
-        "I'm pretty flexible":
-            #THIS ONE REALLY NEEDS SOME WORK:
-            show text "+10% Stand your ground" at text_choice_effect
-            $stand_s += .10
-            n "I don't know Clara. I know you're smart, but the guys..."
-            n "...."
-            n "They just really... ACT like guys, you know?"
-            c "I said I can handle it. Trust me."
-            c "And you've got my back, right Niko?"
-            n "--"
-            n "----"
-            n "yeah of course Cuz"
-            "Niko's hesitation was kind of weird. So you try another angle" #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
-        "They'd need to adjust to a new perspective":
-            show text "+10% Challenging norms" at text_choice_effect
-            $norms_s += .10
-            c "Well as far as fitting in,"
-            c "I acutally think THEY would need to do work to adjust and welecome a Chamoru, female perspective!"
-            n "oh-- Do some work to adjust--? Adjust to you?"
-            c "We each have to do the work so that we all 'fit in' together."
-            $pass #the change the game choice. The
+    python:
+    #This python block is just a hack to do multi-line comment in renpy
+        """
+        n "I guess. I'm just worried about how you'd fit in with the guys"
+        menu: #both choices need to have POSTIIVE and NEGATIVE clear consequences
+            "I'm pretty flexible":
+                #THIS ONE REALLY NEEDS SOME WORK:
+                show text "+10% Stand your ground" at text_choice_effect
+                $stand_s += .10
+                n "I don't know Clara. I know you're smart, but the guys..."
+                n "...."
+                n "They just really... ACT like guys, you know?"
+                c "I said I can handle it. Trust me."
+                c "And you've got my back, right Niko?"
+                n "--"
+                n "----"
+                n "yeah of course Cuz"
+                "Niko's hesitation was kind of weird. So you try another angle" #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
+            "They'd need to adjust to a new perspective":
+                show text "+10% Challenging norms" at text_choice_effect
+                $norms_s += .10
+                c "Well as far as fitting in,"
+                c "I acutally think THEY would need to do work to adjust and welecome a Chamoru, female perspective!"
+                n "oh-- Do some work to adjust--? Adjust to you?"
+                c "We each have to do the work so that we all 'fit in' together."
+                $pass #the change the game choice. The
 
-    #be explicit with the player how you leveled up yourself:
-    #You just helped Clara cope with master's concerns cloak coping versus master is accountable. Both are anti-oppression work?)
+        #be explicit with the player how you leveled up yourself:
+        #You just helped Clara cope with master's concerns cloak coping versus master is accountable. Both are anti-oppression work?)
 
-    #Not really there yet, but eventually:
-    #be explicit with the player how you leveled up Niko (internalized misogyny)
+        #Not really there yet, but eventually:
+        #be explicit with the player how you leveled up Niko (internalized misogyny)
+        """
     hide clara_neutral_eyes_open
     show clara_pointer_left_eyes_closed at lowered_left_2
     show clara_pointer_left_eyes_closed at bounce
@@ -98,6 +102,7 @@ label a_The_Build_Up:
     hide clara_pointer_left_eyes_closed
     show clara_neutral_eyes_open at lowered_left_2
     n "So?"
+
     menu: #I'm mostly ok slash kinda excited about this player choice, I just want to make their input EVEN MORE CRUCIAL,
     #like the player choice that happens later in choosing Tita's evacuation versus Esperansa's stand and defend
     #In ^that case, it will really change the course of the story. What does THISv choice do?
@@ -156,7 +161,7 @@ label a_The_Build_Up:
 
     c "Hey Niko"
     n "Hey Clara"
-    n "I've been thinking about what you said, and I looked at your last hacker application. They should have let you in"
+    n "I've been thinking about what you said, and I looked at your last hacker application. The Hacker Boyz should have let you in"
     c "Really?!? Why'd they reject me"
     n "Maybe discrimination is harder to see than we thought?"
     "A moment of quiet"
