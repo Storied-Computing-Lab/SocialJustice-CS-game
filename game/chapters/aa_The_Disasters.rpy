@@ -43,28 +43,31 @@ label aa_The_Disasters:
     show clara_neutral_eyes_open at lowered_left_2
     hide closed_neutral_arms_neutral
     show neutral_face_arms_neutral at nb_lowered_right
-    e "So, Clara..What's your background with social justice issues?"
-    hide neutral_face_arms_neutral
-    show closed_neutral_arms_neutral at nb_lowered_right
-    show closed_neutral_arms_neutral at bounce
+    #e "So, Clara..What's your background with social justice issues?"
+    #hide neutral_face_arms_neutral
+    #show closed_neutral_arms_neutral at nb_lowered_right
+    #show closed_neutral_arms_neutral at bounce
 
-    e "Or, like, what's got you interested?"
-    hide closed_neutral_arms_neutral
-    show neutral_face_arms_neutral at nb_lowered_right
+    #e "Or, like, what's got you interested?"
+    #hide closed_neutral_arms_neutral
+    #show neutral_face_arms_neutral at nb_lowered_right
 
-    menu:
-        "I've experienced gender inequality in hacking":
-            e "That's real."
-            c "Are you doing any work to address gender inequality?"
-            e "Yes! That's something our community is really concerned with actually."
-        "What's going on with the U.S. Military?":
-            e "The U.S. military buildup is one big problem facing a lot of us now."
-            c "Why is that?"
-            e "Great question!!"
-        "I'm not sure":
-            e "No worries! I'm glad you're curious about social justice."
-            e "There's a lot of ways to help out, and help is always needed."
-
+    python:
+    #This python block is a hacky way of commenting out multiple lines of code in repny
+        """
+        menu:
+            "I've experienced gender inequality in hacking":
+                e "That's real."
+                c "Are you doing any work to address gender inequality?"
+                e "Yes! That's something our community is really concerned with actually."
+            "What's going on with the U.S. Military?":
+                e "The U.S. military buildup is one big problem facing a lot of us now."
+                c "Why is that?"
+                e "Great question!!"
+            "I'm not sure":
+                e "No worries! I'm glad you're curious about social justice."
+                e "There's a lot of ways to help out, and help is always needed."
+        """
     "Tita walks up to the table."
     image tita_neutral1= im.Scale("images/tita/tita_neutral.png", 500, 750) #Enter specific numbers <--
     image tita_concerned1 = im.Scale("images/tita/tita_concerned.png", 500, 750) #Enter specific numbers <--
@@ -152,15 +155,15 @@ label aa_The_Disasters:
             $which_poster = "resist"
             c "I think we should resist!"
             e "We have to demand an end to the military buildup!"
-            c "Tita, we need all the help we can get."
-            e "Clara's right, will the Tinian Evacuation Task force stand with the Land Protectors?"
-            t "I'll have to ask at the next general meeting."
-            t "It's important to fight back, I agree,"
-            t "But I think the Task Force's central mission will remain to support fleeing refugees from Tinian and Pågan."
-            e "Of course, any social justice or liberation movement also must support refugees!"
-            c "But I think it's important that our first approach is the most direct!"
-            c "No more land theft!"
-            c "Not one more acre!!"
+            #c "Tita, we need all the help we can get."
+            #e "Clara's right, will the Tinian Evacuation Task force stand with the Land Protectors?"
+            #t "I'll have to ask at the next general meeting."
+            #t "It's important to fight back, I agree,"
+            #t "But I think the Task Force's central mission will remain to support fleeing refugees from Tinian and Pågan."
+            #e "Of course, any social justice or liberation movement also must support refugees!"
+            #c "But I think it's important that our first approach is the most direct!"
+            #c "No more land theft!"
+            #c "Not one more acre!!"
             e "Clara, we are gathering people to start protests and even striking."
             hide tita_concerned1
             show tita_neutral1 at center
@@ -179,34 +182,35 @@ label aa_The_Disasters:
             e "through a more secure channel."
             c "I do actually! Niko suggested that you all needed help with digital communications."
             c "And I do have experience hacking past an artificial block Niko put on my own machine."
-            e "Niko locked you out of your computer? Typical Niko."
-            e "Haha!"
-            e "Is he still with the Hacker Boyz?"
-            c "Yeah...."
-            "You catch Esperansa up on your efforts to join the hacking club"
+            #e "Niko locked you out of your computer? Typical Niko."
+            #e "Haha!"
+            #e "Is he still with the Hacker Boyz?"
+            #c "Yeah...."
+            #"You catch Esperansa up on your efforts to join the hacking club"
             #Consider inluding some of the choices Clara made from that FIRST
             #conversation here to come back around to the takeaways!!!!!!!!!!!!!!
-            c "Niko was starting to understand that we need diverse hackers to achieve diverse goals"
-            e "But he's still learning about social justice and hacking?"
-            c "That's right"
-            e "Yeah. I think when technology is used to steal and destroy land,"
-            e "I don't care what gender of the person programming drone strikes and other A.I. that kills"
-            e "But I do think we need a diversity of perspectives on how to USE technology..."
-            e "Like for social justice rather than military expansion!"
-            e "Anyways. We have to light a fire in people's hearts"
+            #c "Niko was starting to understand that we need diverse hackers to achieve diverse goals"
+            #e "But he's still learning about social justice and hacking?"
+            #c "That's right"
+            #e "Yeah. I think when technology is used to steal and destroy land,"
+            #e "yeah, I don't care what gender of the person programming drone strikes and other A.I. that kills"
+            #e "But I do think we need a diversity of perspectives on how to USE technology..."
+            #e "Like for social justice rather than military expansion!"
+            e "Your skills are exactly what we need to get these posters out Clara!"
+            e "We have to light a fire in people's hearts"
             e "So we all become Land Protectors!"
             e "Our language, our land, and our lives depend on it."
-            e "But the U.S. military still holds a place in people's hearts."
-            e "We have to expose their ugly side. They aren't the saviors of the Chamoru people"
-            e "They can't keep expanding and taking more land and expect us to adore them ANY LONGER!"
-            "You consider Esperansa's words"
-            "A pang of guilt hits you right in the chest."
-            "So many of your Chamoru family members have served in the U.S. Navy"
-            c "Esperansa, you've given me a lot to think about"
-            c "I still think it's important to stop the military buildup."
-            c "But I don't know if they are the enemy"
-            c "I'm still worried and considering it..."
-            c "But I love this land. I want to protect it."
+            #e "But the U.S. military still holds a place in people's hearts."
+            #e "We have to expose their ugly side. They aren't the saviors of the Chamoru people"
+            #e "They can't keep expanding and taking more land and expect us to adore them ANY LONGER!"
+            #"You consider Esperansa's words"
+            #"A pang of guilt hits you right in the chest at Esperansa's words."
+            #"So many of your Chamoru family members have served in the U.S. Navy"
+            #c "Esperansa, you've given me a lot to think about"
+            #c "I still think it's important to stop the military buildup."
+            #c "But I don't know if they are the enemy"
+            #c "I'm still worried and considering it..."
+            #c "But I love this land. I want to protect it."
             c "Let me have a look at the remote printer's source code."
             c "I'll get those communications out as soon as possible."
             e "Tita mentioned that the remote printer has a bug, and is only sending 2 posters."
@@ -225,9 +229,9 @@ label aa_The_Disasters:
             hide fierce_face_arms_crossed
             show face_neutral_arms_crossed at nb_lowered_right
             c "Yeah. I think we need to gather supplies and support each other."
-            c "We have to have....solidarity with our most vulnerable."
-            t "Yeah, more specifically this kind of work is called 'harm reduction', or 'mutual aid'!"
-            e "I'll see you two around soon."
+            c "We have to have solidarity with our most vulnerable."
+            #t "Yeah, more specifically this kind of work is called 'harm reduction', or 'mutual aid'!"
+            e "Agreed. I'll see you two around soon."
             e "I'm going to start cleaning up the Food Not Bombs table and dishes."
             hide face_neutral_arms_crossed
             show neutral_face_arms_neutral at nb_lowered_right
@@ -245,13 +249,13 @@ label aa_The_Disasters:
             t "Do you have experience hacking source code? There may be a way to reprogram the printer to print 100 posters instead of just 2."
             c "I do actually! Niko suggested that you all needed help with digital communications."
             c "And I do have experience hacking past an artificial block Niko put on my own machine."
-            t "Niko Rubino, your cousin? What a rascal."
-            t "I should talk to your Auntie about him! Is he also working against the military buildup crisis?"
-            c "I'm not sure, he hasn't mentioned anything yet to me."
-            "Some time passes as you and Tita catch up on life on the islands and your extended family's shenanigans"
-            t "So many of my friends have left the islands. With climate change their sugarcane crops are suffering badly."
-            t "The Navy has really impacted the land, Clara. Poisoned our soil, paved over graves."
-            c "I'm here to help, Auntie Tita."
+            #t "Niko Rubino, your cousin? What a rascal."
+            #t "I should talk to your Auntie about him! Is he also working against the military buildup crisis?"
+            #c "I'm not sure, he hasn't mentioned anything yet to me."
+            #"Some time passes as you and Tita catch up on life on the islands and your extended family's shenanigans"
+            #t "So many of my friends have left the islands. With climate change their sugarcane crops are suffering badly."
+            #t "The Navy has really impacted the land, Clara. Poisoned our soil, paved over graves."
+            #c "I'm here to help, Auntie Tita."
             c "Let me have a look at the printer's source code."
             c "I'll try to get 100 posters printing!"
 
