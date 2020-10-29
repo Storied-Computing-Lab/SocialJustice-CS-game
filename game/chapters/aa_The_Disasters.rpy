@@ -79,56 +79,62 @@ label aa_The_Disasters:
     show tita_smiling1 at center
     show tita_smiling1 at bounce
     t "Esperansa, Clara is my niece!"
-    hide neutral_face_arms_neutral
-    show closed_neutral_arms_neutral at nb_lowered_right
-    show closed_neutral_arms_neutral at bounce
-    e "Wow! Shoulda known."
-    hide tita_smiling1
-    show tita_neutral1 at center
-    hide clara_neutral_eyes_open
-    show clara_neutral_eyes_closed at lowered_left_2
-    show clara_neutral_eyes_closed at bounce
-    c "Why? Haha"
-    hide closed_neutral_arms_neutral
-    show neutral_face_arms_neutral at nb_lowered_right
-    e "Tita, doesn't Clara know your work?"
-    hide clara_neutral_eyes_closed
-    show clara_pointer_left_eyes_open at lowered_left_2
-    show clara_pointer_left_eyes_open at bounce
-    c "No, I don't know!"
-    hide tita_neutral1
-    show tita_smiling1 at center
-    t "Clara, will you walk with me?"
-    hide clara_pointer_left_eyes_open
-    show clara_neutral_eyes_open at lowered_left_2
-    c "Sure."
+    #hide neutral_face_arms_neutral
+    #show closed_neutral_arms_neutral at nb_lowered_right
+    #show closed_neutral_arms_neutral at bounce
+    python:
+        """
+        e "Wow! Shoulda known."
+        hide tita_smiling1
+        show tita_neutral1 at center
+        hide clara_neutral_eyes_open
+        show clara_neutral_eyes_closed at lowered_left_2
+        show clara_neutral_eyes_closed at bounce
+        c "Why? Haha"
+        hide closed_neutral_arms_neutral
+        show neutral_face_arms_neutral at nb_lowered_right
+        e "Tita, doesn't Clara know your work?"
+        hide clara_neutral_eyes_closed
+        show clara_pointer_left_eyes_open at lowered_left_2
+        show clara_pointer_left_eyes_open at bounce
+        c "No, I don't know!"
+        hide tita_neutral1
+        show tita_smiling1 at center
+        t "Clara, will you walk with me?"
+        hide clara_pointer_left_eyes_open
+        show clara_neutral_eyes_open at lowered_left_2
+        c "Sure."
 
-    hide screen ingamemenu
-    init python:
-        def redraw_comic():
+        hide screen ingamemenu
+        init python:
+            def redraw_comic():
+                renpy.scene()
+                renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
+                renpy.pause()
+        window hide #note, this command gets rid of all the sprites, too!
+        python:
             renpy.scene()
             renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
+            renpy.with_statement(dissolve)
             renpy.pause()
-    window hide #note, this command gets rid of all the sprites, too!
-    python:
-        renpy.scene()
-        renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
-        renpy.with_statement(dissolve)
-        renpy.pause()
-        while True:
-            keep_reading = renpy.display_menu([("Keep Reading", True), ("Continue", False)])
-            if keep_reading:
-                renpy.pause(.5)
-                redraw_comic()
-            else:
-                break
-    scene tinian japaneseGate with dissolve
-    show screen ingamemenu
-    "You return to the FNB table as Tita finishes speaking."
-    show clara_neutral_eyes_open at lowered_left_2 with dissolve
-    show tita_neutral1 at center with dissolve
+            while True:
+                keep_reading = renpy.display_menu([("Keep Reading", True), ("Continue", False)])
+                if keep_reading:
+                    renpy.pause(.5)
+                    redraw_comic()
+                else:
+                    break
+        scene tinian japaneseGate with dissolve
+        show screen ingamemenu
+        "You return to the FNB table as Tita finishes speaking."
+        show clara_neutral_eyes_open at lowered_left_2 with dissolve
+        show tita_neutral1 at center with dissolve
+        """
+    hide tita_smiling1
+    show tita_neutral1 at center
     "Esperansa looks troubled."
-    show angry_face_arms_crossed at nb_lowered_right with dissolve
+    hide neutral_face_arms_neutral
+    show angry_face_arms_crossed at nb_lowered_right #with dissolve
     e "Tita why hasn’t the task force considered even more resistance?"
     hide angry_face_arms_crossed
     show closed_pursed_face_arms_crossed at nb_lowered_right
@@ -169,19 +175,19 @@ label aa_The_Disasters:
             e "Clara, we are gathering people to start protests and even striking."
             hide tita_concerned1
             show tita_neutral1 at center
-            t "Yes, and the Tinian Evacuation Task force is voting to contribute to a strike fund"
-            t "in solidarity with the Land Protectors."
+            #t "Yes, and the Tinian Evacuation Task force is voting to contribute to a strike fund"
+            #t "in solidarity with the Land Protectors."
             t "We still need to discuss the strike fund. Talk later Esperansa?"
             e "Sounds good."
             t "I'll be back in a few. Ayu'os Clara"
-            c "Ayu'os Auntie Tita!"
+            #c "Ayu'os Auntie Tita!"
             "Esperansa and you start discussing resistance and anti-colonialism as Tita returns to the Task Force building."
             hide tita_neutral1 with dissolve
             e "We are gathering together from all over the Northern Marianas Islands to protest against the buildup."
-            e "However, we need to send the posters digitally through unofficial channels."
+            #e "However, we need to send the posters digitally through unofficial channels."
             e "One of our tactics is striking, and we want our organizing communications to remain confidential."
-            e "Do you have any experience hacking source code? There may be a way to send 100 posters automatically"
-            e "through a more secure channel."
+            e "Do you have any experience hacking source code?""
+            e "There may be a way to send 100 posters automatically through a more secure channel."
             c "I do actually! Niko suggested that you all needed help with digital communications."
             c "And I do have experience hacking past an artificial block Niko put on my own machine."
             #e "Niko locked you out of your computer? Typical Niko."
@@ -200,7 +206,7 @@ label aa_The_Disasters:
             #e "Like for social justice rather than military expansion!"
             e "Your skills are exactly what we need to get these posters out Clara!"
             e "We have to light a fire in people's hearts"
-            e "So we all become Land Protectors!"
+            #e "So we all become Land Protectors!"
             e "Our language, our land, and our lives depend on it."
             #e "But the U.S. military still holds a place in people's hearts."
             #e "We have to expose their ugly side. They aren't the saviors of the Chamoru people"
@@ -215,38 +221,39 @@ label aa_The_Disasters:
             #c "But I love this land. I want to protect it."
             c "Let me have a look at the remote printer's source code."
             c "I'll get those communications out as soon as possible."
-            e "Tita mentioned that the remote printer has a bug, and is only sending 2 posters."
-            e "But there are at least 100 libraries, community groups, families, and activist orgs who have asked us to send the poster"
+            e "We need to print 100 posters but the printer has a bug and only prints 2."
+            #e "Tita mentioned that the remote printer has a bug, and is only sending 2 posters."
+            #e "But there are at least 100 libraries, community groups, families, and activist orgs who have asked us to send the poster"
             e "If you can get this working, we can really start a movement!"
         "We should evacuate. (Tita's approach)":
             $which_poster = "evacuate"
             c "I think we need to evacuate!"
             t "Refugees from Tinian and Pågan are our most vulnerable!"
-            t "They include veterans, subsistence farmers, housing insecure people and people with disabilities."
+            #t "They include veterans, subsistence farmers, housing insecure people and people with disabilities."
             e "It's a tough choice, but I'm glad you'll be supporting the refugees Clara"
             hide fierce_face_arms_neutral
             show fierce_face_arms_crossed at nb_lowered_right
-            e "I think we have to take a more direct approach and stop land theft NOW"
-            e "But Evacuation is doing important work, too."
+            #e "I think we have to take a more direct approach and stop land theft NOW. BUT!"
+            e "Evacuation is doing important work, too."
             hide fierce_face_arms_crossed
             show face_neutral_arms_crossed at nb_lowered_right
-            c "Yeah. I think we need to gather supplies and support each other."
+            #c "Yeah. I think we need to gather supplies and support each other."
             c "We have to have solidarity with our most vulnerable."
             #t "Yeah, more specifically this kind of work is called 'harm reduction', or 'mutual aid'!"
             e "Agreed. I'll see you two around soon."
-            e "I'm going to start cleaning up the Food Not Bombs table and dishes."
+            #e "I'm going to start cleaning up the Food Not Bombs table and dishes."
             hide face_neutral_arms_crossed
             show neutral_face_arms_neutral at nb_lowered_right
-            e "Talk soon!"
+            #e "Talk soon!"
             "Tita and you start discussing refugee mutual aid as Esperansa joins some other activists."
             hide neutral_face_arms_neutral with dissolve
             hide tita_concerned1
             show tita_neutral1 at center
-            t "We are getting the word out to people on Tinian and Pågan about resources provided by the Task Force."
-            t "However, we've been having problems getting the word out."
+            #t "We are getting the word out to people on Tinian and Pågan about resources provided by the Task Force."
+            #t "However, we've been having problems getting the word out."
             t "We need to print 100 posters but the printer has a bug and only prints 2."
             t "Since we started protesting the military build-up, the city has been witholding technical support for local libraries."
-            t "since the city leadership knows that we do a lot of our agitation and organizing in free spaces like community centers and libraries."
+            #t "since the city leadership knows that we do a lot of our agitation and organizing in free spaces like community centers and libraries."
             t "We think there is a bug in the source code of the printer at the Center for Chamoru rights."
             t "Do you have experience hacking source code? There may be a way to reprogram the printer to print 100 posters instead of just 2."
             c "I do actually! Niko suggested that you all needed help with digital communications."
