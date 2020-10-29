@@ -186,7 +186,7 @@ label aa_The_Disasters:
             e "We are gathering together from all over the Northern Marianas Islands to protest against the buildup."
             #e "However, we need to send the posters digitally through unofficial channels."
             e "One of our tactics is striking, and we want our organizing communications to remain confidential."
-            e "Do you have any experience hacking source code?""
+            e "Do you have any experience hacking source code?"
             e "There may be a way to send 100 posters automatically through a more secure channel."
             c "I do actually! Niko suggested that you all needed help with digital communications."
             c "And I do have experience hacking past an artificial block Niko put on my own machine."
@@ -249,10 +249,10 @@ label aa_The_Disasters:
             hide neutral_face_arms_neutral with dissolve
             hide tita_concerned1
             show tita_neutral1 at center
-            #t "We are getting the word out to people on Tinian and Pågan about resources provided by the Task Force."
+            t "We are getting the word out to people about resources provided by the Evacuation Task Force."
             #t "However, we've been having problems getting the word out."
             t "We need to print 100 posters but the printer has a bug and only prints 2."
-            t "Since we started protesting the military build-up, the city has been witholding technical support for local libraries."
+            #t "Since we started protesting the military build-up, the city has been witholding technical support for local libraries."
             #t "since the city leadership knows that we do a lot of our agitation and organizing in free spaces like community centers and libraries."
             t "We think there is a bug in the source code of the printer at the Center for Chamoru rights."
             t "Do you have experience hacking source code? There may be a way to reprogram the printer to print 100 posters instead of just 2."
