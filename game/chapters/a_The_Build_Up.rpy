@@ -193,6 +193,7 @@ label a_The_Build_Up:
     # For the sake of simplicity for the test run on 11/2 I think its best to leave the cypher as an actual screen rather than a hoverable, or else the user testers might miss it on their own
     n "Heres a clue, deciper this to reveal a hint for the location of your first hack!"
     n "It's a Caesar Cipher that is shifted by four... GOODLUCK!"
+    show screen ingamemenu
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
     call check_nikos_hack from _call_check_nikos_hack
 
@@ -210,7 +211,7 @@ label a_The_Build_Up:
     n "Keep this cipher, and your notes from this exercise."
     n "They may come in handy, later."
     c "Thanks Niko. I'll keep them in my notebook!"
-    show screen ingamemenu
+
     "You just earned two new pages in your notebook!"
 
     n "Great work again, Clara."
