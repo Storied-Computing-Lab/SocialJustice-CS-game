@@ -29,7 +29,7 @@ label a_The_Build_Up:
     scene tinian japaneseGate
     "You turn from the window to see your cousin Niko, dressed like a White kid."
     "Again."
-    "A little more formal, a little less Chamoru. His style draws attention away from his olive skin and stout islander features."
+    #"A little more formal, a little less Chamoru. His style draws attention away from his olive skin and stout islander features."
     "Your mind turns to the matter at hand."
 
     show clara_neutral_eyes_open at lowered_left_2 with dissolve
@@ -59,104 +59,111 @@ label a_The_Build_Up:
     hide clara_neutral_eyes_closed
     show clara_neutral_eyes_open at lowered_left_2
     c "Wouldn't it be better for everyone if the Hacker Boyz had a new perspective on the team?"
-    n "I guess. I'm just worried about how you'd fit in with the guys"
-    menu: #both choices need to have POSTIIVE and NEGATIVE clear consequences
-        "I'm pretty flexible":
-            #THIS ONE REALLY NEEDS SOME WORK:
-            show text "+10% Stand your ground" at text_choice_effect
-            $stand_s += .10
-            n "I don't know Clara. I know you're smart, but the guys..."
-            n "...."
-            n "They just really... ACT like guys, you know?"
-            c "I said I can handle it. Trust me."
-            c "And you've got my back, right Niko?"
-            n "--"
-            n "----"
-            n "yeah of course Cuz"
-            "Niko's hesitation was kind of weird. So you try another angle" #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
-        "They'd need to adjust to a new perspective":
-            show text "+10% Challenging norms" at text_choice_effect
-            $norms_s += .10
-            c "Well as far as fitting in,"
-            c "I acutally think THEY would need to do work to adjust and welecome a Chamoru, female perspective!"
-            n "oh-- Do some work to adjust--? Adjust to you?"
-            c "We each have to do the work so that we all 'fit in' together."
-            $pass #the change the game choice. The
+    python:
+    #This python block is just a hack to do multi-line comment in renpy
+        """
+        n "I guess. I'm just worried about how you'd fit in with the guys"
+        menu: #both choices need to have POSTIIVE and NEGATIVE clear consequences
+            "I'm pretty flexible":
+                #THIS ONE REALLY NEEDS SOME WORK:
+                show text "+10% Stand your ground" at text_choice_effect
+                $stand_s += .10
+                n "I don't know Clara. I know you're smart, but the guys..."
+                n "...."
+                n "They just really... ACT like guys, you know?"
+                c "I said I can handle it. Trust me."
+                c "And you've got my back, right Niko?"
+                n "--"
+                n "----"
+                n "yeah of course Cuz"
+                "Niko's hesitation was kind of weird. So you try another angle" #the change girls choice. The "cloak" coping(?) choice: (cloak switch armour, like Ariel & Michelle. Take up space other workplace 'hacks' see corkboard.)
+            "They'd need to adjust to a new perspective":
+                show text "+10% Challenging norms" at text_choice_effect
+                $norms_s += .10
+                c "Well as far as fitting in,"
+                c "I acutally think THEY would need to do work to adjust and welecome a Chamoru, female perspective!"
+                n "oh-- Do some work to adjust--? Adjust to you?"
+                c "We each have to do the work so that we all 'fit in' together."
+                $pass #the change the game choice. The
 
-    #be explicit with the player how you leveled up yourself:
-    #You just helped Clara cope with master's concerns cloak coping versus master is accountable. Both are anti-oppression work?)
+        #be explicit with the player how you leveled up yourself:
+        #You just helped Clara cope with master's concerns cloak coping versus master is accountable. Both are anti-oppression work?)
 
-    #Not really there yet, but eventually:
-    #be explicit with the player how you leveled up Niko (internalized misogyny)
-    hide clara_neutral_eyes_open
-    show clara_pointer_left_eyes_closed at lowered_left_2
-    show clara_pointer_left_eyes_closed at bounce
-    c "and plus, right now YOU're the only Chamoru in the group!"
-    hide niko_neutral_eyes_worried
-    show niko_neutral_eyes_neutral at nb_lowered_right
-    show niko_neutral_eyes_neutral at bounce
-    hide clara_pointer_left_eyes_closed
-    show clara_neutral_eyes_open at lowered_left_2
-    n "So?"
-    menu: #I'm mostly ok slash kinda excited about this player choice, I just want to make their input EVEN MORE CRUCIAL,
-    #like the player choice that happens later in choosing Tita's evacuation versus Esperansa's stand and defend
-    #In ^that case, it will really change the course of the story. What does THISv choice do?
-        "With me that would make TWO Chamorus in the group!":
-            show text "+10% Stand your ground" at text_choice_effect
-            $stand_s += .10 #something to level up her breaking in and disrupting score I guess
-            c "Soooo! Niko with me that would make TWO Chamorus in the group!"
-            n "Hm. Maybe you're right that would improve things..."
-            n "They do sometimes look at me weird whenever I question their jokes about poor Chamoru communities in Dededo"
-            $ you_the_only_Chamoru = "with me that makes two"
-            $ pass#No player choices need to interrupt, but here just like KK:H some reward for reimaging could fly into the air? idk it's a good plot point?
-        "Maybe we should form a brand new hacker group of Chamorus!":
-            show text "+10% Reclaim our imagination" at text_choice_effect
-            $imagine_s += .10#an animation to level up Clara's reimagining skill
-            $ you_the_only_Chamoru = "with us as Chamoru hackers"
-            c "Maybe you and I could form a brand new Chamoru hacker group Niko"
-            c "It could focus on Chamoru specific issues. What do you think?"
-            n "That actually might be cool"
-            $ x = 1 #< -- but Niko and the PLAYER still need to help her somehow reimagine ??
-            $ x = 1 #an animation to level up Niko's radicalization
-    n "Hm. Yeah. But I don't think the hacker boys are 'racist'..."
-    #Here's a chance for player and clara to level up his critique ?????
-    #maybe she comes in with higher critique ability over imagination <-- player needs to help us with this
-    menu:
-        "Why do you say they're not racist?": #use critical ability
-            show text "NEW ABILITY: CRITIQUE" at text_choice_effect
-            c "Why do you say they aren't racist?"
-            n "They don't say racist things or discriminate against me for being Chamoru"
-            c "But isn't there a reason you said 'it might be cool' to just be Chamoru hackers together?"
-            $ x = 1 #helping Niko be critical using her ability should be a reward somehow, unlock something? idk
-            n "A reason? Hm... It does piss me off when they say shit about the poorer parts of town."
-            $ hacker_boys_racist = "the shit they say about poorer folks in Dededo"
-        "Maybe he's right, but does he experience any discrimination?": #learn or level up imagining ability by learning how to imagine together
-            show text "+10% Reclaim our imagination" at text_choice_effect
-            $imagine_s += .10 #giving Niko the space to imagine together? Show his colors
-            c "Maybe you're right, but do they make any comments."
-            c "Like do they encourage your Chamoru side"
-            c "Or do they only like your ideas when you make them comfortable?"
-            "Niko shifts his weight from left to right."
-            "So you try to open him up one more time"
-            $ hacker_boys_racist = "experiencing discrimination"
+        #Not really there yet, but eventually:
+        #be explicit with the player how you leveled up Niko (internalized misogyny)
 
-    c "Do you experience any other type of discrimination?"
-    if you_the_only_Chamoru == "with me that makes two":
-        n "Well I was thinking about having two Chamorus in the group, like you said"
-        n "Would that really be enough to combat discrimination?"
-        c "We could look out for each other."
-        c "What if Chamoru hackers really did a different type of hacking?"
-    else:
-        n "Well I was thinking about the Chamoru hacker group you mentioned."
-        n "What if Chamoru hackers really did a different type of hacking?"
+        hide clara_neutral_eyes_open
+        show clara_pointer_left_eyes_closed at lowered_left_2
+        show clara_pointer_left_eyes_closed at bounce
+        c "and plus, right now YOU're the only Chamoru in the group!"
+        hide niko_neutral_eyes_worried
+        show niko_neutral_eyes_neutral at nb_lowered_right
+        show niko_neutral_eyes_neutral at bounce
+        hide clara_pointer_left_eyes_closed
+        show clara_neutral_eyes_open at lowered_left_2
+        n "So?"
 
+        menu: #I'm mostly ok slash kinda excited about this player choice, I just want to make their input EVEN MORE CRUCIAL,
+        #like the player choice that happens later in choosing Tita's evacuation versus Esperansa's stand and defend
+        #In ^that case, it will really change the course of the story. What does THISv choice do?
+            "With me that would make TWO Chamorus in the group!":
+                show text "+10% Stand your ground" at text_choice_effect
+                $stand_s += .10 #something to level up her breaking in and disrupting score I guess
+                c "Soooo! Niko with me that would make TWO Chamorus in the group!"
+                n "Hm. Maybe you're right that would improve things..."
+                n "They do sometimes look at me weird whenever I question their jokes about poor Chamoru communities in Dededo"
+                $ you_the_only_Chamoru = "with me that makes two"
+                $ pass#No player choices need to interrupt, but here just like KK:H some reward for reimaging could fly into the air? idk it's a good plot point?
+            "Maybe we should form a brand new hacker group of Chamorus!":
+                show text "+10% Reclaim our imagination" at text_choice_effect
+                $imagine_s += .10#an animation to level up Clara's reimagining skill
+                $ you_the_only_Chamoru = "with us as Chamoru hackers"
+                c "Maybe you and I could form a brand new Chamoru hacker group Niko"
+                c "It could focus on Chamoru specific issues. What do you think?"
+                n "That actually might be cool"
+                $ x = 1 #< -- but Niko and the PLAYER still need to help her somehow reimagine ??
+                $ x = 1 #an animation to level up Niko's radicalization
+        n "Hm. Yeah. But I don't think the hacker boys are 'racist'..."
+        #Here's a chance for player and clara to level up his critique ?????
+        #maybe she comes in with higher critique ability over imagination <-- player needs to help us with this
+        menu:
+            "Why do you say they're not racist?": #use critical ability
+                show text "NEW ABILITY: CRITIQUE" at text_choice_effect
+                c "Why do you say they aren't racist?"
+                n "They don't say racist things or discriminate against me for being Chamoru"
+                c "But isn't there a reason you said 'it might be cool' to just be Chamoru hackers together?"
+                $ x = 1 #helping Niko be critical using her ability should be a reward somehow, unlock something? idk
+                n "A reason? Hm... It does piss me off when they say shit about the poorer parts of town."
+                $ hacker_boys_racist = "the shit they say about poorer folks in Dededo"
+            "Maybe he's right, but does he experience any discrimination?": #learn or level up imagining ability by learning how to imagine together
+                show text "+10% Reclaim our imagination" at text_choice_effect
+                $imagine_s += .10 #giving Niko the space to imagine together? Show his colors
+                c "Maybe you're right, but do they make any comments."
+                c "Like do they encourage your Chamoru side"
+                c "Or do they only like your ideas when you make them comfortable?"
+                "Niko shifts his weight from left to right."
+                "So you try to open him up one more time"
+                $ hacker_boys_racist = "experiencing discrimination"
+
+        c "Do you experience any other type of discrimination?"
+        if you_the_only_Chamoru == "with me that makes two":
+            n "Well I was thinking about having two Chamorus in the group, like you said"
+            n "Would that really be enough to combat discrimination?"
+            c "We could look out for each other."
+            c "What if Chamoru hackers really did a different type of hacking?"
+        else:
+            n "Well I was thinking about the Chamoru hacker group you mentioned."
+            n "What if Chamoru hackers really did a different type of hacking?"
+        """
     hide niko_neutral_eyes_neutral
     hide clara_neutral_eyes_open
+    scene black with dissolve
     "A few days go by. Clara explores a little and comes back to the Center for Chamoru Rights"
+    scene tinian japaneseGate
 
     c "Hey Niko"
     n "Hey Clara"
-    n "I've been thinking about what you said, and I looked at your last hacker application. They should have let you in"
+    n "I've been thinking about what you said, and I looked at your last hacker application. The Hacker Boyz should have let you in"
     c "Really?!? Why'd they reject me"
     n "Maybe discrimination is harder to see than we thought?"
     "A moment of quiet"
@@ -204,26 +211,34 @@ label a_The_Build_Up:
     scene tinian japaneseGate
 
     n "Nice one Clara! That was a pretty tough problem."
-    n "It took me way longer to finish when I did it."
-    n "I have to say, the Hacker Boyz are definitely going to reconsider your application"
-    c "Yeah, or again, you and me, starting our own club!"
+    #n "It took me way longer to finish when I did it."
+    n "The Hacker Boyz are definitely going to reconsider your application"
+    #c "Yeah, or again, you and me, starting our own club!"
 
+<<<<<<< HEAD
     n "Keep this cipher, and your notes from this exercise."
     n "They may come in handy, later."
     c "Thanks Niko. I'll keep them in my notebook!"
 
+=======
+    #n "Keep this cipher, and your notes from this exercise."
+    #n "They may come in handy, later."
+    c "Thanks Niko. I'll keep these notes in my notebook!"
+    show screen ingamemenu
+>>>>>>> playtest_nov_2
     "You just earned two new pages in your notebook!"
 
     n "Great work again, Clara."
-    n "And I was thinking about what you said, about the Hacker Boyz and [hacker_boys_racist]."
-    n "You know who you should talk to about this kind of stuff?"
+    #n "And I was thinking about what you said, about the Hacker Boyz and [hacker_boys_racist]."
+    n "And I was thinking about what you said.."
+    n "You know who might know more about discrimination?"
     c "Who?"
     n "Esperansa. She's really into the whole social justice thing."
-    c "Oh yeah?"
-    n "Yeah, I always see her at the town center in Dededo. Giving out food to homeless people"
+    #c "Oh yeah?"
+    #n "Yeah, I always see her at the town center in Dededo. Giving out food to homeless people"
     c "Oh, wow!"
     n "I'm heading out, but let's talk more later"
-    n "I underestimated you cousin!"
+    #n "I underestimated you cousin!"
 
 
 
