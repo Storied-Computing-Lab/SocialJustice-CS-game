@@ -36,7 +36,7 @@ default stand_s = 0
 default imagine_s = 0
 default norms_s = 0
 default hack_s = 1
-default notebook_images = ["notebook.jpg", "firstcypher_copy.jpg"]
+default notebook_images = ["print_statement.jpg", "cypher_page.jpg", "for_loop.jpg", "pigpen"]
 
 
 $ config.console = True
