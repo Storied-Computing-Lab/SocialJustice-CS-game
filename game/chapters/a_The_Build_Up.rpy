@@ -192,15 +192,16 @@ label a_The_Build_Up:
     n "Well guess what? You're locked out of your computer!"
     c "what???"
     c "Oh my gosh. *Only you* would think of a hack like this Niko ya jerk!"
-
+    show screen ingamemenu
+    c "Let me get my notebook for this!"
+    "Niko hands you a clue."
     #Scene Cypher is just a background that gets called... it contains the images of my proposed cypher and the instructions are then
     #told through niko via the games text below
-    scene cypher1_pc
+    scene cypher1_mac
     #scene cypher1_pc commented out whichever one you need to call upon
     # For the sake of simplicity for the test run on 11/2 I think its best to leave the cypher as an actual screen rather than a hoverable, or else the user testers might miss it on their own
     n "Heres a clue, deciper this to reveal a hint for the location of your first hack!"
     n "It's a Caesar Cipher that is shifted by four... GOODLUCK!"
-    show screen ingamemenu
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
     call check_nikos_hack from _call_check_nikos_hack
 
@@ -214,18 +215,9 @@ label a_The_Build_Up:
     #n "It took me way longer to finish when I did it."
     n "The Hacker Boyz are definitely going to reconsider your application"
     #c "Yeah, or again, you and me, starting our own club!"
-
-<<<<<<< HEAD
     n "Keep this cipher, and your notes from this exercise."
     n "They may come in handy, later."
     c "Thanks Niko. I'll keep them in my notebook!"
-
-=======
-    #n "Keep this cipher, and your notes from this exercise."
-    #n "They may come in handy, later."
-    c "Thanks Niko. I'll keep these notes in my notebook!"
-    show screen ingamemenu
->>>>>>> playtest_nov_2
     "You just earned two new pages in your notebook!"
 
     n "Great work again, Clara."
