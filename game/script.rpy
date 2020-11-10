@@ -35,8 +35,8 @@ define t = Character("Tita")
 default stand_s = 0
 default imagine_s = 0
 default norms_s = 0
-default hack_s = 1
-default notebook_images = ["notebook.jpg", "firstcypher_copy.jpg"]
+default hack_s = 2
+default notebook_images = ["print_statement.png", "cesarcy.png", "for_loop.png", "pigpen.png"]
 
 
 $ config.console = True
