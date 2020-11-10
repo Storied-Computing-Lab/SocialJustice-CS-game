@@ -277,12 +277,12 @@ label aa_The_Disasters:
     show screen ingamecypher
     call check_100_posters from _call_check_100_posters
     #Extension or bonus, fix the printer so it can print any number of posters, not just 100
-
     scene tinian japaneseGate
 
 #Then she does the hack of posters. Either 'EVACUATION. RIGHTS FOR REFUGEES' or 'RESIST. PROTECT THE LAND'
 
     "You did it!"
+    "You earned the pig pen cipher in your notebook!"
     "End of Demo"
     "End of Demo"
     "End of Demo"
