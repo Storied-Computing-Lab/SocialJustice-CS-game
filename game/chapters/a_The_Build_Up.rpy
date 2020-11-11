@@ -215,17 +215,10 @@ label a_The_Build_Up:
     n "The Hacker Boyz are definitely going to reconsider your application"
     #c "Yeah, or again, you and me, starting our own club!"
 
-<<<<<<< HEAD
     n "Keep this cipher, and your notes from this exercise."
     n "They may come in handy, later."
     c "Thanks Niko. I'll keep them in my notebook!"
 
-=======
-    #n "Keep this cipher, and your notes from this exercise."
-    #n "They may come in handy, later."
-    c "Thanks Niko. I'll keep these notes in my notebook!"
-    show screen ingamemenu
->>>>>>> playtest_nov_2
     "You just earned two new pages in your notebook!"
 
     n "Great work again, Clara."
