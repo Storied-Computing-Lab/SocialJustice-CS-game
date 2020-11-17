@@ -4,14 +4,14 @@
 # name of the character.
 
 image tinian japaneseGate = "misc/tinian-japaneseGate.png"
-image claras_computer_screen = "claras_computer_screen.png"
+image claras_computer_screen = "misc/claras_computer_screen.png"
 image DisastersComic1 = "misc/TheDisastersComic1.png"
 #image clara_desktop = "clara_desktop.png"
-image atom_opened = "atom-opened.png"
-image center library_space = "library_computer_lab.png"
-image skatepark = "dededo_skatepark.jpg"
-image flea_market = "dededo_fleamarket1.jpg"
-image driving = "driving.jpg"
+image atom_opened = "misc/atom-opened.png"
+image center library_space = "misc/library_computer_lab.png"
+image skatepark = "misc/dededo_skatepark.jpg"
+image flea_market = "misc/dededo_fleamarket1.jpg"
+image driving = "misc/driving.jpg"
 #assign cypher1 image depending on OS
 # DOES NOT WORK RIGHT NOW
 #init python:
@@ -208,24 +208,12 @@ screen ingamecypher:
 
 label start:
     $day = 0
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-    #scene cypher
-    #"Niko: Get to your hack!"
-
-    scene tinian japaneseGate
-    $ print("Hello world japaneseGate")
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    show screen player_actions
+    #scene tinian japaneseGate
+    #$ print("Hello world japaneseGate")
 
     #show screen player_actions
     #show screen simple_screen
-
-
-
     #show screen ingamemenu
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
@@ -235,34 +223,18 @@ label start:
 
     $ print("Hello from inside the first call to print")
     $ import sys; sys.stdout.write("Hello sys.stdout.write just ran\n")
-    call aa_The_Disasters from _call_aa_The_Disasters #Hack2. Baby social justice for-loop.
-    #cypher 2 called up here ^
-
-    call ab_The_Clash from _call_ab_The_Clash
-
-    call ac_The_Meeting from _call_ac_The_Meeting
-
-    call ad_The_Demands from _call_ad_The_Demands
-
-    call ae_The_Resistance from _call_ae_The_Resistance
-
-    call af_The_Translation from _call_af_The_Translation
-
-    call ag_The_Silence from _call_ag_The_Silence
-
-    call ah_The_Renewal from _call_ah_The_Renewal
-
-    call ai_The_News from _call_ai_The_News
-
-    call aj_The_Takeover from _call_aj_The_Takeover
-
-    call ak_The_Reach from _call_ak_The_Reach
-
-    call al_The_End from _call_al_The_End
-
-
-    show clara phone at lowered_left
-    show tita_neutral at t_lowered_right
+    #call aa_The_Disasters from _call_aa_The_Disasters #Hack2. Baby social justice for-loop.
+    #call ab_The_Clash from _call_ab_The_Clash
+    #call ac_The_Meeting from _call_ac_The_Meeting
+    #call ad_The_Demands from _call_ad_The_Demands
+    #call ae_The_Resistance from _call_ae_The_Resistance
+    #call af_The_Translation from _call_af_The_Translation
+    #call ag_The_Silence from _call_ag_The_Silence
+    #call ah_The_Renewal from _call_ah_The_Renewal
+    #call ai_The_News from _call_ai_The_News
+    #call aj_The_Takeover from _call_aj_The_Takeover
+    #call ak_The_Reach from _call_ak_The_Reach
+    #call al_The_End from _call_al_The_End
 
     "Here ends the DEMO"
     "THANK YOU FOR PLAYING!"

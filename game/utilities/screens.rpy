@@ -161,17 +161,19 @@ screen player_actions():
             text "Actions"
             #textbutton "Debate":
                 #action Return(True)
-            textbutton "Create":
+            #textbutton "Create":
                 #action Show("simple_screen")
-                action Show("claras_computer") #this is maybe not great?
+                #action Jump("claras_computer") #this is maybe not great?
             textbutton "Explore":
                 action Jump("guahan_imagemap")
+            textbutton "Return":
+                action Return(True)
 
 screen guahan_imagemap(): #Preparing the imagemap
     imagemap:
-        idle "guahan_idle.png"
+        idle "misc/guahan_idle.png"
         #ground "guahan.png"
-        hover "guahan_hover.png"
+        hover "misc/guahan_hover.png"
 
         hotspot (645, 136, 103, 71) clicked Jump("dededo")
         hotspot (378, 256, 230, 58) clicked Jump("center")
@@ -180,9 +182,9 @@ screen guahan_imagemap(): #Preparing the imagemap
 
 screen dededo_imagemap():
     imagemap:
-        ground "dededo_village_center.png"
+        ground "misc/dededo_village_center.png"
         #ground "guahan.png"
-        hover "dededo_village_center_hover.png"
+        hover "misc/dededo_village_center_hover.png"
 
         hotspot (6, 422, 128, 192) clicked Jump("fleamarket")
         hotspot (1026, 513, 238, 203) clicked Jump("driving")
