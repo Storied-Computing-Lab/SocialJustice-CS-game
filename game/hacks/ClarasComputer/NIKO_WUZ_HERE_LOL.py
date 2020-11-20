@@ -21,7 +21,7 @@ def main():
     #hint!! look in the anti_virus file!!
     niko_virus.invade()
 
-    eliminate_virus()
+    #eliminate_virus()
     #rint(niko_virus.message)
     
     #This is also a comment
@@ -30,5 +30,5 @@ def main():
 
 
 def eliminate_virus():
-    global virus
-    virus.change_message("Virus eliminated")
+    global niko_virus
+    niko_virus.change_message("Virus eliminated")
