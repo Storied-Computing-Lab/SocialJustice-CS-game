@@ -19,7 +19,8 @@ label check_nikos_hack:
         # save a variable print_value to print to the main stdout that is called into mock_stdout instead of the main stdout
         print_value = ""
         while True:
-            reload(NIKO_WUZ_HERE_LOL)
+            reloaded_module = reload(NIKO_WUZ_HERE_LOL)
+            print(reloaded_module)
             with mock.patch('sys.stdout', new_callable = StringIO.StringIO) as mock_stdout:
                 NIKO_WUZ_HERE_LOL.main()
                 print_value = mock_stdout.getvalue()

@@ -1,4 +1,8 @@
 from __future__ import unicode_literals
+from anti_virus import AntiVirus
+from virus import Virus
+
+niko_virus = Virus()
 
 def main():
     """
@@ -12,8 +16,19 @@ def main():
     Once hack is completed, press space/click forward in the game as usual to proceed in the game
     """
 
-    print("Niko wuz here")
+    #print("Niko wuz here lol")
 
+    #hint!! look in the anti_virus file!!
+    niko_virus.invade()
+
+    eliminate_virus()
+    #rint(niko_virus.message)
+    
     #This is also a comment
     #BONUS: Can you print another message below the first?
     return
+
+
+def eliminate_virus():
+    global virus
+    virus.change_message("Virus eliminated")
