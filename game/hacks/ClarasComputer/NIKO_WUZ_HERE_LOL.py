@@ -7,8 +7,10 @@ niko_virus = Virus()
 def main():
     """
     Welcome to your first hack!
-    All you have to do is this:
-    Change "Niko wuz here" to a new message & view your modification in the console
+    You are presented with a niko_virus!!! Be sure to check out the virus.py file to see what a virus can do.
+    In order to defeat the virus you will have to change what the virus currently says!
+    If you are stuck/unsure on what to do be sure to read the names of the methods given and
+    read the notebook to find out what a method is and what to do with them!!!
 
     All this text is a comment. Computers do not read between the """ """
     Press command + s to save changes here.
@@ -16,16 +18,12 @@ def main():
     Once hack is completed, press space/click forward in the game as usual to proceed in the game
     """
 
-    #print("Niko wuz here lol")
-
-    #hint!! look in the anti_virus file!!
     niko_virus.invade()
 
-    #eliminate_virus()
-    #rint(niko_virus.message)
+    
     
     #This is also a comment
-    #BONUS: Can you print another message below the first?
+    #BONUS: Can you make the virus say nothing at all?
     return
 
 

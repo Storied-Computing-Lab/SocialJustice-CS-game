@@ -6,7 +6,6 @@ from __future__ import unicode_literals
 This is a multi-line
 comment
 """
-
 def main():
     #What do these two lines of code do?
     print_poster_once()
