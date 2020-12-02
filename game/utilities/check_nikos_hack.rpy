@@ -20,7 +20,7 @@ label check_nikos_hack:
         print_value = ""
         while True:
             reloaded_module = reload(NIKO_WUZ_HERE_LOL)
-            print(reloaded_module)
+            #print(reloaded_module)
             with mock.patch('sys.stdout', new_callable = StringIO.StringIO) as mock_stdout:
                 NIKO_WUZ_HERE_LOL.main()
                 print_value = mock_stdout.getvalue()
