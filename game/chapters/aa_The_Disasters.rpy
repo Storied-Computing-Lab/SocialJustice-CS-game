@@ -79,59 +79,46 @@ label aa_The_Disasters:
     show tita_smiling1 at center
     show tita_smiling1 at bounce
     t "Esperansa, Clara is my niece!"
-    #hide neutral_face_arms_neutral
-    #show closed_neutral_arms_neutral at nb_lowered_right
-    #show closed_neutral_arms_neutral at bounce
-    python:
-        """
-        e "Wow! Shoulda known."
-        hide tita_smiling1
-        show tita_neutral1 at center
-        hide clara_neutral_eyes_open
-        show clara_neutral_eyes_closed at lowered_left_2
-        show clara_neutral_eyes_closed at bounce
-        c "Why? Haha"
-        hide closed_neutral_arms_neutral
-        show neutral_face_arms_neutral at nb_lowered_right
-        e "Tita, doesn't Clara know your work?"
-        hide clara_neutral_eyes_closed
-        show clara_pointer_left_eyes_open at lowered_left_2
-        show clara_pointer_left_eyes_open at bounce
-        c "No, I don't know!"
-        hide tita_neutral1
-        show tita_smiling1 at center
-        t "Clara, will you walk with me?"
-        hide clara_pointer_left_eyes_open
-        show clara_neutral_eyes_open at lowered_left_2
-        c "Sure."
-
-        hide screen ingamemenu
-        init python:
-            def redraw_comic():
-                renpy.scene()
-                renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
-                renpy.pause()
-        window hide #note, this command gets rid of all the sprites, too!
-        python:
+    e "Tita, does Clara know about your work?"
+    hide clara_neutral_eyes_closed
+    show clara_pointer_left_eyes_open at lowered_left_2
+    show clara_pointer_left_eyes_open at bounce
+    c "No, I don't know!"
+    hide tita_neutral1
+    show tita_smiling1 at center
+    t "Clara, will you walk with me?"
+    hide clara_pointer_left_eyes_open
+    show clara_neutral_eyes_open at lowered_left_2
+    c "Sure."
+    hide tita_smiling1
+    hide clara_neutral_eyes_open
+    hide neutral_face_arms_neutral
+    hide screen ingamemenu
+    hide screen player_actions
+    init python:
+        def redraw_comic():
             renpy.scene()
             renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
-            renpy.with_statement(dissolve)
             renpy.pause()
-            while True:
-                keep_reading = renpy.display_menu([("Keep Reading", True), ("Continue", False)])
-                if keep_reading:
-                    renpy.pause(.5)
-                    redraw_comic()
-                else:
-                    break
-        scene tinian japaneseGate with dissolve
-        show screen ingamemenu
-        "You return to the FNB table as Tita finishes speaking."
-        show clara_neutral_eyes_open at lowered_left_2 with dissolve
-        show tita_neutral1 at center with dissolve
-        """
-    hide tita_smiling1
+    window hide #note, this command gets rid of all the sprites, too!
+    python:
+        renpy.scene()
+        renpy.show("DisastersComic1", at_list=[Transform(yalign=0.5),Transform(xalign=0.5)])
+        renpy.with_statement(dissolve)
+        renpy.pause()
+        while True:
+            keep_reading = renpy.display_menu([("Keep Reading", True), ("Continue", False)])
+            if keep_reading:
+                renpy.pause(.5)
+                redraw_comic()
+            else:
+                break
+    scene tinian japaneseGate with dissolve
+    show screen ingamemenu
+    "You return to the FNB table as Tita finishes speaking."
     show tita_neutral1 at center
+    show neutral_face_arms_neutral at nb_lowered_right
+    show clara_neutral_eyes_open at lowered_left_2
     "Esperansa looks troubled."
     hide neutral_face_arms_neutral
     show angry_face_arms_crossed at nb_lowered_right #with dissolve
