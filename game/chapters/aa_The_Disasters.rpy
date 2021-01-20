@@ -9,14 +9,6 @@ label aa_The_Disasters:
         easeout .175 yoffset 0
         yoffset 0
 
-    #
-    #
-    #
-    #show Esperansa at lowered_right
-    "You're so excited about your first hack, you just want to keep nerding out with Niko."
-    "But you're still concerned with the way the Hacker Boyz exclude girls."
-    c "Maybe I should meet Esperansa. I could use someone to talk to about this."
-
     scene black with dissolve
     "After a few hours, you decide to head to the town center"
     scene tinian japaneseGate

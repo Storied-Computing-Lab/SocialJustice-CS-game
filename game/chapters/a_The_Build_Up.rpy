@@ -224,6 +224,10 @@ label a_The_Build_Up:
     c "Oh, wow!"
     n "I'm heading out, but let's talk more later"
     n "I underestimated you cousin!"
+    "You're so excited about your first hack, you just want to keep nerding out with Niko."
+    "But you're still concerned with the way the Hacker Boyz exclude girls."
+    c "Maybe I should meet Esperansa. I could use someone to talk to about this."
+
 
 
 
