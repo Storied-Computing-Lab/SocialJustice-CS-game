@@ -169,6 +169,15 @@ screen player_actions():
             textbutton "Return":
                 action Return(True)
 
+screen player_actions1():
+    modal True
+    frame:
+        xalign 0.8 ypos 50
+        vbox:
+            text "Actions"
+            textbutton "Explore":
+                action Jump("guahan_imagemap")
+
 screen guahan_imagemap(): #Preparing the imagemap
     imagemap:
         idle "misc/guahan_idle.png"

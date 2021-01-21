@@ -208,7 +208,6 @@ screen ingamecypher:
 
 label start:
     $day = 0
-    show screen player_actions
     #scene tinian japaneseGate
     #$ print("Hello world japaneseGate")
 
@@ -217,7 +216,7 @@ label start:
     #show screen ingamemenu
 
     #THIS NEXT LINE SHOULD BE THE FIRST CHAPTER!!!!!!!!!!!!!!!!!
-    call a_The_Build_Up from _call_a_The_Build_Up #Hack1. Get in the code, cousin's prank.
+    call a_The_Center from _call_a_The_Center #Hack1. Get in the code, cousin's prank.
     #This is the first instance in which cypher 1 for PC or MAC is called ^
     $ import os; print(os.environ)
 
@@ -236,9 +235,9 @@ label start:
     #call ak_The_Reach from _call_ak_The_Reach
     #call al_The_End from _call_al_The_End
 
-    "Here ends the DEMO"
-    "THANK YOU FOR PLAYING!"
-    "GOODBYE"
+    #"Here ends the DEMO"
+    #"THANK YOU FOR PLAYING!"
+    #"GOODBYE"
 
     # This ends the game.
 
