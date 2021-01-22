@@ -186,7 +186,7 @@ screen guahan_imagemap(): #Preparing the imagemap
 
         hotspot (645, 136, 103, 71) clicked Jump("dededo")
         hotspot (378, 256, 230, 58) clicked Jump("center")
-        hotspot (528, 529, 170, 66) clicked Jump("sugarcane")
+        hotspot (528, 529, 170, 66) clicked Jump("bananafields")
         hotspot (258, 326, 210, 55) clicked Jump("base")
 
 screen dededo_imagemap():

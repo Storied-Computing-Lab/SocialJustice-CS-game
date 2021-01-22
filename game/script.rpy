@@ -12,6 +12,8 @@ image center library_space = "misc/library_computer_lab.png"
 image skatepark = "misc/dededo_skatepark.jpg"
 image flea_market = "misc/dededo_fleamarket1.jpg"
 image driving = "misc/driving.jpg"
+image front_gate = "misc/front_gate.png"
+image banana_fields = "misc/banana_fields.png"
 #assign cypher1 image depending on OS
 # DOES NOT WORK RIGHT NOW
 #init python:
@@ -211,7 +213,7 @@ label start:
     #scene tinian japaneseGate
     #$ print("Hello world japaneseGate")
 
-    #show screen player_actions
+    show screen player_actions
     #show screen simple_screen
     #show screen ingamemenu
 
