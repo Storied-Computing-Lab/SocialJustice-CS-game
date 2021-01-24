@@ -212,8 +212,6 @@ label start:
     $day = 0
     #scene tinian japaneseGate
     #$ print("Hello world japaneseGate")
-
-    show screen player_actions
     #show screen simple_screen
     #show screen ingamemenu
 

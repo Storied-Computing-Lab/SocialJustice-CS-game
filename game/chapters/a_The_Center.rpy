@@ -149,9 +149,9 @@ label a_The_Center:
     else:
         n "Well I was thinking about the Chamoru hacker group you mentioned."
         n "What if Chamoru hackers really did a different type of hacking?"
-
     hide niko_neutral_eyes_neutral
     hide clara_neutral_eyes_open
+    "A few days go by. Clara explores a little and comes back to the Center for Chamoru Rights"
     $renpy.call_screen("player_actions1")
     "A few days go by. Clara explores a little and comes back to the Center for Chamoru Rights"
 
