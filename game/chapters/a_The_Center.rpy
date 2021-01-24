@@ -126,16 +126,16 @@ label a_The_Center:
             show text "NEW ABILITY: CRITIQUE" at text_choice_effect
             c "Why do you say they aren't racist?"
             n "They don't say racist things or discriminate against me for being Chamoru"
-            c "But isn't there a reason you said 'it might be cool' to just be Chamoru hackers together?"
             $ x = 1 #helping Niko be critical using her ability should be a reward somehow, unlock something? idk
-            n "A reason? Hm... It does piss me off when they say shit about the poorer parts of town."
+            n "I mean, it does piss me off when they say shit about the poorer parts of town."
+            n "..and those parts of town have a lot more Chamorus..."
+            n "but they never say anything to me."
             $ hacker_boys_racist = "the shit they say about poorer folks in Dededo"
-        "Maybe he's right, but does he experience any discrimination?": #learn or level up imagining ability by learning how to imagine together
+        "Do they encourage your Chamoru side?": #learn or level up imagining ability by learning how to imagine together
             show text "+10% Reclaim our imagination" at text_choice_effect
             $imagine_s += .10 #giving Niko the space to imagine together? Show his colors
-            c "Maybe you're right, but do they make any comments."
-            c "Like do they encourage your Chamoru side"
-            c "Or do they only like your ideas when you make them comfortable?"
+            c "Do you think they encourage your Chamoru side?"
+            c "Or do they only like your ideas that make them comfortable?"
             "Niko shifts his weight from left to right."
             "So you try to open him up one more time"
             $ hacker_boys_racist = "experiencing discrimination"
