@@ -50,6 +50,8 @@ init -999 python:
     config.developer = True #is this actually persisting during build? because of stdout_line needs it to be True
     config.debug = True
     pic_index = {"picture_index": 0}
+    hack1_complete=False
+    hint1_numLoops=0
 
 transform lowered_center:
     xalign 0.5

@@ -25,7 +25,8 @@ label check_nikos_hack:
                 print_value = mock_stdout.getvalue()
                 if print_value == 'Niko wuz here\n':
                     renpy.say("Clara", "I am still locked out of my computer!")
-                    renpy.say("Clara", "Cesar Cypher... shifted by 4? That should tell me where the hack is!")
+                    #renpy.say("Clara", "Cesar Cypher... shifted by 4? That should tell me {a=hint1}where{/a} the hack is!")
+                    renpy.say("Clara", "I wonder {a=hint1}where{/a} Niko might have hidden his hack?")
                 else:
                     break
             print(print_value)

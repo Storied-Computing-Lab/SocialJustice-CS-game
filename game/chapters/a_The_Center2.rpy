@@ -20,19 +20,20 @@ label a_The_Center2:
     c "Oh my gosh. *Only you* would think of a hack like this Niko ya jerk!"
     show screen ingamemenu
     c "Let me get my notebook for this!"
-    "Niko hands you a clue."
+    #"Niko hands you a clue."
     #Scene Cypher is just a background that gets called... it contains the images of my proposed cypher and the instructions are then
     #told through niko via the games text below
-    scene cypher1_mac
+    #scene cypher1_mac
     #scene cypher1_pc commented out whichever one you need to call upon
     # For the sake of simplicity for the test run on 11/2 I think its best to leave the cypher as an actual screen rather than a hoverable, or else the user testers might miss it on their own
-    n "Heres a clue, deciper this to reveal a hint for the location of your first hack!"
-    n "It's a Caesar Cipher that is shifted by four... GOODLUCK!"
+    #n "Heres a clue, deciper this to reveal a hint for the location of your first hack!"
+    #n "It's a Caesar Cipher that is shifted by four... GOODLUCK!"
     #Then after this is shown up, we allow the users to first get their in game notebook, which is called below from script.rpy
     call check_nikos_hack from _call_check_nikos_hack
 
     #increment hack counter variable after hack is complete
     $hack_s += 2
+    $hack1_complete = True
     #call check_nikos_hack from _call_check_nikos_hack
     #Background of game is then reset after hack and cypher dissapears! :)
     scene tinian japaneseGate

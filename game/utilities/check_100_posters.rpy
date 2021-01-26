@@ -62,7 +62,7 @@ label check_100_posters:
             if print_poster_once.calls < 100:
                 renpy.say("Clara","Looks like I only printed " + str(print_poster_once.calls) + " posters!")
                 renpy.say("Clara","I should try to send at least 100")
-                renpy.say("Clara","Maybe I should check out the note, it should tell me where the hack is! Hmm... looks like it's a pig pen cypher")
+                #renpy.say("Clara","Maybe I should check out the note, it should tell me where the hack is! Hmm... looks like it's a pig pen cypher")
             else:
                 break
 

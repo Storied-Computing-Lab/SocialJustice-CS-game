@@ -9,6 +9,11 @@ label aa_The_Disasters:
         easeout .175 yoffset 0
         yoffset 0
 
+    python:
+        print(hack_s)
+        if not hack1_complete:
+            renpy.jump("guahan_imagemap")
+
     scene black with dissolve
     "After a few hours, you decide to head to the town center"
     scene tinian japaneseGate
@@ -250,10 +255,10 @@ label aa_The_Disasters:
     "You walk to the Center for Chamoru Rights and you find the printer and plug in your laptop"
     "You are able to extract the source code from the printer"
     c "Alright, time to get this working!"
-    c "Niko gave me this hint for hacking a printer!"
+    #c "Niko gave me this hint for hacking a printer!"
 
     #cypher 2 pops up and directs users to the location of the hack
-    show screen ingamecypher
+    #show screen ingamecypher
     call check_100_posters from _call_check_100_posters
     #Extension or bonus, fix the printer so it can print any number of posters, not just 100
 
