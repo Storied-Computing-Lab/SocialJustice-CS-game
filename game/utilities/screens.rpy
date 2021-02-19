@@ -1710,7 +1710,7 @@ screen notebook():
             notes = f.read()
             f.close()
             # Returns an empty string if user is not on notes tab
-            if pic_index["picture_index"] == 4:
+            if pic_index["picture_index"] == 5:
                 return notes
             else:
                 return ""
