@@ -1697,3 +1697,93 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
+
+
+screen notebook():
+    modal True
+    python:
+        from game.get_notebook_path import student_notebook_path
+
+        def get_notes():
+            global student_notebook_path
+            f = open(student_notebook_path, "r")
+            notes = f.read()
+            f.close()
+            # Returns an empty string if user is not on notes tab
+            if pic_index["picture_index"] == 4:
+                return notes
+            else:
+                return ""
+        
+        def picture_inc():
+            """
+            Increases the notebook counter. Modulo is used for circular
+            notebook (automatically goes back to start when next button 
+            is pressed on last image)
+            """
+            pic_index["picture_index"] = (pic_index["picture_index"] + 1) % hack_s
+
+        def picture_dec():
+            """
+            Decreases the notebook counter. Modulo is used for circular
+            notebook (automatically goes to end when back button is pressed 
+            on first image)
+            """
+            pic_index["picture_index"] = (pic_index["picture_index"] - 1) % hack_s
+        
+    add notebook_images[pic_index["picture_index"]]
+
+    # Exit notebook button
+    vbox xalign 0.668 yalign 0.0:
+        imagebutton auto "exit_%s.png" action Hide("notebook", dissolve)
+
+    # Next note button
+    vbox xalign 0.658 yalign 0.92:
+        imagebutton auto "foward_button_%s.png" action picture_inc, Show("notebook")
+
+    # Previous note button
+    vbox xalign 0.0 yalign 0.92:
+        imagebutton auto "backwards_button_%s.png" action picture_dec, Show("notebook")
+    
+    # Student notes
+    $ notes = get_notes()
+    vbox xalign 0.1 yalign 0.2:
+        text notes
+
+
+
+# clickable icon
+#This clickable icon is called in /chapters/a_The_Buid_Up
+#It essentially adds the icon to the top left and allows it to be clicked
+#However it needs to be able to be closed !!! Potential fix: Add .png of a red 'x' to the side thats clickable
+#FIX ME
+screen ingamemenu:
+    vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
+        imagebutton auto "notebookicon_%s.png" action Show("notebook", dissolve)
+
+        #vbox xalign 0.668 yalign 0.0:
+            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
+            #imagebutton auto takes in the notebook icon photo in the image directory
+            #you have to have two images in order for it to work, hence the "_%s"
+            #this then shows the notebook screen which is in line 124
+
+# Clickable icon/popup for the second in game hack based on the code aboce that was used for the in game notebook...
+#Cypher used for the hint of the hack #2 dealing with printers, has to be clickable popup since main screen in that scene is the interactive pciture of the flyer
+screen cypher2():
+    modal True
+    add "Hack_2.jpg"
+    #vbox xalign 0.668 yalign 0.0:
+        #imagebutton auto "exit_%s.png"
+    vbox xalign 0.850 yalign 0.0:
+        imagebutton auto "exit_%s.png" action Hide("cypher2", dissolve)
+
+screen ingamecypher:
+    vbox xalign 0.0 yalign 0.5: #vbox can call on where the pop up will be. Theyre coordinates
+        imagebutton auto "Cypher_%s.png" action Show("cypher2", dissolve)
+
+        #vbox xalign 0.668 yalign 0.0:
+            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
+            #imagebutton auto takes in the notebook icon photo in the image directory
+            #you have to have two images in order for it to work, hence the "_%s"
+            #this then shows the notebook screen which is in line 124
+
