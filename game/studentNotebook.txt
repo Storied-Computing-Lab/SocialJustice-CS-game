@@ -1,2 +1,2 @@
-Write your notes in the studentNotebook.txt file in the game folder.
+Write your notes in studentNotebook.txt in the game folder.
 Replace me and add your own notes!

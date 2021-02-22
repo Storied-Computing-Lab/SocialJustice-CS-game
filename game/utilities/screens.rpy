@@ -1705,15 +1705,39 @@ screen notebook():
         from game.get_notebook_path import student_notebook_path
 
         def get_notes():
+            def shorten(line, n):
+                """ Given a line with length > n, add a new line character every n chars
+                >>> shorten("123456...75", 70)
+                "123...70\n71...75"
+                """
+                new_line = ""
+                for i in range(len(line)):
+                    new_line += line[i]
+                    if len(new_line) % n == 0:
+                        new_line += "\n"
+                return new_line
+                
             global student_notebook_path
+            notes = ""
+            yOffset = 0.15 # Each line should push text down
+            line_limit = 65
             f = open(student_notebook_path, "r")
-            notes = f.read()
+
+            # Ensures that the text does not overflow by adding a new line char every line_limit chars
+            for line in f:
+                if len(line) > line_limit:
+                    notes += shorten(line, line_limit)
+                else:
+                    notes += line
+                yOffset += .04
             f.close()
+
             # Returns an empty string if user is not on notes tab
+            # Second return value (yOffset) is unpacked as a tuple
             if pic_index["picture_index"] == 5:
-                return notes
+                return notes, yOffset
             else:
-                return ""
+                return "", 0
         
         def picture_inc():
             """
@@ -1746,8 +1770,8 @@ screen notebook():
         imagebutton auto "backwards_button_%s.png" action picture_dec, Show("notebook")
     
     # Student notes
-    $ notes = get_notes()
-    vbox xalign 0.1 yalign 0.2:
+    $ notes, yOffset = get_notes()
+    vbox xalign 0.1 yalign yOffset:
         text notes
 
 
