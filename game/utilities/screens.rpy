@@ -1697,3 +1697,117 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
+
+
+screen notebook():
+    modal True
+    python:
+        from game.get_notebook_path import student_notebook_path
+
+        def get_notes():
+            def shorten(line, n):
+                """ Given a line with length > n, add a new line character every n chars
+                >>> shorten("123456...75", 70)
+                "123...70\n71...75"
+                """
+                new_line = ""
+                for i in range(len(line)):
+                    new_line += line[i]
+                    if len(new_line) % n == 0:
+                        new_line += "\n"
+                return new_line
+                
+            global student_notebook_path
+            notes = ""
+            yOffset = 0.15 # Each line should push text down
+            line_limit = 65
+            f = open(student_notebook_path, "r")
+
+            # Ensures that the text does not overflow by adding a new line char every line_limit chars
+            for line in f:
+                if len(line) > line_limit:
+                    notes += shorten(line, line_limit)
+                else:
+                    notes += line
+                yOffset += .04
+            f.close()
+
+            # Returns an empty string if user is not on notes tab
+            # Second return value (yOffset) is unpacked as a tuple
+            if pic_index["picture_index"] == 5:
+                return notes, yOffset
+            else:
+                return "", 0
+        
+        def picture_inc():
+            """
+            Increases the notebook counter. Modulo is used for circular
+            notebook (automatically goes back to start when next button 
+            is pressed on last image)
+            """
+            pic_index["picture_index"] = (pic_index["picture_index"] + 1) % hack_s
+
+        def picture_dec():
+            """
+            Decreases the notebook counter. Modulo is used for circular
+            notebook (automatically goes to end when back button is pressed 
+            on first image)
+            """
+            pic_index["picture_index"] = (pic_index["picture_index"] - 1) % hack_s
+        
+    add notebook_images[pic_index["picture_index"]]
+
+    # Exit notebook button
+    vbox xalign 0.668 yalign 0.0:
+        imagebutton auto "exit_%s.png" action Hide("notebook", dissolve)
+
+    # Next note button
+    vbox xalign 0.658 yalign 0.92:
+        imagebutton auto "foward_button_%s.png" action picture_inc, Show("notebook")
+
+    # Previous note button
+    vbox xalign 0.0 yalign 0.92:
+        imagebutton auto "backwards_button_%s.png" action picture_dec, Show("notebook")
+    
+    # Student notes
+    $ notes, yOffset = get_notes()
+    vbox xalign 0.1 yalign yOffset:
+        text notes
+
+
+
+# clickable icon
+#This clickable icon is called in /chapters/a_The_Buid_Up
+#It essentially adds the icon to the top left and allows it to be clicked
+#However it needs to be able to be closed !!! Potential fix: Add .png of a red 'x' to the side thats clickable
+#FIX ME
+screen ingamemenu:
+    vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
+        imagebutton auto "notebookicon_%s.png" action Show("notebook", dissolve)
+
+        #vbox xalign 0.668 yalign 0.0:
+            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
+            #imagebutton auto takes in the notebook icon photo in the image directory
+            #you have to have two images in order for it to work, hence the "_%s"
+            #this then shows the notebook screen which is in line 124
+
+# Clickable icon/popup for the second in game hack based on the code aboce that was used for the in game notebook...
+#Cypher used for the hint of the hack #2 dealing with printers, has to be clickable popup since main screen in that scene is the interactive pciture of the flyer
+screen cypher2():
+    modal True
+    add "Hack_2.jpg"
+    #vbox xalign 0.668 yalign 0.0:
+        #imagebutton auto "exit_%s.png"
+    vbox xalign 0.850 yalign 0.0:
+        imagebutton auto "exit_%s.png" action Hide("cypher2", dissolve)
+
+screen ingamecypher:
+    vbox xalign 0.0 yalign 0.5: #vbox can call on where the pop up will be. Theyre coordinates
+        imagebutton auto "Cypher_%s.png" action Show("cypher2", dissolve)
+
+        #vbox xalign 0.668 yalign 0.0:
+            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
+            #imagebutton auto takes in the notebook icon photo in the image directory
+            #you have to have two images in order for it to work, hence the "_%s"
+            #this then shows the notebook screen which is in line 124
+
