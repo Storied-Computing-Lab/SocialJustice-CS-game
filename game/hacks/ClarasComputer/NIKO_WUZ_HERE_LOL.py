@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from virus import Virus
 #Tip: Check out the virus.py file to see what this type of virus can do.
-niko_virus = Virus()
+niko_virus = Virus() #this code creates a new Virus
 
 def main():
     """
@@ -25,6 +25,7 @@ def main():
 
 #Tip: Other commands like eliminate_virus() might be helpful.
 #Tip: The in-game notebook has more examples of how to write a code command.
+#eliminate_virus(): changes the message of  nico_virus to "Virus eliminated"
 def eliminate_virus():
     global niko_virus
     niko_virus.change_message("Virus eliminated")

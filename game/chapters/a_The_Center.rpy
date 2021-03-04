@@ -61,6 +61,7 @@ label a_The_Center:
     c "Wouldn't it be better for everyone if the Hacker Boyz had a new perspective on the team?"
     n "I guess. I'm just worried about how you'd fit in with the guys"
     menu: #both choices need to have POSTIIVE and NEGATIVE clear consequences
+        "What should Clara say? Click on an option."
         "I'm pretty flexible":
             #THIS ONE REALLY NEEDS SOME WORK:
             show text "+10% Stand your ground" at text_choice_effect
@@ -101,6 +102,7 @@ label a_The_Center:
     menu: #I'm mostly ok slash kinda excited about this player choice, I just want to make their input EVEN MORE CRUCIAL,
     #like the player choice that happens later in choosing Tita's evacuation versus Esperansa's stand and defend
     #In ^that case, it will really change the course of the story. What does THISv choice do?
+        "What should Clara say? Click on an option."
         "With me that would make TWO Chamorus in the group!":
             show text "+10% Stand your ground" at text_choice_effect
             $stand_s += .10 #something to level up her breaking in and disrupting score I guess
@@ -122,6 +124,7 @@ label a_The_Center:
     #Here's a chance for player and clara to level up his critique ?????
     #maybe she comes in with higher critique ability over imagination <-- player needs to help us with this
     menu:
+        "What should Clara say? Click on an option."
         "Why do you say they're not racist?": #use critical ability
             show text "NEW ABILITY: CRITIQUE" at text_choice_effect
             c "Why do you say they aren't racist?"
@@ -152,8 +155,8 @@ label a_The_Center:
     hide niko_neutral_eyes_neutral
     hide clara_neutral_eyes_open
     "A few days go by. Clara explores a little and comes back to the Center for Chamoru Rights"
+    scene black with dissolve
+    "Go find Clara for your first task by using your mouse to click and explore different locations."
     $renpy.call_screen("player_actions1")
-    "A few days go by. Clara explores a little and comes back to the Center for Chamoru Rights"
-
 
     return
