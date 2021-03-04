@@ -37,8 +37,8 @@ define t = Character("Tita")
 default stand_s = 0
 default imagine_s = 0
 default norms_s = 0
-default hack_s = 4
-default notebook_images = [ "cesarcy.png", "print_statement.png", "regular_methods.png", "class_methods.png", "for_loop.png", "pigpen.png"]
+default hack_s = 6
+default notebook_images = [ "cesarcy.png", "print_statement.png", "regular_methods.png", "class_methods.png","for_loop.png", "black_notes_page.png"]
 
 
 $ config.console = True
@@ -141,73 +141,6 @@ define character.e = Character("Esperansa")
     #show tinianJapanese-gate
     #show cipher-screen
     #show tinianJapanese-gate
-
-
-
-#The code for the screen called in the in game pop up below
-#This is just an image of an example notebook that I have thrown into the images directory
-
-#Have an internal notebook counter variable saved in pic_index dictionary to dictate picture shown in notebook
-#making sure that variable doesn't go over the variable that indicates the hack that you are on/under 0
-#foward/back buttons increment/decrement internal counter variable and refresh notebook so that a new picture is loaded
-screen notebook():
-    modal True
-    python:
-        def picture_inc():
-            if pic_index["picture_index"] == hack_s - 1:
-                pic_index["picture_index"] = hack_s - 1;
-            else:
-                pic_index["picture_index"] += 1
-        def picture_dec():
-            if pic_index["picture_index"] <= 0:
-                pic_index["picture_index"] = 0
-            else:
-                pic_index["picture_index"] -= 1
-    add notebook_images[pic_index["picture_index"]]
-    vbox xalign 0.668 yalign 0.0:
-        imagebutton auto "exit_%s.png" action Hide("notebook", dissolve)
-
-    vbox xalign 0.658 yalign 0.92:
-        imagebutton auto "foward_button_%s.png" action picture_inc, Show("notebook")
-    vbox xalign 0.0 yalign 0.92:
-        imagebutton auto "backwards_button_%s.png" action picture_dec, Show("notebook")
-
-
-
-# clickable icon
-#This clickable icon is called in /chapters/a_The_Buid_Up
-#It essentially adds the icon to the top left and allows it to be clicked
-#However it needs to be able to be closed !!! Potential fix: Add .png of a red 'x' to the side thats clickable
-#FIX ME
-screen ingamemenu:
-    vbox xalign 0.0 yalign 0.0: #vbox can call on where the pop up will be. Theyre coordinates
-        imagebutton auto "notebookicon_%s.png" action Show("notebook", dissolve)
-
-        #vbox xalign 0.668 yalign 0.0:
-            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
-            #imagebutton auto takes in the notebook icon photo in the image directory
-            #you have to have two images in order for it to work, hence the "_%s"
-            #this then shows the notebook screen which is in line 124
-
-# Clickable icon/popup for the second in game hack based on the code aboce that was used for the in game notebook...
-#Cypher used for the hint of the hack #2 dealing with printers, has to be clickable popup since main screen in that scene is the interactive pciture of the flyer
-screen cypher2():
-    modal True
-    add "Hack_2.jpg"
-    #vbox xalign 0.668 yalign 0.0:
-        #imagebutton auto "exit_%s.png"
-    vbox xalign 0.850 yalign 0.0:
-        imagebutton auto "exit_%s.png" action Hide("cypher2", dissolve)
-
-screen ingamecypher:
-    vbox xalign 0.0 yalign 0.5: #vbox can call on where the pop up will be. Theyre coordinates
-        imagebutton auto "Cypher_%s.png" action Show("cypher2", dissolve)
-
-        #vbox xalign 0.668 yalign 0.0:
-            #imagebutton auto "exit_%s.png" action renpy.hide_screen("ingamemenu")
-            #imagebutton auto takes in the notebook icon photo in the image directory
-            #you have to have two images in order for it to work, hence the "_%s"
-            #this then shows the notebook screen which is in line 124
 
 
 label start:
