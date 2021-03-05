@@ -1734,7 +1734,7 @@ screen notebook():
 
             # Returns an empty string if user is not on notes tab
             # Second return value (yOffset) is unpacked as a tuple
-            if pic_index["picture_index"] == 5:
+            if pic_index["picture_index"] == 6:
                 return notes, yOffset
             else:
                 return "", 0

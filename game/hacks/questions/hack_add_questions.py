@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 """
 This is an example of a dictionary that maps NFL teams to their cities.
 Notice that each key is followed by a colon ( : ) and each mapping is followed
-by a comma:
+by a comma. Every key must be unique:
 
 teams = {
     "Las Vegas" : "Raiders",

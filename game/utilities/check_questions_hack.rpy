@@ -1,15 +1,8 @@
 label check_questions_hack:
     python:
         from __future__ import unicode_literals
-        #from hacks import hack_100_flyers does not work, gets error "no module named hacks even with __init__.py"
         from game.hacks.questions import hack_add_questions
-        #Line 5 generates an error because "no module named hacks." To get hack_100_posters to be imported,
-        #it looks like hack_100_posters still has to live in the game folder unfortunately!
         import sys
-        #print(sys.path)
-        #print(sys.version)
-        #import mock
-        #print(mock.__name__)
         import StringIO
 
 
@@ -28,16 +21,14 @@ label check_questions_hack:
             
             questions_dict_len = len(questions_dict)
             if questions_dict_len < 5:
-                renpy.say("Clara","Looks like I only have " + str(questions_dict_len) + " questions!")
-                renpy.say("Clara","I should try to get at least 5")
+                renpy.say("Clara", "I need at least 5 questions, I currently have " + str(questions_dict_len))
+                renpy.say("Clara","I need to ask more people!")
             else:
                 break
 
 
         del hack_add_questions
         del StringIO
-        #$claras_computer_locked = False
         renpy.say("Clara", "Great. We have enough questions!!")
-        renpy.say("Clara", "Welcome Back Clara")
 
     return
