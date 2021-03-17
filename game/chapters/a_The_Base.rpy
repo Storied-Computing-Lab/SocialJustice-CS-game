@@ -30,7 +30,7 @@ label a_The_Base:
 
     call check_questions_hack from _call_check_questions_hack
 
-    hide clara_neutral_eyes_open 
+    hide clara_neutral_eyes_open
     hide niko_neutral_eyes_slight_smile
     #increment hack counter variable after hack is complete
     $hack_s += 2
@@ -39,5 +39,12 @@ label a_The_Base:
     scene front_gate with dissolve
     e "Good job Clara! That should stall them for a long time!"
 
-    
+    call ac_The_Meeting
+
+    "We did it! We used our voices!"
+    "We collectively delayed the military plans!"
+    "How did feel?"
+    "What did you learn?"
+    "How will you take further action in your community?"
+
     $renpy.call_screen("player_actions1")

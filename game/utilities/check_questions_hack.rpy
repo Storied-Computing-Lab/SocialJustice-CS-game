@@ -5,9 +5,11 @@ label check_questions_hack:
         import sys
         import StringIO
 
+        global questions_dict
+
 
         """
-        Forever loop that waits until hack_add_questions.main() has a dictionary with length >= 5 
+        Forever loop that waits until hack_add_questions.main() has a dictionary with length >= 5
         """
         while True:
             reload(hack_add_questions)
@@ -18,7 +20,7 @@ label check_questions_hack:
                 renpy.say("Clara", "Oh no! An error occurred. Check if the dictionary is still called 'questions' and the main() function is still returning it!")
                 reload(hack_add_questions)
                 questions_dict = hack_add_questions.main()
-            
+
             questions_dict_len = len(questions_dict)
             if questions_dict_len < 5:
                 renpy.say("Clara", "I need at least 5 questions, I currently have " + str(questions_dict_len))
