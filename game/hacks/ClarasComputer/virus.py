@@ -1,20 +1,31 @@
-#Tip: This type of coding is called object oriented programming. Your Notebook has more information about this.
-#This class provides methods to customize the virus.
-#__init__(self) defines what a new Virus itself comes with automatically, in this case, a pre-set message.
-#change_message(self,message): changes the current message of the virus to the message passed in.
-#invade(self): prints out the message.
 
 class Virus:
+    """
+    This class provides methods to customize the virus.
+    There are many ways to solve this puzzle!
+    """
 
     def __init__(self):
+        """
+        Set the default message for a Virus. 
+        """
         self.message = "Niko wuz here"
-    #Tip: Can you use this method in NIKO_WUZ_HERE_LOL.py to change the message
+
     def change_message(self, message):
+        """
+        Change what the default message says.
+        How to use: niko_virus.change_message("Your message here")
+        """
         self.message = message
-    #Tip: Is there a way you can change this function to eliminate the virus completely
+
     def invade(self):
+        """
+        Print out a Virus' message.
+        How to use: niko_virus.invade()
+        """
         print(self.message)
 
 #def main():
     #global niko_virus
     #niko_virus = Virus()
+
