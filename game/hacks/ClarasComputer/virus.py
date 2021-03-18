@@ -15,4 +15,6 @@ class Virus:
     def invade(self):
         print(self.message)
 
-    
+#def main():
+    #global niko_virus
+    #niko_virus = Virus()
