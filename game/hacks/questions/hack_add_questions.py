@@ -30,7 +30,10 @@ You don't have to do it here, but you can access these elements using square bra
 """
 
 def main():
-    """ Make a dictionary that maps at least 5 names to questions!"""
+    """
+    Make a dictionary that maps at least 5 names to questions!
+    ie: { "Clara": "Why does the military want to do this?" }
+    """
     # Note: Do not change the name of this dictionary or the return statement!
     questions = {
         # Replace this line and add your own questions!
