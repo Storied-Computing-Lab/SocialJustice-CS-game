@@ -59,9 +59,9 @@ transform nh_upper_right: #works with Niko's head?
     yalign -.01 #more negative moves it up?
 
 init python:
-    build.name = "Guaiya_MayDEBUG"
-    build.directory_name = "Guaiya_MayDEBUG"
-    build.executable_name = "Guaiya_Means_Love.MayDEBUG"
+    build.name = "Guaiya_v1.01.01.2020.Release"
+    build.directory_name = "Guaiya_v1.01.01.2020.Release"
+    build.executable_name = "Guaiya_Means_Love.v1.01.01.2020.Release"
 
 init python:
 
